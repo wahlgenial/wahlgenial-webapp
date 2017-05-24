@@ -1,0 +1,156 @@
+<div class="row blue-row">
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Die Mission</h3>
+      </div>
+    </div>
+    <div class="row as-white">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <p>
+          Wahl.Daten.Helfer ist der zentrale Anlaufpunkt für alles rund um offene Daten und die Digitalisierung der Demokratie. Hier werden Hackathons und Meetups zu diesen und verwandten Themen angekündigt.
+          Doch wir wollen uns nicht nur treffen, um uns mit den aktuellen Wahldaten auseinanderzusetzen, es sollen auch neue Toolsets und Apps entwickelt werden, die für bevorstehende Wahlen leicht adaptiert und weiterverwendet werden können.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <p>
+          Gemeinsam wollen wir auf Veranstaltungen in ganz Deutschland an neuen Apps</br>
+          und Visualisierungen rund um offene Wahldaten arbeiten. Die Resultate werden</br>
+          anschließend im Showroom der Kampagne veröffentlicht, um wirklich genutzt zu werden.
+
+          Apps entwickeln stärkt die Demokratie!
+        </p>
+        <p class="as-pink">
+          <strong>Apps entwickeln stärkt die Demokratie!</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row white-row">
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Bundestagswahl</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <p>
+          Die Wahl zum <span class="pink">19. Deutschen Bundestag</span> findet am <span class="pink">24. September 2017 </span>statt.</br>
+          Wir wollen alle Bürgerinnen und Bürger aufrufen, im Zuge dieser Wahl die hier bereitgestellten Wahldaten, Tools und Apps zu nutzen.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <p>
+          Informiert euch auf der Website oder bei unseren Treffen, erschafft Neues – </br>und vor allem: <span class="pink">Geht wählen!</span></br>
+          Eine Vielzahl von Angeboten soll dabei helfen.
+          Schaut euch die Beispiele unten an!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row white-row">
+  <div class="col-lg-6 col-md-6 map-container">
+    <div id="map"></div>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <h4>Events zur Bundestagswahl 2017</h4>
+    <ul class="city-list">
+      {% for event in site.pages %}
+        {% if event.tags contains "bundestagswahl2017" %}
+          <li class="box">
+            <a class="box-header" href="{{ event.url|replace:"index.html","" }}">
+              &lt;event/&gt; {{ event.title }}
+            </a>
+            <div class="box-content">
+              {{ event.where }}<br/>
+              {{ event.when }}
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+       <li class="box">
+        <div class="box-header">&lt;wahllokal/&gt; Dein Wahllokal</div>
+        <div class="box-content">
+          Jetzt <a href="mailto:mitmachen@wahldatenhelfer.de">mitmachen@wahldatenhelfer.de</a>!
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row white-row">
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Beispiele</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <a target="_blank" href="http://wahllokalfinder.herokuapp.com/">
+          <%= image_tag("wahllokalfinder.png", class: "img-responsive", alt: "Wahllokalfinder") %>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <a target="_blank" href="https://tom.cologne.codefor.de/wahlgebiet/">
+          <%= image_tag("wahlgebiete.png", class: "img-responsive", alt: "Wahlgebiete") %>          
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <a target="_blank" href="http://codeformuenster.org/wahlkarte/">
+          <%= image_tag("wahlkarte.png", class: "img-responsive", alt: "Wahlkarte") %>          
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <a target="_blank" href="http://www.ulmapi.de/direktkandidaten-map/">
+          <%= image_tag("direktkandidaten.png", class: "img-responsive", alt: "Direktkandidaten") %>          
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var map;
+
+    // set up the map
+    map = new L.map('map',
+      { dragging: false,
+        touchZoom: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        zoomControl: false,
+        keyboard: false }
+    );
+
+    // create the tile layer with correct attribution
+    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
+
+    // start the map in South-East England
+    map.setView(new L.LatLng(51.0834196, 10.4234469),5);
+    map.addLayer(osm);
+
+    var markers = [];
+    {% for event in site.pages %}
+      {% if event.tags contains "bundestagswahl2017" %}
+        var marker = L.marker(
+          [{{ event.lat }}, {{ event.lng }}],
+          {
+            clickable: true,
+            title: 'Wahllokal {{ event.name }}'
+          }
+        ).addTo(map);
+        marker.on('click', function() {
+          window.location.href = '{{ event.url|replace:"index.html","" }}';
+        });
+        markers.push(marker);
+      {% endif %}
+    {% endfor %}
+  }());
+</script>
