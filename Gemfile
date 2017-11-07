@@ -14,6 +14,9 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'haml'
 gem 'jquery-rails'
 
+gem 'react-rails'
+gem 'webpacker'
+
 group :development, :test do
   gem 'byebug'
 end

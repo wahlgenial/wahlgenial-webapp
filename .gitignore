@@ -17,3 +17,6 @@ config/database.yml
 !/log/.keep
 /tmp
 .DS_Store
+/public/packs
+/public/packs-test
+/node_modules
