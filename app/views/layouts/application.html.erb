@@ -3,20 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <title>wahldatenhelfer.de</title>
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="navbar-top.css" rel="stylesheet">
   </head>
   <body>
     <%= render 'shared/header' %>
-    <div id="wahldatenhelfer_component" class="container clearfix"> </div>
+     <div id="fullpage">
+    	<div class="section active bg-primary">
+        <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+      </div>
+    	<div class="section bg-warning">Some section</div>
+    	<div class="section bg-info">Some section</div>
+    	<div class="section bg-danger">
+        <div id="wahldatenhelfer_component" class="container clearfix"> </div>
+      </div>
     <%=render 'shared/footer' %>
     <%= javascript_pack_tag 'wahldatenhelfer_component' %>
+  </div>
   </body>
 </html>
