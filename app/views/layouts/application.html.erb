@@ -15,9 +15,8 @@
   </head>
   <body>
     <%= render 'shared/header' %>
-    <div class="content-box">
-      yield
-    </div>
+    <div id="wahldatenhelfer_component" class="container clearfix"> </div>
     <%=render 'shared/footer' %>
+    <%= javascript_pack_tag 'wahldatenhelfer_component' %>
   </body>
 </html>
