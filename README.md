@@ -7,3 +7,4 @@
 - copy `config/database.yml.example` into `config/database.yml`
 - `$ bundle install`
 - `$ rails db:setup`
+- `$ yarn`
