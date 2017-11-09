@@ -1,4 +1,6 @@
 {
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.0.2",
     "babel-preset-react": "^6.24.1",
@@ -9,6 +11,14 @@
     "react_ujs": "^2.4.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.9.4"
+    "storybook": "^1.0.0",
+    "webpack-dev-server": "^2.9.4",
+    "@storybook/react": "^3.2.14",
+    "@storybook/addon-actions": "^3.2.14",
+    "@storybook/addon-links": "^3.2.14"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }

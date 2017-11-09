@@ -10,3 +10,8 @@
 - `$ yarn`
 
 Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and development environment.
+
+
+## Development
+### Storybook
+Run `$ yarn stroybook` for storybook. Stories are located in `/app/javascript/stories/`
