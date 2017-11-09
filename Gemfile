@@ -4,6 +4,7 @@ ruby '2.4.2'
 
 gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
+gem 'pg'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'

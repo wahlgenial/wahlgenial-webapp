@@ -8,3 +8,5 @@
 - `$ bundle install`
 - `$ rails db:setup`
 - `$ yarn`
+
+Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and development environment.
