@@ -15,6 +15,7 @@ Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and deve
 ## Development
 ### React
 #### Standard JS
-We use [JavaScript Standard Style ](https://standardjs.com/) which is JavaScript style guide. You can use [eslint](https://eslint.org/) plugin for your editor.
+We use [JavaScript Standard Style ](https://standardjs.com/) which is JavaScript style guide. You can use [eslint](https://eslint.org/) plugin for your editor.  
+To check code validation run: `$ yarn lint` or for auto fixing `$ yarn lint-fix`
 #### Storybook
 Run `$ yarn stroybook` for storybook. Stories are located in `/app/javascript/stories/`
