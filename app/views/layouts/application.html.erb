@@ -14,12 +14,15 @@
     	<div class="section active bg-primary">
         <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
       </div>
-    	<div class="section bg-warning">Some section</div>
+    	<div class="section bg-warning">
+    	  <div id="election_programs" class="container"> </div>
+    	</div>
     	<div class="section bg-info">Some section</div>
     	<div class="section bg-danger">
-        <div id="wahldatenhelfer_component" class="container clearfix"> </div>
+        <div id="wahldatenhelfer_component" class="container"> </div>
       </div>
     <%=render 'shared/footer' %>
+    <%= javascript_pack_tag 'election_programs' %>
     <%= javascript_pack_tag 'wahldatenhelfer_component' %>
   </div>
   </body>
