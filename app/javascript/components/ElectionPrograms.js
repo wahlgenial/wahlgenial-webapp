@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const ElectionPrograms = props => (
   <div className="container bg-primary p-3">
@@ -10,6 +9,5 @@ const ElectionPrograms = props => (
 ElectionPrograms.defaultProps = {}
 
 ElectionPrograms.propTypes = {}
-
 
 export default ElectionPrograms

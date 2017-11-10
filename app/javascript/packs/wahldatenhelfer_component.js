@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 
 const Wahldatenhelfer = props => (
   <div className="container bg-primary p-3">
@@ -15,6 +14,6 @@ Wahldatenhelfer.propTypes = {}
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Wahldatenhelfer />,
-    document.getElementById('wahldatenhelfer_component').appendChild(document.createElement('div')),
+    document.getElementById('wahldatenhelfer_component').appendChild(document.createElement('div'))
   )
 })
