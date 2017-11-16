@@ -33,7 +33,6 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "lint": "./node_modules/.bin/eslint ./app/javascript",
     "lint-fix": "./node_modules/.bin/eslint ./app/javascript --ext .js,.jsx --fix"
   }
