@@ -1,9 +1,24 @@
-/* eslint no-console:0 */
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-//
-// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
-// layout file, like app/views/layouts/application.html.erb
-console.log('File loaded!')
+require('bootstrap')
+require('fullpage.js')
+
+const mountFullpage = () => {
+  $('#fullpage').fullpage({
+    menu: '#menu',
+    lockAnchors: true,
+    anchors: ['page1', 'page2', 'page3', 'page4'],
+    navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
+    showActiveTooltip: true,
+    navigation: true,
+    navigationPosition: 'right',
+    css3: false,
+    lazyLoading: true
+  })
+}
+const mountToolitp = () => {
+  $('[data-toggle="tooltip"]').tooltip()
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  mountToolitp()
+  mountFullpage()
+})

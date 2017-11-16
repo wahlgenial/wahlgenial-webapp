@@ -8,6 +8,7 @@ module.exports = {
         "define": true,
         "require": true,
         "module": true,
+        "$": true,
     },
     "extends": "standard",
     "parser": "babel-eslint",
@@ -27,7 +28,7 @@ module.exports = {
         "indent": ["error", 2],
         "linebreak-style": [ "error", "unix" ],
         "quotes": [ "error", "single" ],
-        
+
         "react/jsx-boolean-value": 0,
         "react/jsx-closing-bracket-location": 1,
         "react/jsx-curly-spacing": [2, "always"],
