@@ -1,5 +1,7 @@
 # WAHLDATENHELFER :ballot_box_with_check:
+
 ## Getting Started
+
 ### Requirements:
 - Ruby 2.4.2
 
@@ -13,9 +15,14 @@ Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and deve
 
 
 ## Development
-### React
-#### Standard JS
+
+### Standard JS
 We use [JavaScript Standard Style ](https://standardjs.com/) which is JavaScript style guide. You can use [eslint](https://eslint.org/) plugin for your editor.  
 To check code validation run: `$ yarn lint` or for auto fixing `$ yarn lint-fix`
+
+### React
 #### Storybook
 Run `$ yarn stroybook` for storybook. Stories are located in `/app/javascript/stories/`
+
+### Webpacker
+Webpacker is used as a pipeline for JavaScript, to run the development server, run `$ webpack-dev-server`
