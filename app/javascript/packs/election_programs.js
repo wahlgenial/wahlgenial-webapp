@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import ElectionPrograms from '../components/ElectionPrograms'
+import ElectionPrograms from '../components/ElectionPrograms/ElectionPrograms'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
