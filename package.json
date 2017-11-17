@@ -10,7 +10,8 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react_ujs": "^2.4.1"
+    "react_ujs": "^2.4.1",
+    "sass-loader": "^6.0.6"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.14",
