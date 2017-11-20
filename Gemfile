@@ -7,7 +7,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'haml'
 gem 'webpacker'
 gem 'react-rails'
-
+gem 'rails_admin', '~> 1.2'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
