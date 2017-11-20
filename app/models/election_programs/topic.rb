@@ -1,3 +1,3 @@
 class ElectionPrograms::Topic < ApplicationRecord
-  has_one :party
+  has_many :questions
 end
