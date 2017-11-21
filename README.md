@@ -15,7 +15,8 @@ Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and deve
 
 
 ## Development
-
+### Dummy content
+Through installation, after running `$ rails db:setup`, the records should be created on development environment automatically, otherwise you can run `$ rails db:seed` to add pre-created content (which is only for development).
 ### Standard JS
 We use [JavaScript Standard Style ](https://standardjs.com/) which is JavaScript style guide. You can use [eslint](https://eslint.org/) plugin for your editor.  
 To check code validation run: `$ yarn lint` or for auto fixing `$ yarn lint-fix`
