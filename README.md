@@ -24,7 +24,8 @@ We use [JavaScript Standard Style ](https://standardjs.com/) which is JavaScript
 To check code validation run: `$ yarn lint` or for auto fixing `$ yarn lint-fix`
 
 ### Tests
-We use rspec for tests. use `$ rspec` to run tests.
+We use [rspec](https://github.com/rspec/rspec-rails), [factory_bot](https://github.com/thoughtbot/factory_bot_rails) and   [guard-rspec](https://github.com/guard/guard-rspec) for tests.  
+Run `$ rspec` for running tests. To work in file-change-watch mode, run `$ guard`
 
 ### React
 #### Storybook
