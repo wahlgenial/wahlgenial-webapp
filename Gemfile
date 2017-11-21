@@ -14,6 +14,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
+  gem 'guard-rails', require: false
+  gem "guard-rspec"
+  gem "guard"
   gem 'byebug'
 end
 
