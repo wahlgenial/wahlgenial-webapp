@@ -8,6 +8,8 @@ gem 'haml'
 gem 'webpacker'
 gem 'react-rails'
 gem 'rails_admin', '~> 1.2'
+gem 'draper'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
