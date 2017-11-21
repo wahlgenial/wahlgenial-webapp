@@ -13,31 +13,24 @@
 ActiveRecord::Schema.define(version: 20171120143745) do
 
   create_table "election_programs_opinions", force: :cascade do |t|
-    t.integer "opinion"
     t.integer "question_id"
     t.integer "party_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "opinion"
   end
 
   create_table "election_programs_parties", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "election_programs_questions", force: :cascade do |t|
+    t.string "title"
     t.text "text"
     t.integer "topic_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "election_programs_topics", force: :cascade do |t|
     t.string "title"
     t.text "details"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

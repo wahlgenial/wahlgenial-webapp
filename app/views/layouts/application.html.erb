@@ -12,6 +12,7 @@
     <%= render 'shared/header' %>
      <div id="fullpage">
     	<div class="section active bg-primary">
+        <%= react_component('election_programs', election_programs: @election_programs) %>
         <div id="election_programs" class="container"> </div>
       </div>
     	<div class="section bg-warning">
