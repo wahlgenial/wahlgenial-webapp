@@ -5,13 +5,14 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
     let(:output) {
       [
         {
-          :title=>"topic",
-          :questions=>[
+          title: 'topic',
+          questions: [
             {
-              :title=>"question",
-              :opinions=>[
-                { :opinion=>"positive", :party=>"party1" },
-                { :opinion=>"positive", :party=>"party2" }
+              title: 'question',
+              text: 'the question text',
+              opinions: [
+                { opinion: 'positive', party: 'party1' },
+                { opinion: 'positive', party: 'party2' }
               ]
             }
           ]

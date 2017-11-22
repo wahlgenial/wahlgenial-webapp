@@ -8,7 +8,7 @@ class ElectionPrograms::TopicReactDecorator < Draper::Decorator
     topic_hash = { title:object.title,  questions: [] }
 
     object.questions.each do |question|
-      question_hash = { title: question.title, opinions: [] }
+      question_hash = { title: question.title, text: question.text, opinions: [] }
 
       question.opinions.each do |opinion|
         opinion_hash = {
