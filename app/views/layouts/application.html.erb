@@ -12,7 +12,13 @@
     <%= render 'shared/header' %>
      <div id="fullpage">
     	<div class="section active bg-primary">
-        <%= react_component('election_programs', election_programs: @election_programs) %>
+
+        <%= react_component(
+          'ElectionPrograms',
+          topics: @election_programs.map(&:to_h))
+        %>
+
+
         <div id="election_programs" class="container"> </div>
       </div>
     	<div class="section bg-warning">
@@ -23,7 +29,6 @@
         <div id="wahldatenhelfer_component" class="container"> </div>
       </div>
     <%=render 'shared/footer' %>
-    <%= javascript_pack_tag 'election_programs' %>
     <%= javascript_pack_tag 'wahldatenhelfer_component' %>
   </div>
   </body>
