@@ -1,3 +1,5 @@
+import { mountComponents } from 'react-rails-ujs'
+import ElectionPrograms from './components/ElectionPrograms'
 require('bootstrap')
 require('fullpage.js')
 
@@ -21,4 +23,9 @@ const mountToolitp = () => {
 document.addEventListener('DOMContentLoaded', () => {
   mountToolitp()
   mountFullpage()
+  mountComponents({
+    ElectionPrograms
+  })
+  // mountComponents is needed since there is an issue with jquery3 onReady method
+  // https://github.com/reactjs/react-rails/issues/742
 })
