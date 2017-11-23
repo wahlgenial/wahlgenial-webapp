@@ -24,12 +24,14 @@ class ElectionPrograms extends React.Component {
   }
   render () {
     const {topics} = this.props
+    const {selectedTopicIndex} = this.state
     return (
-      <div className="container bg-primary p-3">
+      <div className="container p-3">
         {topics.map((topic, index) => (
           <TopicButton
             key={ index }
             title={ topic.title }
+            active= { index === selectedTopicIndex }
             onPress={ () => { this.handleSelectTopic(index) } } />
         ))}
         {this.topicSelected() && (
