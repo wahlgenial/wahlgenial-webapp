@@ -1,5 +1,8 @@
-<%= react_component(
-  'ElectionPrograms',
-  topics: @election_programs.map(&:to_h))
-%>
-<div id="election_programs" class="container"> </div>
+<div class="main-container col-lg-12">
+  <div class="container col-lg-10 col-md-12">
+    <%= react_component(
+      'ElectionPrograms',
+      topics: @election_programs.map(&:to_h))
+    %>
+  </div>
+</div>
