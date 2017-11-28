@@ -1,3 +1,9 @@
+html
+	font-size: 90%
+body
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+	color: $white
+	background-color: $orange
 footer
 	background-color: $white
 	padding: 40px 0 20px 0
@@ -6,6 +12,30 @@ footer
 	footer
 		padding: 20px 0
 
+// fullpage.js overrides:
+.fp-section.fp-table
+	display: flex
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+  background: $white
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span
+	background-color: $yellow
+#fp-nav ul li a span,
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+	height: 10px
+	width: 10px
+	margin: -5px 0 0 -5px
+
+#fp-nav ul li,
+.fp-slidesNav ul li
+	width: 24px
+	height: 24px
+
+ // bootstrap overrides
 .btn
 	border-radius: 1.5rem
 
@@ -13,6 +43,20 @@ footer
   color: $white
   background-color: $pompadour
   border-color: transparent
+
+.btn-default
+  color: $white
+  border-color: $white
+
+.btn-default.active,
+.btn-default:hover,
+.btn-default:not([disabled]):not(.disabled):active,
+.btn-default:not([disabled]):not(.disabled).active
+	color: $white
+	border-color: $white
+	background-color: $white_30
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
 
 
 .btn-primary.active,
@@ -25,10 +69,68 @@ footer
 	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
 
+// end overrides
+
+
 .topicsButtonsContainer
-	height: 240px
+	height: 210px
+	.btn-container
+		padding: 0 8px
+	.btn.btn-primary
+		text-transform: uppercase
+		font-size: 80%
+		font-weight: 100
+		letter-spacing: 0.2em
+		line-height: 1.8em
+.questionsListContainer
+	.question-block-wrapper
+		border-bottom: 1px solid $white
+	.question-block
+		p
+			background-image: url("/question-icon.png")
+			padding: 5px 0 5px 30px
+			background-size: 25px
+			background-position-x: 0
+			background-repeat: no-repeat
+			background-position-y: 50%
+			cursor: pointer
+		p:after
+			font-size: 32px
+			font-weight: 100
+			content: '>'
+			position: absolute
+			right: 30px
+			transform: rotate(0deg)
+		p.active:after
+			transform: rotate(90deg)
+			transition: all 0.4s ease-out
 #whoBox
 	background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
-	.main-container
+	.topicsButtonsWrapper
+		height: 80%
+		margin: 0 auto
 		background: url(/arc.png) top center no-repeat
-		background-size: 81%
+		background-size: 100%
+.more-apps
+	padding: 0
+	margin: 0
+	text-align: right
+	line-height: 1.4rem
+	.ghost-container
+		padding: 0 20px
+		img
+			width: 70px
+			position: relative
+			top: 10px
+			float: right
+			clear: both
+		p
+			width: 40%
+			float: right
+			clear: both
+	.btn-default
+		border-radius: 1.5rem 0 0 1.5rem
+		border-right-color: transparent
+		width: 70%
+		float: right
+		clear: both

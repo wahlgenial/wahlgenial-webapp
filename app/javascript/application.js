@@ -7,8 +7,8 @@ const mountFullpage = () => {
   $('#fullpage').fullpage({
     menu: '#menu',
     lockAnchors: true,
-    anchors: ['page1', 'page2', 'page3', 'page4'],
-    navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
+    // anchors: ['page1', 'page2', 'page3', 'page4'],
+    // navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
     showActiveTooltip: true,
     navigation: true,
     navigationPosition: 'right',

@@ -13,7 +13,7 @@ const TopicsButton = ({title, onPress, active, index, topicsCount}) => {
   }
 
   return (
-    <div className="d-inline px-1">
+    <div className="btn-container d-inline-block">
       <Button
         style={ { position: 'relative', top: `${positionPrecentage()}%` } }
         title={ title }

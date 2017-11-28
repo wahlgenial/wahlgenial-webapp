@@ -1,8 +1,24 @@
-<div class="col-lg-12">
-  <div class="main-container container col-lg-10 col-md-12">
+<div class="row h-100">
+  <div class="col-lg-3 col-md-12">
+    <h3>Wen soll ich wählen?</h3>
+    <p>Wähle ein Thema aus, um herauszufinden, wie die einzlenen Parteien dem Thema gegenüber stehen</p>
+  </div>
+  <div class="col-lg-6 col-md-12 h-100">
     <%= react_component(
       'ElectionPrograms',
       topics: @election_programs.map(&:to_h))
-    %>
+      %>
+    <div class="col-12">
+      Footer
+    </div>
+  </div>
+  <div class="col-lg-3 d-flex">
+    <div class="more-apps align-self-end py-5">
+      <div class="ghost-container">
+        <img src='/ghost.svg' />
+        <p>Noch nicht sicher, wen du wählen sollst?</p>
+      </div>
+      <a class='btn btn-default px-4 py-2 mt-4' href='#'>Mehr Wahl-Apps</a>
+    </div>
   </div>
 </div>

@@ -2,9 +2,11 @@ import React from 'react'
 const QuestionItem = ({text, onClick, opinions = null}) => {
   return (
     <div
-      className='px-5 py-4 bg-warning'
+      className='question-block px-5 py-4'
       onClick= { () => { onClick() } }>
-      {text}
+      <div className='question-block-wrapper'>
+        <p className={ (opinions !== null) ? 'active' : '' }>{text}</p>
+      </div>
       <div className='p-2 bg-primary'>
         {(opinions !== null) && (
           <OpinionBoard opinions={ opinions } />
@@ -33,7 +35,7 @@ const OpinionBoard = ({opinions}) => {
 }
 
 class QuestionsList extends React.Component {
-  state = {selectedQuestionIndex: null}
+  state = {selectedQuestionIndex: 0}
 
   selectedQuestion () {
     const {selectedQuestionIndex} = this.state
@@ -64,7 +66,7 @@ class QuestionsList extends React.Component {
   render () {
     const {questions} = this.props
     return (
-      <div className='px-5 py-4 bg-success'>
+      <div className='questionsListContainer col-lg-12'>
         {questions.map((question, index) => (
           <QuestionItem
             opinions={ this.handleOpinionData(index) }

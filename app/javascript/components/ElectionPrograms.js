@@ -8,7 +8,7 @@ class ElectionPrograms extends React.Component {
     super(props)
     this.handleSelectTopic = this.handleSelectTopic.bind(this)
   }
-  state = { selectedTopicIndex: null }
+  state = { selectedTopicIndex: 0 }
   selectedTopic () {
     const {selectedTopicIndex} = this.state
     const {topics} = this.props
@@ -27,18 +27,20 @@ class ElectionPrograms extends React.Component {
     const {selectedTopicIndex} = this.state
     return (
       <div>
-        <div className="topicsButtonsContainer row p-3 d-flex justify-content-center">
-          {topics.map((topic, index) => (
-            <TopicButton
-              key={ index }
-              index={ index }
-              topicsCount={ topics.length }
-              title={ topic.title }
-              active= { index === selectedTopicIndex }
-              onPress={ () => { this.handleSelectTopic(index) } } />
-          ))}
+        <div className="topicsButtonsContainer row">
+          <span className='topicsButtonsWrapper d-flex'>
+            {topics.map((topic, index) => (
+              <TopicButton
+                key={ index }
+                index={ index }
+                topicsCount={ topics.length }
+                title={ topic.title }
+                active= { index === selectedTopicIndex }
+                onPress={ () => { this.handleSelectTopic(index) } } />
+            ))}
+          </span>
         </div>
-        <div className="row">
+        <div className="QuestionsListContainer h-100">
           {this.topicSelected() && (
             <QuestionsList questions={ this.selectedTopic().questions } />
           )}
