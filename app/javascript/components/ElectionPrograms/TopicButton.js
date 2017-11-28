@@ -7,7 +7,8 @@ const TopicsButton = ({title, onPress, active, index, topicsCount}) => {
     // depended on elements count and its index
     const theRatio = (index / topicsCount)
     const shitPrecentage = 1 / topicsCount
-    const sum = (theRatio > 0.5) ? (1.00 - theRatio) : (theRatio + shitPrecentage)
+    let sum = (theRatio > 0.5) ? (1.00 - theRatio) : (theRatio + shitPrecentage)
+    if (sum >= 0.5) { sum = 0.46 } // middle child
     return Math.ceil(sum * 100)
   }
 
