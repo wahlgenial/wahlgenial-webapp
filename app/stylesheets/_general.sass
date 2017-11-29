@@ -44,6 +44,20 @@ footer
   background-color: $pompadour
   border-color: transparent
 
+.btn-yellow
+  background-color: $yellow
+
+.btn-yellow.active,
+.btn-yellow:hover,
+.btn-yellow:not([disabled]):not(.disabled):active,
+.btn-yellow:not([disabled]):not(.disabled).active
+	color: $white
+	border-color: $white
+	background-color: $yellow_30
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+
+
 .btn-default
   color: $white
   border-color: $white
@@ -104,6 +118,14 @@ footer
 		p.active:after
 			transform: rotate(90deg)
 			transition: all 0.4s ease-out
+.opinionsContainer
+	.btn-container
+		.btn-yellow
+			.party-name
+				float: left
+			.party-opinion
+				float: right
+
 #whoBox
 	background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
 	.topicsButtonsWrapper

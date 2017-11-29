@@ -1,4 +1,5 @@
 import React from 'react'
+import OpinionButton from './OpinionButton'
 const QuestionItem = ({text, onClick, opinions = null}) => {
   return (
     <div
@@ -7,7 +8,7 @@ const QuestionItem = ({text, onClick, opinions = null}) => {
       <div className='question-block-wrapper'>
         <p className={ (opinions !== null) ? 'active' : '' }>{text}</p>
       </div>
-      <div className='p-2 bg-primary'>
+      <div className='p-2'>
         {(opinions !== null) && (
           <OpinionBoard opinions={ opinions } />
         )}
@@ -16,19 +17,15 @@ const QuestionItem = ({text, onClick, opinions = null}) => {
   )
 }
 
-const OpinionItem = ({opinion}) => {
-  return (
-    <div>{opinion.party} - {opinion.opinion}</div>
-  )
-}
-
 const OpinionBoard = ({opinions}) => {
   return (
-    <div>
+    <div className='opinionsContainer'>
       { opinions.map((opinion, index) => (
-        <OpinionItem
+        <OpinionButton
+          opinion = { opinion }
+          onClick = { () => { alert('click') } }
           key={ index }
-          opinion={ opinion } />
+          active={ false } />
       ))}
     </div>
   )
