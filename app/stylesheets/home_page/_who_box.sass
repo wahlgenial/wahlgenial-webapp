@@ -1,0 +1,78 @@
+#whoBox
+	background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
+	.topicsButtonsWrapper
+		height: 80%
+		margin: 0 auto
+		background: url(/arc.png) top center no-repeat
+		background-size: 100%
+.who-description
+	h3, p
+		padding: inherit
+	h3
+		padding-bottom: 0
+		text-transform: uppercase
+	p
+		padding-top: 10px
+.more-apps
+	padding: 0
+	margin: 0
+	text-align: right
+	line-height: 1.4rem
+	.ghost-container
+		padding: 0 20px
+		img
+			width: 70px
+			position: relative
+			top: 10px
+			float: right
+			clear: both
+		p
+			width: 40%
+			float: right
+			clear: both
+	.btn-default
+		border-radius: 1.5rem 0 0 1.5rem
+		border-right-color: transparent
+		width: 70%
+		float: right
+		clear: both
+
+.topicsButtonsContainer
+	height: 210px
+	.btn-container
+		padding: 0 8px
+	.btn.btn-primary
+		text-transform: uppercase
+		font-size: 80%
+		font-weight: 100
+		letter-spacing: 0.2em
+		line-height: 1.8em
+.questionsListContainer
+	.question-block-wrapper
+		border-bottom: 1px solid $white
+	.question-block
+		p
+			background-image: url("/question-icon.png")
+			padding: 5px 0 5px 30px
+			background-size: 25px
+			background-position-x: 0
+			background-repeat: no-repeat
+			background-position-y: 50%
+			cursor: pointer
+		p:after
+			font-size: 32px
+			font-weight: 100
+			content: '>'
+			position: absolute
+			right: 30px
+			transform: rotate(0deg)
+		p.active:after
+			transform: rotate(90deg)
+			transition: all 0.4s ease-out
+.opinionsContainer
+	.btn-container
+		.btn-yellow
+			.party-name
+				float: left
+			.party-opinion
+				float: right

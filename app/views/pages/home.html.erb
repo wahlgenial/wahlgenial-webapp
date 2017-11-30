@@ -1,15 +1,15 @@
 <div id="fullpage">
- <div id='whyBox' class="section active">
-   <%= render 'why_box' %>
+ <div id='whyBox' class="section">
+    <%= render 'why_box' %>
  </div>
-  <div id='whoBox' class="section">
-   <%= render 'who_box' %>
+  <div id='whoBox' class="section active">
+    <%= render 'who_box' %>
   </div>
- <div class="section bg-warning">
-   <%= render 'how_box' %>
+ <div id='howBox' class="section">
+    <%= render 'how_box' %>
  </div>
- <div class="section bg-info">
-   <a class='btn btn-primary'href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+ <div id='whatBox' class="section">
+    <a class='btn btn-primary'href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
  </div>
 <%=render 'shared/footer' %>
 <%= javascript_pack_tag 'wahldatenhelfer_component' %>

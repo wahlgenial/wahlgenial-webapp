@@ -1,0 +1,72 @@
+// fullpage.js overrides:
+.fp-section.fp-table
+	display: flex
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+  background: $white
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span
+	background-color: $yellow
+#fp-nav ul li a span,
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+	height: 10px
+	width: 10px
+	margin: -5px 0 0 -5px
+
+#fp-nav ul li,
+.fp-slidesNav ul li
+	width: 24px
+	height: 24px
+
+ // bootstrap overrides
+.btn
+	border-radius: 1.5rem
+
+.btn-primary
+  color: $white
+  background-color: $pompadour
+  border-color: transparent
+
+.btn-yellow
+  background-color: $yellow
+
+.btn-yellow.active,
+.btn-yellow:hover,
+.btn-yellow:not([disabled]):not(.disabled):active,
+.btn-yellow:not([disabled]):not(.disabled).active
+	color: $white
+	border-color: $white
+	background-color: $yellow_30
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+
+
+.btn-default
+  color: $white
+  border-color: $white
+
+.btn-default.active,
+.btn-default:hover,
+.btn-default:not([disabled]):not(.disabled):active,
+.btn-default:not([disabled]):not(.disabled).active
+	color: $white
+	border-color: $white
+	background-color: $white_30
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+
+
+.btn-primary.active,
+.btn-primary:hover,
+.btn-primary:not([disabled]):not(.disabled):active,
+.btn-primary:not([disabled]):not(.disabled).active
+	color: $white
+	border-color: $white
+	background-color: $pompadour_light
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+
+// end overrides
