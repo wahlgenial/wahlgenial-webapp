@@ -20,9 +20,18 @@ const mountToolitp = () => {
   $('[data-toggle="tooltip"]').tooltip()
 }
 
+const menuToggler = () => {
+  $('.main-menu-open').click(() => {
+    $('.main-menu').addClass('open')
+  })
+  $('.main-menu-close').click(() => {
+    $('.main-menu').removeClass('open')
+  })
+}
 document.addEventListener('DOMContentLoaded', () => {
   mountToolitp()
   mountFullpage()
+  menuToggler()
   mountComponents({
     ElectionPrograms
   })
