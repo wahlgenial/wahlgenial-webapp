@@ -1,5 +1,6 @@
 import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
+import Glossary from './components/Glossary'
 
 require('bootstrap')
 require('fullpage.js')
@@ -28,10 +29,8 @@ const mountFullpage = () => {
 
 const viewNotMobile = () => {
   if (window.innerWidth > 570) {
-    console.log('true')
     return true
   } else {
-    console.log('false')
     return false
   }
 }
@@ -52,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
   mountToolitp()
   menuToggler()
   mountComponents({
-    ElectionPrograms
+    ElectionPrograms,
+    Glossary
   })
   // mountComponents is needed since there is an issue with jquery3 onReady method
   // https://github.com/reactjs/react-rails/issues/742

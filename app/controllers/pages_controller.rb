@@ -5,10 +5,16 @@ class PagesController < ApplicationController
 	end
 
 	def glossary
+		@terms = glossary_terms
 	end
 
 	private
+
 	def election_programs
 		ElectionPrograms::TopicReactDecorator.decorate_collection(ElectionPrograms::Topic.includes(questions: {opinions: :party}))
+	end
+
+	def glossary_terms
+		Glossary::TermReactDecorator.decorate(Glossary::Term.all.order('title ASC').group_by{ |t| t.title[0] })
 	end
 end
