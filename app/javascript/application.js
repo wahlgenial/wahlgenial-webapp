@@ -1,5 +1,6 @@
 import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
+
 require('bootstrap')
 require('fullpage.js')
 
@@ -24,6 +25,16 @@ const mountFullpage = () => {
 //     return false
 //   }
 // }
+
+const viewNotMobile = () => {
+  if (window.innerWidth > 570) {
+    console.log('true')
+    return true
+  } else {
+    console.log('false')
+    return false
+  }
+}
 const mountToolitp = () => {
   $('[data-toggle="tooltip"]').tooltip()
 }
@@ -37,8 +48,8 @@ const menuToggler = () => {
   })
 }
 document.addEventListener('DOMContentLoaded', () => {
+  if (viewNotMobile()) { mountFullpage() }
   mountToolitp()
-  mountFullpage()
   menuToggler()
   mountComponents({
     ElectionPrograms
