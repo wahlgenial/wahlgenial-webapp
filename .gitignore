@@ -20,5 +20,6 @@ config/database.yml
 /public/assets
 /public/packs
 /public/packs-test
+/public/uploads
 /node_modules
 .byebug_history

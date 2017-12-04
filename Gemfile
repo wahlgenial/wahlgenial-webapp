@@ -5,10 +5,16 @@ ruby '2.4.2'
 gem 'rails', '~> 5.1.4'
 gem 'jbuilder', '~> 2.0'
 gem 'haml'
+
 gem 'webpacker'
 gem 'react-rails'
-gem 'rails_admin', '~> 1.2'
 gem 'draper'
+
+gem 'rails_admin', '~> 1.2'
+
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3'

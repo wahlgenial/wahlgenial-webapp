@@ -1,0 +1,16 @@
+<div>
+  <div class="logo-container p-4">
+    <a href="#"><img src='/wahl-daten-helfer-logo.svg' /> </a>
+  </div>
+  <div class="text-center">
+    <h1 class="pb-5">
+      GLOSSAR
+    </h1>
+    <p class="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
+  </div>
+  <ul>
+    <%- ('a'..'z').to_a.push('ä', 'ö', 'ü').each do |letter| %>
+      <li><%=letter %></li>
+    <%- end %>
+  </ul>
+</div>
