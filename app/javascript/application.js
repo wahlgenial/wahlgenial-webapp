@@ -9,13 +9,21 @@ const mountFullpage = () => {
     lockAnchors: true,
     // anchors: ['page1', 'page2', 'page3', 'page4'],
     // navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
+    normalScrollElements: '.main-menu',
     showActiveTooltip: true,
     navigation: true,
     navigationPosition: 'right',
-    css3: false,
+    css3: true,
     lazyLoading: true
   })
 }
+// const menuIsOpened = () => {
+//   if ($('.main-menu').hasClass('open')) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
 const mountToolitp = () => {
   $('[data-toggle="tooltip"]').tooltip()
 }
