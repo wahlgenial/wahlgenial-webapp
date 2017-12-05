@@ -1,25 +1,44 @@
 import React from 'react'
+import LetterItem from './Glossary/LetterItem'
+import TermsList, {TermsEmpty} from './Glossary/TermsList'
 
 class Glossary extends React.Component {
-  state = { selectedTopicIndex: 0 }
+  // state = { selectedLetter: null }
+  state = { selectedLetter: 'W' } // Temporarily added
+  handleSelectLetter (letter) {
+    const {selectedLetter} = this.state
+    if (selectedLetter !== letter) this.setState({selectedLetter: letter})
+  }
+  filterLetter (letter) {
+    return this.props.lettersCollection.filter((letterObject) => {
+      return (letterObject.letter === letter)
+    })[0]
+  }
   render () {
     const {lettersCollection} = this.props
+    const {selectedLetter} = this.state
     return (
-      <div className='col-12 bg-warning'>
-        <h3>Hey</h3>
-        <ul>
-          {console.log(typeof lettersCollection)}
-          {console.log(Array.isArray(lettersCollection))}
-          {lettersCollection.map((letter) => (
-            <a className='px-1' href='#'>{letter.letter}({letter.count})</a>
+      <div id='glossary' className='col-12'>
+        <div className='letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0' >
+          {lettersCollection.map((letter, index) => (
+            <LetterItem
+              key={ index }
+              letter={ letter.letter }
+              count={ letter.count }
+              onClick = { () => { this.handleSelectLetter(letter.letter) } }
+              active={ letter.letter === selectedLetter } />
           ))}
-        </ul>
+        </div>
+        {!selectedLetter
+          ? <TermsEmpty />
+          : <TermsList letterData={ this.filterLetter(selectedLetter) } />
+        }
       </div>
     )
   }
 }
 
-Glossary.defaultProps = {}
+Glossary.defadivtProps = {}
 
 Glossary.propTypes = {}
 
