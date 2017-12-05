@@ -3,8 +3,8 @@ import LetterItem from './Glossary/LetterItem'
 import TermsList, {TermsEmpty} from './Glossary/TermsList'
 
 class Glossary extends React.Component {
-  // state = { selectedLetter: null }
-  state = { selectedLetter: 'W' } // Temporarily added
+  state = { selectedLetter: null }
+  // state = { selectedLetter: 'W' } // Temporarily added
   handleSelectLetter (letter) {
     const {selectedLetter} = this.state
     if (selectedLetter !== letter) this.setState({selectedLetter: letter})
