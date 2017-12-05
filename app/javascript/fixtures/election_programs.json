@@ -1,3 +1,40 @@
 {
-
+  "topics":
+    [
+      { "title": "Buldung",
+        "questions": [
+          { "title": "Question#1",
+            "text":"What is the question here ?",
+            "opinions": [
+              { "opinion" :"positive",
+                "party": "Party#1" },
+              { "opinion": "neutral",
+                "party":"Party#2" }
+                ]
+              },
+              { "title": "Question#2",
+                "text":"Where is the question here ?",
+                "opinions": [
+                  { "opinion": "negative",
+                    "party": "Party#1" },
+                  { "opinion": "positive",
+                    "party": "Party#2" }
+                ]
+              }]
+      },
+      { "title": "Arbeit",
+         "questions": [
+            { "title": "Question 3",
+              "text":"Question 3 text goes here!",
+              "opinions":
+              [ { "opinion": "positive",
+                  "party":"Party#1" }]
+              }]
+      },
+      { "title": "Asyl",
+        "questions": [] },
+      { "title": "Digital",
+        "questions": [] },
+      { "title": "Umwelt",
+        "questions":[] } ]
 }
