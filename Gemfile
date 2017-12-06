@@ -13,7 +13,6 @@ gem 'draper'
 gem 'rails_admin', '~> 1.2'
 
 gem 'carrierwave'
-gem 'fog'
 gem 'mini_magick'
 
 group :development, :test do
@@ -28,6 +27,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'fog'
 end
 
 group :development do

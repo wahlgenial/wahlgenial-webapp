@@ -9,7 +9,7 @@ const TermItem = ({title, description, image, imageThumb, onClick, selected}) =>
       {selected && (
         <div className='term-details clearfix'>
           <a href={ image } target='_blank'>
-            <img src={ imageThumb } />
+            <img className='px-1' src={ imageThumb } />
           </a>
           {description}
         </div>)}
