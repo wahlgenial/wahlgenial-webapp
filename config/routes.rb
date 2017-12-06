@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   controller :pages do
     get 'home'
     get 'glossary'
+    get 'election_apps'
   end
-
 end

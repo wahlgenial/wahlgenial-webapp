@@ -8,6 +8,9 @@ class PagesController < ApplicationController
 		@terms = glossary_terms
 	end
 
+	def election_apps
+	end
+
 	private
 
 	def election_programs
