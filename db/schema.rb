@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20171206101541) do
 
   create_table "election_apps_apps", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.text "description"
     t.string "image"
     t.integer "category_id"

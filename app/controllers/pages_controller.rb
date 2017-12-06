@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 	end
 
 	def election_apps
+		@apps_categories = election_apps_apps
 	end
 
 	private
@@ -19,5 +20,9 @@ class PagesController < ApplicationController
 
 	def glossary_terms
 		Glossary::TermReactDecorator.decorate(Glossary::Term.all.order('title ASC').group_by{ |t| t.title[0] })
+	end
+
+	def election_apps_apps
+		ElectionApps::CategoryReactDecorator.decorate(ElectionApps::Category.includes(:apps))
 	end
 end
