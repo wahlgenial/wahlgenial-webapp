@@ -1,15 +1,16 @@
 class Glossary::TermReactDecorator < Draper::Decorator
-
   def to_h
     collections = []
+    grouped_objects = grouped_by_title
+
     ('A'..'Z').to_a.push('Ä', 'Ö', 'Ü').each do |letter|
       letter_hash = {}
-      letter_records = object["#{letter}"]
+      letter_records = grouped_objects[letter]
       letter_hash['letter'] = letter
       letter_hash['count'] = letter_records.nil? ? 0 : letter_records.count
 
       terms = []
-      unless letter_records.nil?
+      if letter_records.present?
         letter_records.each do |record|
           term_record = {}
           term_record[:title] = record['title']
@@ -24,5 +25,11 @@ class Glossary::TermReactDecorator < Draper::Decorator
       collections.push(letter_hash)
     end
     collections
+  end
+
+  private
+
+  def grouped_by_title
+    object.group_by { |o| o.title[0].capitalize }
   end
 end
