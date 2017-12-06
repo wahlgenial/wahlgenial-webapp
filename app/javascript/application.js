@@ -1,6 +1,7 @@
 import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
 import Glossary from './components/Glossary'
+import ElectionApps from './components/ElectionApps'
 
 require('bootstrap')
 require('fullpage.js')
@@ -52,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggler()
   mountComponents({
     ElectionPrograms,
-    Glossary
+    Glossary,
+    ElectionApps
   })
   // mountComponents is needed since there is an issue with jquery3 onReady method
   // https://github.com/reactjs/react-rails/issues/742

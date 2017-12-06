@@ -2,9 +2,14 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import ElectionProgramsStory from './ElectionProgramsStory'
 import GlossaryStory from './GlossaryStory'
+import ElectionAppsStory from './ElectionAppsStory'
 import '../../stylesheets/application.sass'
 
 storiesOf('Election Programs')
-  .add('All View', () => <ElectionProgramsStory />)
+  .add('Whole View', () => <ElectionProgramsStory />)
+
 storiesOf('GLossary')
-  .add('All View', () => <GlossaryStory />)
+  .add('Whole View', () => <GlossaryStory />)
+
+storiesOf('ElectionApps')
+  .add('Whole View', () => <ElectionAppsStory />)
