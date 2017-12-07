@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def election_apps
-    @apps_categories = election_apps_apps
+    @apps_categories = election_apps_categories
   end
 
   private
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     ElectionPrograms::TopicReactDecorator.decorate_collection(ElectionPrograms::Topic.includes(questions: {opinions: :party}))
   end
 
-  def election_apps_apps
+  def election_apps_categories
     ElectionApps::CategoryReactDecorator.decorate(ElectionApps::Category.includes(:apps))
   end
 end
