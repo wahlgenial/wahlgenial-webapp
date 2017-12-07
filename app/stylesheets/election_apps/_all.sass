@@ -1,14 +1,24 @@
 #election-apps
   .app-block
-    width: 12rem
-    height: 21rem
+    width: 13rem
+    height: 19rem
     border: 0.2rem solid $white
     background-color: inherit
+    transition: all 0.3s ease-out
     border-radius: 1rem
     overflow: hidden
     clear: none
     .card-title
       font-weight: 600
+    .card-body
+      height: 100%
+      a
+        color: $white
+        font-weight: bold
+        font-size: 1.1rem
+    &:hover
+      background-color: $pompadour
+      transition: all 0.3s ease-out
     .card-text
       line-height: 1.2rem
     .card-footer
@@ -17,3 +27,7 @@
       bottom: 0
       width: 100%
       border: 0
+      a
+        color: $pompadour
+        font-weight: bold
+        font-size: 1.1rem

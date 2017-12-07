@@ -10,16 +10,25 @@
          "apps": [
             { "name": "App number 1",
                "description": "Was steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach! Was steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach! Was steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach!",
+               "link": "http://link.app",
                "image": null,
-               "image_thumb": null },
+               "image_thumb": null,
+               "logo": null,
+               "logo_smal": null },
             { "name": "App number 2",
                "description": "Was steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach!\r\nWas steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach!\r\nWas steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach!\r\nWas steckt eigentlich hinter den ganzen politischen Wörtern?\r\nSchau selbst nach!\r\n",
+               "link": "http://link.app",
                "image": null,
-               "image_thumb": null },
+               "image_thumb": null,
+               "logo": null,
+               "logo_smal": null },
             { "name": "App number 3",
                "description": "",
+               "link": "http://link.app",
                "image": null,
-               "image_thumb": null }
+               "image_thumb": null,
+               "logo": null,
+               "logo_smal": null }
          ]
       }
    ]
