@@ -2,23 +2,20 @@ require 'rails_helper'
 
 RSpec.describe ElectionPrograms::TopicReactDecorator do
   describe 'election programs react decorator' do
-    let(:output) {
-      [
-        {
-          title: 'topic',
-          questions: [
-            {
-              title: 'question',
-              text: 'the question text',
-              opinions: [
-                { opinion: 'positive', party: 'party1' },
-                { opinion: 'positive', party: 'party2' }
-              ]
-            }
-          ]
-        },
-      ]
-    }
+    let(:output) do
+      [{
+        title: 'topic',
+        questions: [
+          { title: 'question',
+            text: 'the question text',
+            opinions: [
+              { opinion: 'positive', party: 'party1' },
+              { opinion: 'positive', party: 'party2' }
+            ]
+          }
+        ]
+      }]
+    end
 
     it 'returns the correct data tree' do
       party_1 = create(:party, name: 'party1')
