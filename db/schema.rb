@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206101541) do
+ActiveRecord::Schema.define(version: 20171207140617) do
 
   create_table "election_apps_apps", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20171206101541) do
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "logo"
+    t.string "link"
   end
 
   create_table "election_apps_categories", force: :cascade do |t|
