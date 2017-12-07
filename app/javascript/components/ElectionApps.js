@@ -1,4 +1,5 @@
 import React from 'react'
+import CategoryItem from './ElectionApps/CategoryItem'
 
 class ElectionApps extends React.Component {
   state = { selectedApp: null }
@@ -7,30 +8,15 @@ class ElectionApps extends React.Component {
     console.log(this.props)
     const {appsCategories} = this.props
     return (
-      <div id='election-apps' className='col-12 bg-warning'>
+      <div id='election-apps' className='d-flex flex-wrap'>
         {appsCategories.map((category, index) => (
-          <CategoryItem
+          category.apps.length !== 0 && (<CategoryItem
             title={ category.title }
-            apps={ category.apps }
-          />
+            apps={ category.apps } />)
         ))}
       </div>
     )
   }
-}
-
-const CategoryItem = ({title, apps}) => {
-  return (
-    <div>
-      <h1>{title}</h1>
-      {apps.map((app, index) => (
-        <div>
-          <h3>{app.name}</h3>
-          <p>{app.description}</p>
-        </div>
-      ))}
-    </div>
-  )
 }
 
 ElectionApps.defadivtProps = {}
