@@ -14,8 +14,11 @@ class ElectionApps::CategoryReactDecorator < Draper::Decorator
           app = {
             name: record_app.name,
             description: record_app.description,
+            link: record_app.link,
             image: record_app.image_url,
             image_thumb: record_app.image_url(:thumb),
+            logo: record_app.logo_url,
+            logo_thumb: record_app.logo_url(:small),
           }
           category[:apps].push(app)
         end
