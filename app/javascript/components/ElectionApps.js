@@ -33,6 +33,7 @@ class ElectionApps extends React.Component {
           category.apps.length !== 0 && (
             <CategoryItem
               categoryIndex={ index }
+              icon={ category.icon }
               title={ category.title }
               apps={ category.apps }
               onClick = { (categoryIndex, appIndex) => { this.handleAppSelect(categoryIndex, appIndex) } } />)

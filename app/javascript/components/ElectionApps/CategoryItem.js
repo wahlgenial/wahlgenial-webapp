@@ -1,13 +1,18 @@
 import React from 'react'
 
-const CategoryItem = ({title, categoryIndex, apps, onClick}) => {
+const CategoryItem = ({icon, title, categoryIndex, apps, onClick}) => {
   const handleClick = (appId) => {
     onClick(categoryIndex, appId)
   }
   return (
-    <div className='px-4'>
-      <h1>{title}</h1>
-      <span className='h-100'>
+    <div className='px-4 col-12 text-center'>
+      <div className='m-auto category-container'>
+        <div className='category-title text-left'>
+          <div className='category-title-icon'>
+            <img src={ icon } title={ title } />
+          </div>
+          <h1>{title}</h1>
+        </div>
         {apps.map((app, index) => (
           <AppItem
             onClick={ () => { handleClick(index) } }
@@ -15,7 +20,7 @@ const CategoryItem = ({title, categoryIndex, apps, onClick}) => {
             description={ app.description }
             link={ app.link } />
         ))}
-      </span>
+      </div>
     </div>
   )
 }
