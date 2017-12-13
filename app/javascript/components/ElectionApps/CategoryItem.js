@@ -44,7 +44,7 @@ const AppItem = ({name, description, link, onClick}) => {
   }
   return (
     <div className='app-block card d-inline-block mx-1'>
-      <div className="card-body text-left py-4" onClick={ () => { handleClick() } }>
+      <div className="card-body text-left py-4" onClick={ (e) => { handleClick(e) } }>
         <h4 className="card-title pt-2">{name}</h4>
         <p className="card-text">{descriptionTurncate()}</p>
         <a href='#' onClick={ (e) => { handleClick(e) } }>
