@@ -33,3 +33,12 @@ Run `$ yarn stroybook` for storybook. Stories are located in `/app/javascript/st
 
 ### Webpacker
 Webpacker is used as a pipeline for JavaScript, to run the development server, run `$ webpack-dev-server`
+
+
+## Available Assets
+### ElectionApps Category Icons
+Currently the only icons available for `icon_name` field are:
+- decisions
+- infos
+- questions
+- unknown
