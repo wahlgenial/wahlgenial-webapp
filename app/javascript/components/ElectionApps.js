@@ -1,6 +1,5 @@
 import React from 'react'
 import CategoryItem from './ElectionApps/CategoryItem'
-
 class ElectionApps extends React.Component {
   state = {
     selectedCategoryIndex: null,
@@ -32,8 +31,9 @@ class ElectionApps extends React.Component {
         {appsCategories.map((category, index) => (
           category.apps.length !== 0 && (
             <CategoryItem
+              key={ index }
               categoryIndex={ index }
-              icon={ category.icon }
+              iconName={ category.icon_name }
               title={ category.title }
               apps={ category.apps }
               onClick = { (categoryIndex, appIndex) => { this.handleAppSelect(categoryIndex, appIndex) } } />)
