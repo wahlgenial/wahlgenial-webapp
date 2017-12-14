@@ -1,8 +1,9 @@
 import React from 'react'
 import {isDeviceMobile} from '../../utils/functions'
-const AppItem = ({name, description, link, onClick}) => {
+import $ from 'jquery'
+const AppItem = ({name, description, link, selected, onClick}) => {
   const descriptionTurncate = () => {
-    return description.substring(0, 82) + ' ...'
+    return description.substring(0, 98) + ' ...'
   }
   const handleClick = (e) => {
     if (isDeviceMobile()) {
@@ -10,9 +11,13 @@ const AppItem = ({name, description, link, onClick}) => {
     } else {
       onClick()
     }
+    e.preventDefault()
+    $('html, body').animate({
+      scrollTop: 0
+    }, 300)
   }
   return (
-    <div className='app-block card d-inline-block mx-1'>
+    <div className={ 'app-block card d-inline-block mx-1' + (!selected ? '' : ' selected') }>
       <a href='#app-description'>
         <div className="card-body text-left py-4" onClick={ (e) => { handleClick(e) } }>
           <h4 className="card-title pt-2">{name}</h4>

@@ -2,10 +2,11 @@ import React from 'react'
 import {ElectionAppsCategoriesIcons} from '../../images/icons'
 import AppItem from './AppItem'
 
-const CategoryItem = ({iconName, title, categoryIndex, apps, onClick}) => {
+const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppSelected}) => {
   const handleClick = (appId) => {
     onClick(categoryIndex, appId)
   }
+
   const handleIcon = (iconString) => {
     if (!iconString || iconString === ' ') {
       return (ElectionAppsCategoriesIcons.unknown)
@@ -28,7 +29,8 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick}) => {
             onClick={ () => { handleClick(index) } }
             name={ app.name }
             description={ app.description }
-            link={ app.link } />
+            link={ app.link }
+            selected={ handleAppSelected(index, categoryIndex) } />
         ))}
       </div>
     </div>
