@@ -1,11 +1,13 @@
 import React from 'react'
 import CategoryItem from './ElectionApps/CategoryItem'
+import AppDescription from './ElectionApps/AppDescription'
 class ElectionApps extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       selectedCategoryIndex: null,
       selectedAppIndex: null,
+      // copy categories keys into array
       categoryIndexOrder: Object.keys(this.props.appsCategories)
     }
   }
@@ -17,8 +19,9 @@ class ElectionApps extends React.Component {
     })
   }
   orderedAppsCategories () {
+    // this function rearranges the selected category to the top
     const {categoryIndexOrder, selectedCategoryIndex} = this.state
-    if (this.appSelected()) {
+    if (this.isAppSelected()) {
       categoryIndexOrder.unshift(
         categoryIndexOrder.splice(
           categoryIndexOrder.indexOf(selectedCategoryIndex),
@@ -28,9 +31,15 @@ class ElectionApps extends React.Component {
     return categoryIndexOrder
   }
 
-  appSelected () {
+  isAppSelected () {
     const {selectedCategoryIndex, selectedAppIndex} = this.state
     return (selectedCategoryIndex !== null && selectedAppIndex !== null)
+  }
+
+  selectedApp () {
+    const {selectedCategoryIndex, selectedAppIndex} = this.state
+    const {appsCategories} = this.props
+    return appsCategories[selectedCategoryIndex].apps[selectedAppIndex]
   }
   render () {
     const {selectedCategoryIndex, selectedAppIndex} = this.state
@@ -38,8 +47,13 @@ class ElectionApps extends React.Component {
     return (
       <div id='election-apps' className='d-flex flex-wrap'>
         <div className='row col-12'>
-          {this.appSelected() && (
+          {this.isAppSelected() && (
             <div className='app-details col-5 row mx-auto'>
+              <AppDescription
+
+                appName={ this.selectedApp().name }
+
+              />
               categoryIndex: {selectedCategoryIndex}<br />
               selectedAppIndex: {selectedAppIndex}
             </div>)

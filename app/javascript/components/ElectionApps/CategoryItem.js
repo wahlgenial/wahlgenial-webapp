@@ -1,5 +1,6 @@
 import React from 'react'
 import {ElectionAppsCategoriesIcons} from '../../images/icons'
+import AppItem from './AppItem'
 
 const CategoryItem = ({iconName, title, categoryIndex, apps, onClick}) => {
   const handleClick = (appId) => {
@@ -33,29 +34,4 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick}) => {
     </div>
   )
 }
-
-const AppItem = ({name, description, link, onClick}) => {
-  const descriptionTurncate = () => {
-    return description.substring(0, 82) + ' ...'
-  }
-  const handleClick = (e) => {
-    onClick()
-    e.preventDefault()
-  }
-  return (
-    <div className='app-block card d-inline-block mx-1'>
-      <div className="card-body text-left py-4" onClick={ (e) => { handleClick(e) } }>
-        <h4 className="card-title pt-2">{name}</h4>
-        <p className="card-text">{descriptionTurncate()}</p>
-        <a href='#' onClick={ (e) => { handleClick(e) } }>
-          mehr
-        </a>
-      </div>
-      <div className="card-footer text-center py-2">
-        <a href={ !link ? '#' : link }> Los geht's </a>
-      </div>
-    </div>
-  )
-}
-
 export default CategoryItem
