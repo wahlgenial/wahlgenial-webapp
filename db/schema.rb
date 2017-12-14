@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207140617) do
+ActiveRecord::Schema.define(version: 20171214154217) do
 
   create_table "election_apps_apps", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171207140617) do
     t.integer "question_id"
     t.integer "party_id"
     t.integer "opinion"
+    t.text "statement"
   end
 
   create_table "election_programs_parties", force: :cascade do |t|

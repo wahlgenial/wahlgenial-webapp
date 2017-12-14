@@ -9,8 +9,8 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
           { title: 'question',
             text: 'the question text',
             opinions: [
-              { opinion: 'positive', party: 'party1' },
-              { opinion: 'positive', party: 'party2' }
+              { opinion: 'positive', party: 'party1', statement: 'Part1 statement' },
+              { opinion: 'positive', party: 'party2', statement: 'Part2 statement' }
             ]
           }
         ]
@@ -22,8 +22,8 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
       party_2 = create(:party, name: 'party2')
       topic = create(:topic, title: 'topic', details: 'The topic details')
       question = create(:question, title: 'question', text: 'the question text', topic: topic)
-      create(:opinion, opinion: 'positive', party: party_1, question: question)
-      create(:opinion, opinion: 'positive', party: party_2, question: question)
+      create(:opinion, opinion: 'positive', party: party_1, statement: 'Part1 statement', question: question)
+      create(:opinion, opinion: 'positive', party: party_2, statement: 'Part2 statement',question: question)
       # array of hashes
       election_programs = ElectionPrograms::TopicReactDecorator.decorate_collection(
         ElectionPrograms::Topic.includes(:questions) )

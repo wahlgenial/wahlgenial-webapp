@@ -13,7 +13,8 @@ class ElectionPrograms::TopicReactDecorator < Draper::Decorator
       question.opinions.each do |opinion|
         opinion_hash = {
           opinion: opinion.opinion,
-          party: opinion.party.name
+          party: opinion.party.name,
+          statement: opinion.statement
         }
         question_hash[:opinions] << opinion_hash
       end
