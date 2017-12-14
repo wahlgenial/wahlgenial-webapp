@@ -1,4 +1,5 @@
 #election-apps
+  .app-details
   .category-title
     h2
       font-size: 1.4rem
@@ -22,15 +23,23 @@
     border-radius: 1rem
     overflow: hidden
     clear: none
+    a
+      color: $white
+      text-decoration: none
+      &:hover
+        text-decoration: none
+        .more
+          text-decoration: underline
     .card-title
       font-size: 1.4rem
       font-weight: 600
     .card-body
       height: 100%
-      a
+      .more
         color: $white
         font-weight: bold
         font-size: 1.1rem
+
     &:hover
       cursor: pointer
       background-color: $pompadour
@@ -43,7 +52,10 @@
       bottom: 0
       width: 100%
       border: 0
-      a
-        color: $pompadour
-        font-weight: bold
-        font-size: 1.1rem
+    a.footer-link
+      color: $pompadour
+      font-weight: bold
+      font-size: 1.1rem
+      &:hover
+        .card-footer
+          text-decoration: underline
