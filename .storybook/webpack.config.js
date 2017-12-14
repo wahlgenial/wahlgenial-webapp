@@ -4,12 +4,11 @@ module.exports = {
   module: {
     rules: [
       { test: /\.sass$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
-      },
+        loaders: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.(png|jpg|gif|svg)$/,
-            use: [
-              { loader: 'url-loader' }
-            ]
+        use: [
+          { loader: 'url-loader' }
+        ]
       },
     ]
   }
