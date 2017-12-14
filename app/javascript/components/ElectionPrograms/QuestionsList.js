@@ -17,18 +17,56 @@ const QuestionItem = ({text, onClick, opinions = null}) => {
   )
 }
 
-const OpinionBoard = ({opinions}) => {
-  return (
-    <div className='opinionsContainer'>
-      { opinions.map((opinion, index) => (
-        <OpinionButton
-          opinion = { opinion }
-          onClick = { () => { alert('click') } }
-          key={ index }
-          active={ false } />
-      ))}
-    </div>
-  )
+class OpinionBoard extends React.Component {
+  state = {
+    selectedOpinionIndex: null
+  }
+  constructor (props) {
+    super(props)
+    this.handleStatementShow = this.handleStatementShow.bind(this)
+  }
+
+  handleStatementShow (opinionIndex) {
+    if (this.state.selectedOpinionIndex !== opinionIndex) {
+      this.setState({selectedOpinionIndex: opinionIndex})
+    }
+  }
+
+  isOpinionIsSelected (opinionIndex) {
+    if (this.state.selectedOpinionIndex === opinionIndex) {
+      return true
+    } else {
+      return false
+    }
+  }
+  currentOpinionStatement () {
+    const {selectedOpinionIndex} = this.state
+    const {opinions} = this.props
+    if (selectedOpinionIndex === null) return ''
+    return opinions[selectedOpinionIndex].statement
+  }
+
+  render () {
+    const {opinions} = this.props
+    const {selectedOpinionIndex} = this.state
+    return (
+      <div className='opinionsContainer'>
+        { opinions.map((opinion, index) => (
+          <OpinionButton
+            opinion = { opinion }
+            onClick = { this.handleStatementShow }
+            key={ index }
+            opinionIndex={ index }
+            active={ this.isOpinionIsSelected(index) } />
+        ))}
+        {(selectedOpinionIndex !== null) && (
+          <div className='col p-3'>
+            {this.currentOpinionStatement()}
+          </div>
+        )}
+      </div>
+    )
+  }
 }
 
 class QuestionsList extends React.Component {

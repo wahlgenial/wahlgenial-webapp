@@ -7,18 +7,22 @@
             "text":"What is the question here ?",
             "opinions": [
               { "opinion" :"positive",
-                "party": "Party#1" },
+                "party": "Party#1",
+                "statement": "Statement Party#1 about Question#1" },
               { "opinion": "neutral",
-                "party":"Party#2" }
+                "party":"Party#2",
+                "statement": "Statement Party#2 about Question#1" }
                 ]
               },
               { "title": "Question#2",
                 "text":"Where is the question here ?",
                 "opinions": [
                   { "opinion": "negative",
-                    "party": "Party#1" },
+                    "party": "Party#1",
+                    "statement": "Statement Party#1 about Question#2" },
                   { "opinion": "positive",
-                    "party": "Party#2" }
+                    "party": "Party#2",
+                    "statement": "Statement Party#2 about Question#2" }
                 ]
               }]
       },
@@ -28,7 +32,8 @@
               "text":"Question 3 text goes here!",
               "opinions":
               [ { "opinion": "positive",
-                  "party":"Party#1" }]
+                  "party":"Party#1",
+                  "statement": "Statement Party#1 about Question#3" }]
               }]
       },
       { "title": "Asyl",
