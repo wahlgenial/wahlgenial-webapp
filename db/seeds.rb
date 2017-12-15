@@ -21,4 +21,22 @@ if Rails.env.development?
     { id: 4, opinion: 'positive', party_id: 2, question_id: 2} ]
   ElectionPrograms::Opinion.create(opinions)
 
+  political_agreements = [
+
+    { id: 1,
+      title:'Endgültiges Ergebnis der Namentlichen Abstimmung Nr. 1' ,
+      image: '',
+      votes_total: 664, votes_yes: 504, votes_no: 152, votes_abstentions: 8, votes_unset: 45, votes_unvalid: 0 },
+
+    { id: 2,
+      title:'Endgültiges Ergebnis der Namentlichen Abstimmung Nr. 2' ,
+      image: '',
+      votes_total: 664, votes_yes: 504, votes_no: 152, votes_abstentions: 8, votes_unset: 45, votes_unvalid: 0 },
+
+    { id: 3,
+      title:'Endgültiges Ergebnis der Namentlichen Abstimmung Nr. 3' ,
+      image: '',
+      votes_total: 664, votes_yes: 504, votes_no: 152, votes_abstentions: 8, votes_unset: 45, votes_unvalid: 0 } ]
+    BundestagVote::PoliticalAgreement.create(political_agreements)
+
 end

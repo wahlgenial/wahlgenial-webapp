@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @election_programs = election_programs
+    @political_agreements = BundestagVote::PoliticalAgreement.all.limit(3)
   end
 
   def glossary

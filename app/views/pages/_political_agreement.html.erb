@@ -1,0 +1,33 @@
+<div class="card d-inline-block mx-1">
+  <div class="card-body">
+    <div class="card-title pt-2 text-center">
+      <%= political_agreement.title %>
+    </div>
+    <div class="card-image">
+      <% unless political_agreement.image_url(:thumb).nil? %>
+        <img src='<%= political_agreement.image_url(:thumb) %>' />
+      <% end %>
+    </div>
+  </div>
+  <div class="card-footer text-center py-2">
+    <div class="row">
+      <div class="col-3">
+        <%= political_agreement.votes_yes %>
+        <%= link_to image_tag('/positive.png'), :root %>
+      </div>
+      <div class="col-6">
+        <div class="final-result">
+          <% if political_agreement.votes_yes > political_agreement.votes_no %>
+            <%= image_tag('/positive.png') %>
+          <% else %>
+            <%= image_tag('/negative.png') %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-3">
+        <%= political_agreement.votes_no %>
+        <%= link_to image_tag('/negative.png'), :root %>
+      </div>
+    </div>
+  </div>
+</div>

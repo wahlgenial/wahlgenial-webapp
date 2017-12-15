@@ -1,0 +1,11 @@
+<div class="what-box-container h-100">
+  <div class="what-description col-lg-4 col-md-12 pt-5 pl-5 m-auto text-center">
+    <h1>Was ist passiert aktuell in der Politik?</h1>
+    <p class="col-lg-8 m-auto pt-3">Sieh dir die letzten Abstimmungen aus dem Bundestag an</p>
+  </div>
+  <div class="political-agreements-container mt-5 d-flex flex-row justify-content-center">
+    <%- @political_agreements.each do |political_agreement| %>
+      <%= render 'political_agreement', political_agreement: political_agreement %>
+    <% end %>
+  </div>
+</div>
