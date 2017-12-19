@@ -41,8 +41,8 @@ if Rails.env.development?
     end
 
   election_apps_categories = [
-    { id: 1, title: 'Apps Category 1', description: 'Here is description for Category 1' },
-    { id: 2, title: 'Apps Category 2', description: 'Here is description for Category 2' },
+    { id: 1, title: 'Apps Category 1', icon_name: 'infos', description: 'Here is description for Category 1' },
+    { id: 2, title: 'Apps Category 2', icon_name: 'questions', description: 'Here is description for Category 2' },
   ]
   begin
     ElectionApps::Category.create(election_apps_categories)
