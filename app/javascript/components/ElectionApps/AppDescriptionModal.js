@@ -13,41 +13,39 @@ const AppDescriptionModal = ({isOpen, toggleModal, name, logo, image, descriptio
   }
 
   return (
-    <div>
-      <Modal
-        onAfterOpen = { () => { onAfterOpenCallback() } }
-        onRequestClose = { () => { onRequestCloseCallback() } }
-        className={ {
-          base: 'app-description-modal',
-          afterOpen: 'app-description-modal-opened',
-          beforeClose: 'app-description-modal-closed'
-        } }
-        overlayClassName={ {
-          base: 'app-description-modal-overlay',
-          afterOpen: 'app-description-modal-overlay-opened',
-          beforeClose: 'app-description-modal-overlay-closed'
-        } }
-        isOpen={ isOpen }
-        closeTimeoutMS={ 99 }
-        style={ styles.modal }
-        ariaHideApp={ false }
-        role='document'
-        aria={ { labelledby: 'heading', describedby: 'app-description' } }>
-        <div id="heading">
-          <div style={ styles.closeIconContainer } onClick={ () => { toggleModal() } }>
-            <img style={ styles.closeIcon } src={ icons.menuClose } />
-          </div>
+    <Modal
+      onAfterOpen = { () => { onAfterOpenCallback() } }
+      onRequestClose = { () => { onRequestCloseCallback() } }
+      className={ {
+        base: 'app-description-modal',
+        afterOpen: 'app-description-modal-opened',
+        beforeClose: 'app-description-modal-closed'
+      } }
+      overlayClassName={ {
+        base: 'app-description-modal-overlay',
+        afterOpen: 'app-description-modal-overlay-opened',
+        beforeClose: 'app-description-modal-overlay-closed'
+      } }
+      isOpen={ isOpen }
+      closeTimeoutMS={ 99 }
+      style={ styles.modal }
+      ariaHideApp={ false }
+      role='document'
+      aria={ { labelledby: 'heading', describedby: 'app-description' } }>
+      <div id="heading">
+        <div style={ styles.closeIconContainer } onClick={ () => { toggleModal() } }>
+          <img style={ styles.closeIcon } src={ icons.menuClose } />
         </div>
-        <div id="app-description" style={ styles.appDescription }>
-          <AppDescription
-            name={ name }
-            logo={ logo }
-            image={ image }
-            description={ description }
-            link={ link } />
-        </div>
-      </Modal>
-    </div>
+      </div>
+      <div id="app-description" style={ styles.appDescription }>
+        <AppDescription
+          name={ name }
+          logo={ logo }
+          image={ image }
+          description={ description }
+          link={ link } />
+      </div>
+    </Modal>
   )
 }
 

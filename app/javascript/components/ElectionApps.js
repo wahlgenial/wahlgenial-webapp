@@ -71,9 +71,9 @@ class ElectionApps extends React.Component {
     const selectedAppDetails = this.selectedApp()
     return (
       <div id='election-apps' className='d-flex flex-wrap'>
-        <div className='row col-12 no-gutters'>
+        <div className='col-lg-12'>
           {this.isAnyAppSelected() && (
-            <div>
+            <div className='row col-12 no-gutters'>
               {isDeviceMobile()
                 ? (<AppDescriptionModal
                   isOpen={ appModalIsOpen }
