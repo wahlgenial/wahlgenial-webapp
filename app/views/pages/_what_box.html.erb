@@ -1,9 +1,9 @@
-<div class="what-box-container h-100">
-  <div class="what-description col-lg-4 col-md-12 pt-5 pl-5 m-auto text-center">
-    <h1>Was ist passiert aktuell in der Politik?</h1>
-    <p class="col-lg-8 m-auto pt-3">Sieh dir die letzten Abstimmungen aus dem Bundestag an</p>
+<div class="what-box-container">
+  <div class="what-description col-lg-5 col-md-12 pt-4 pl-5 m-auto text-center">
+    <h2>Was ist passiert aktuell in der Politik?</h2>
+    <p class="col-lg-8 m-auto my-2">Sieh dir die letzten Abstimmungen aus dem Bundestag an</p>
   </div>
-  <div class="political-agreements-container mt-5 d-flex flex-row justify-content-center">
+  <div class="political-agreements-container row col-lg-10 no-gutters mx-auto mt-3">
     <%- @political_agreements.each do |political_agreement| %>
       <%= render 'political_agreement', political_agreement: political_agreement %>
     <% end %>
