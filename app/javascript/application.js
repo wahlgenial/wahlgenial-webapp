@@ -42,9 +42,11 @@ const mountToolitp = () => {
 const menuToggler = () => {
   $('.main-menu-open').click(() => {
     $('.main-menu').addClass('open')
+    $('body').addClass('main-menu-open')
   })
   $('.main-menu-close').click(() => {
     $('.main-menu').removeClass('open')
+    $('body').removeClass('main-menu-open')
   })
 }
 document.addEventListener('DOMContentLoaded', () => {

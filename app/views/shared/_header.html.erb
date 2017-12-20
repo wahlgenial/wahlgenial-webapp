@@ -1,9 +1,8 @@
 <header class="header w-100">
   <div class="main-menu-toggler-container">
-    <a class="main-menu-toggler main-menu-open" href="#"><img src='/menu-open.svg' /> </a>
+    <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
   </div>
   <div class="main-menu h-100 w-100 no-gutters">
-
     <div class="col-12 d-flex">
       <%= render 'shared/header_logo' %>
       <div class="col-lg-2 p-4 my-2 col-md-4 ml-auto">
@@ -30,7 +29,7 @@
       </div>
     </div>
     <div class="main-menu-toggler-container">
-      <a class="main-menu-toggler main-menu-close" href="#"> <img src='/menu-close.svg' /> </a>
+      <%= link_to image_tag(asset_pack_path('images/icon-menu-close.svg')), '#', class: 'main-menu-toggler main-menu-close' %>
     </div>
 
   </div>
