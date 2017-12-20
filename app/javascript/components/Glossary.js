@@ -4,7 +4,6 @@ import TermsList, {TermsEmpty} from './Glossary/TermsList'
 
 class Glossary extends React.Component {
   state = { selectedLetter: null }
-  // state = { selectedLetter: 'W' } // Temporarily added
   handleSelectLetter (letter) {
     const {selectedLetter} = this.state
     if (selectedLetter !== letter) this.setState({selectedLetter: letter})
@@ -18,8 +17,8 @@ class Glossary extends React.Component {
     const {lettersCollection} = this.props
     const {selectedLetter} = this.state
     return (
-      <div id='glossary' className='col-12'>
-        <div className='letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0' >
+      <div id="glossary" className="col-12">
+        <div className="letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0" >
           {lettersCollection.map((letter, index) => (
             <LetterItem
               key={ index }

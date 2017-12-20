@@ -15,7 +15,7 @@ const LetterItem = ({letter, count, active, onClick}) => {
     <a
       className={ prepareItemClass() }
       onClick={ (e) => { prepareItemClick(e) } }
-      href='#'>
+      href="#">
       {letter}
     </a>
   )

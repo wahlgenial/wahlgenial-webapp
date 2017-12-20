@@ -70,10 +70,10 @@ class ElectionApps extends React.Component {
     const {appsCategories} = this.props
     const selectedAppDetails = this.selectedApp()
     return (
-      <div id='election-apps' className='d-flex flex-wrap'>
-        <div className='col-lg-12'>
+      <div id="election-apps" className="d-flex flex-wrap">
+        <div className="col-lg-12">
           {this.isAnyAppSelected() && (
-            <div className='row col-12 no-gutters'>
+            <div className="row col-12 no-gutters">
               {isDeviceMobile()
                 ? (<AppDescriptionModal
                   isOpen={ appModalIsOpen }
@@ -84,7 +84,7 @@ class ElectionApps extends React.Component {
                   description={ selectedAppDetails.description }
                   link={ selectedAppDetails.link } />)
                 : (
-                  <div className='app-details row col-12 no-gutters'>
+                  <div className="app-details row col-12 no-gutters">
                     <AppDescription
                       name={ selectedAppDetails.name }
                       logo={ selectedAppDetails.logo }
@@ -96,7 +96,7 @@ class ElectionApps extends React.Component {
             </div>)
           }
         </div>
-        <div id='app-description' className='m-auto category-container'></div>
+        <div id="app-description" className="m-auto category-container"></div>
         {this.orderedAppsCategories().map((orderedIndex, index) => {
           let category = appsCategories[orderedIndex]
           return (category.apps && category.apps.length !== 0) && (

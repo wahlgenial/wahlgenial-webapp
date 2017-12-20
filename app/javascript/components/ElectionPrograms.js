@@ -28,7 +28,7 @@ class ElectionPrograms extends React.Component {
     return (
       <div>
         <div className="topicsButtonsContainer row">
-          <span className='topicsButtonsWrapper d-flex'>
+          <span className="topicsButtonsWrapper d-flex">
             {topics.map((topic, index) => (
               <TopicButton
                 key={ index }

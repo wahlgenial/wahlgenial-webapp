@@ -3,12 +3,12 @@ import OpinionButton from './OpinionButton'
 const QuestionItem = ({text, onClick, opinions = null}) => {
   return (
     <div
-      className='question-block px-5 py-4'
+      className="question-block px-5 py-4"
       onClick= { () => { onClick() } }>
-      <div className='question-block-wrapper'>
+      <div className="question-block-wrapper">
         <p className={ (opinions !== null) ? 'active' : '' }>{text}</p>
       </div>
-      <div className='p-2'>
+      <div className="p-2">
         {(opinions !== null) && (
           <OpinionBoard opinions={ opinions } />
         )}
@@ -50,7 +50,7 @@ class OpinionBoard extends React.Component {
     const {opinions} = this.props
     const {selectedOpinionIndex} = this.state
     return (
-      <div className='opinionsContainer'>
+      <div className="opinionsContainer">
         { opinions.map((opinion, index) => (
           <OpinionButton
             opinion = { opinion }
@@ -60,7 +60,7 @@ class OpinionBoard extends React.Component {
             active={ this.isOpinionIsSelected(index) } />
         ))}
         {(selectedOpinionIndex !== null) && (
-          <div className='col p-3'>
+          <div className="col p-3">
             {this.currentOpinionStatement()}
           </div>
         )}
@@ -101,7 +101,7 @@ class QuestionsList extends React.Component {
   render () {
     const {questions} = this.props
     return (
-      <div className='questionsListContainer col-lg-12'>
+      <div className="questionsListContainer col-lg-12">
         {questions.map((question, index) => (
           <QuestionItem
             opinions={ this.handleOpinionData(index) }
