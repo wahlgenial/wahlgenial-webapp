@@ -5,13 +5,11 @@
     border: 0.2rem solid $white
     background-color: $white_transparent
     transition: all 0.3s ease-out
-    border-radius: 0.1rem
+    border-radius: 0.6rem
     overflow: hidden
     clear: none
     &:hover
       cursor: pointer
-      background-color: $pompadour
-      transition: all 0.3s ease-out
 
   // mobile version
   @include media-breakpoint-down(sm)
@@ -20,6 +18,7 @@
     .card-text
       display: none
     .app-block
+      border-radius: 0.1rem
       display: inline-block
       padding: 0 1rem
       &:hover
@@ -42,16 +41,20 @@
         padding: 0
         margin: 0
         float: left
-        width: 70%
-      h5
+        width: 80%
+      .more-icon
         font-size: 1rem
         display: inline-block
         padding: 0
         margin: 0
         float: left
-        width: 30%
+        width: 20%
+        img
+          width: 0.8rem
+      .more-text
+        display: none
     .app-description
-      padding: 0
+      padding: 0.1rem 0
       margin: 0
       float: left
       width: 60%
@@ -60,13 +63,22 @@
       margin: 0
       float: left
       width: 40%
+      overflow: visible
       a
         color: $white
         font-size: 1rem
         &:hover
           .card-footer
       .card-footer
-        background-color: $white_transparent
+        background-color: $yellow
+        writing-mode: initial
+        text-justify: unset
+        margin: 0
+        padding: 0
+        border-radius: 2rem
+        line-height: 1rem
+        margin: 0.4rem
+        font-size: 0.9rem
         border-top: 0
 
   // desktop version
@@ -105,10 +117,12 @@
       font-weight: 600
     .card-body
       height: 100%
-      .more
+      .more-text
         color: $white
         font-weight: bold
         font-size: 1.1rem
+      .more-icon
+        display: none
     .card-text
       line-height: 1.2rem
     .card-footer
