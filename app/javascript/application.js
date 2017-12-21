@@ -2,15 +2,14 @@ import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
-
 require('bootstrap')
 require('fullpage.js')
 
 const mountFullpage = () => {
   $('#fullpage').fullpage({
     menu: '#menu',
-    lockAnchors: true,
-    // anchors: ['page1', 'page2', 'page3', 'page4'],
+    lockAnchors: false,
+    anchors: ['why-section', 'who-section', 'how-section', 'what-section'],
     // navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
     normalScrollElements: '.main-menu',
     showActiveTooltip: true,
@@ -20,13 +19,13 @@ const mountFullpage = () => {
     lazyLoading: true
   })
 }
-// const menuIsOpened = () => {
-//   if ($('.main-menu').hasClass('open')) {
-//     return true
-//   } else {
-//     return false
-//   }
-// }
+const menuIsOpened = () => {
+  if ($('.main-menu').hasClass('open')) {
+    return true
+  } else {
+    return false
+  }
+}
 
 const viewNotMobile = () => {
   if (window.innerWidth > 570) {
@@ -39,20 +38,32 @@ const mountToolitp = () => {
   $('[data-toggle="tooltip"]').tooltip()
 }
 
-const menuToggler = () => {
-  $('.main-menu-open').click(() => {
-    $('.main-menu').addClass('open')
-    $('body').addClass('main-menu-open')
-  })
-  $('.main-menu-close').click(() => {
-    $('.main-menu').removeClass('open')
-    $('body').removeClass('main-menu-open')
+const menuToggleOpen = () => {
+  $('.main-menu').addClass('open')
+  $('body').addClass('main-menu-open')
+}
+
+const menuToggleClose = () => {
+  $('.main-menu').removeClass('open')
+  $('body').removeClass('main-menu-open')
+}
+
+const menuLinksNavigator = () => {
+  $('a[class^="navigation-link"]').click((link) => {
+    if (menuIsOpened()) { menuToggleClose() }
   })
 }
+
+const menuTogglerEventListener = () => {
+  $('.main-menu-open').click(() => { menuToggleOpen() })
+  $('.main-menu-close').click(() => { menuToggleClose() })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (viewNotMobile()) { mountFullpage() }
   mountToolitp()
-  menuToggler()
+  menuTogglerEventListener()
+  menuLinksNavigator()
   mountComponents({
     ElectionPrograms,
     Glossary,

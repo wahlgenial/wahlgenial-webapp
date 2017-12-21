@@ -1,10 +1,14 @@
-<%= render 'shared/header_logo' %>
-<div class="text-center">
-  <h1 class="pb-5">
-    GLOSSAR
-  </h1>
-  <p class="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
+<div class="glossary">
+  <div class="logo-container p-2">
+    <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+  </div>
+  <div class="text-center">
+    <h1 class="pb-5">
+      GLOSSAR
+    </h1>
+    <p class="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
+  </div>
+  <%= react_component(
+    'Glossary',
+    lettersCollection: @terms.to_h) %>
 </div>
-<%= react_component(
-  'Glossary',
-  lettersCollection: @terms.to_h) %>
