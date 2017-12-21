@@ -10,7 +10,7 @@ const mountFullpage = () => {
     menu: '#menu',
     lockAnchors: false,
     anchors: ['why-section', 'who-section', 'how-section', 'what-section'],
-    // navigationTooltips: ['page1', 'page2', 'page3', 'page4'],
+    // navigationTooltips: ['WARUM', 'WEN', 'WIE', 'WAS'],
     normalScrollElements: '.main-menu',
     showActiveTooltip: true,
     navigation: true,
