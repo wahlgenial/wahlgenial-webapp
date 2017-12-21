@@ -1,15 +1,19 @@
 <header class="header w-100">
-  <div class="main-menu-toggler-container">
+
+  <div class="main-menu-toggler-container ">
     <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
   </div>
-  <div class="main-menu h-100 w-100 no-gutters">
-    <div class="col-12 d-flex">
-      <%= render 'shared/header_logo' %>
-      <div class="col-lg-2 p-4 my-2 col-md-4 ml-auto">
-        <h6>MENÜ</h6>
+
+  <div class="main-menu h-100 w-100 no-gutters open">
+    <div class="d-flex justify-content-between flex-column h-100">
+      <div class="top-bar d-flex flex-row p-2">
+        <div class="logo-container align-self-start">
+          <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+        </div>
+        <div class="d-none d-lg-block d-md-block col-2 text-left p-4 ml-auto mr-5 ">
+          <h6>MENÜ</h6>
+        </div>
       </div>
-    </div>
-    <div class="col-12 h-75 m-auto">
       <div class="main-menu-list-container col-lg-7 col-md-10 col-sm-12 h-50 mx-auto h-75">
         <ul class="main-menu-list">
           <li>WARUM wählen?</li>
@@ -22,15 +26,17 @@
           <li><%= link_to 'GLOSSAR', glossary_path %></li>
         </ul>
       </div>
-    </div>
-    <div class="col-12 mt-auto">
-      <div class="col-2 ml-auto">
-        <a class="btn btn-default" href="#"> IMPRESSUM </a>
-      </div>
-    </div>
-    <div class="main-menu-toggler-container">
-      <%= link_to image_tag(asset_pack_path('images/icon-menu-close.svg')), '#', class: 'main-menu-toggler main-menu-close' %>
-    </div>
+      <div class="">
+        <div class="col-2 ml-auto">
+          <a class="btn btn-default" href="#"> IMPRESSUM </a>
+        </div>
 
+      </div>
+
+      <div class="main-menu-toggler-container">
+        <%= link_to image_tag(asset_pack_path('images/icon-menu-close.svg')), '#', class: 'main-menu-toggler main-menu-close' %>
+      </div>
+
+    </div>
   </div>
 </header>
