@@ -2,9 +2,8 @@ import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
-require('bootstrap')
-require('fullpage.js')
 
+require('./_dependencies')
 const mountFullpage = () => {
   $('#fullpage').fullpage({
     menu: '#menu',
