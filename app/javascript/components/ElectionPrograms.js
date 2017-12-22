@@ -28,7 +28,7 @@ class ElectionPrograms extends React.Component {
     return (
       <div>
         <div className="topicsButtonsContainer row">
-          <span className="topicsButtonsWrapper d-flex">
+          <span className="topicsButtonsWrapper d-flex justify-content-center">
             {topics.map((topic, index) => (
               <TopicButton
                 key={ index }
@@ -40,7 +40,7 @@ class ElectionPrograms extends React.Component {
             ))}
           </span>
         </div>
-        <div className="QuestionsListContainer h-100">
+        <div className="QuestionsListContainer h-100 no-gutters">
           {this.topicSelected() && (
             <QuestionsList questions={ this.selectedTopic().questions } />
           )}

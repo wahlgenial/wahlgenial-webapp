@@ -11,5 +11,9 @@ export default {
   dropeDown: require('./icon-drop-down.svg'),
   share: require('./icon-share.svg'),
   thumbUp: require('./icon-thumb-up.svg'),
-  thumbDown: require('./icon-thumb-down.svg')
+  thumbDown: require('./icon-thumb-down.svg'),
+  smileNegative: require('./icon-smile-negative.svg'),
+  smilePositive: require('./icon-smile-positive.svg'),
+  smileNeutral: require('./icon-smile-neutral.svg'),
+  question: require('./icon-app-category-unknown.svg')
 }

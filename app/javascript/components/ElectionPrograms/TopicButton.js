@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../Button'
 
 const TopicsButton = ({title, onPress, active, index, topicsCount}) => {
   const positionPrecentage = () => {
@@ -13,12 +12,14 @@ const TopicsButton = ({title, onPress, active, index, topicsCount}) => {
   }
 
   return (
-    <div className="btn-container d-inline-block">
-      <Button
+    <div className="btn-container">
+      <a
         style={ { position: 'relative', top: `${positionPrecentage()}%` } }
-        title={ title }
-        onClick={ () => { onPress() } }
-        active={ active } />
+        className={ 'btn btn-primary btn-fat m-1 px-4 py-1' + (active ? ' active' : '') }
+        href='#'
+        onClick={ (e) => { onPress(); e.preventDefault() } }>
+        {title}
+      </a>
     </div>
   )
 }

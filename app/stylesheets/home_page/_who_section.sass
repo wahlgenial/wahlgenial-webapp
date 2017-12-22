@@ -1,18 +1,22 @@
 #whoBox
 	background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
-	.topicsButtonsWrapper
-		height: 80%
-		margin: 0 auto
-		background: url(/arc.png) top center no-repeat
-		background-size: 100%
+.topicsButtonsWrapper
+	// height: 105%
+	margin: 0 auto
+	padding: 0
+	background: url(/arc.png) top center no-repeat
+	background-size: 100%
+
 .who-description
-	h3, p
-		padding: inherit
-	h3
+	h2
+		font-size: 1.88rem
+		font-weight: bold
 		padding-bottom: 0
 		text-transform: uppercase
 	p
 		padding-top: 10px
+	img
+		width: 20px
 .more-apps
 	padding: 0
 	margin: 0
@@ -38,21 +42,28 @@
 		clear: both
 
 .topicsButtonsContainer
-	height: 210px
+	padding: 0
+	@include media-breakpoint-up(sm)
+		margin: 0 -200px
+		height: 220px
 	.btn-container
 		padding: 0 8px
+	.btn-fat
+		margin-top: 10px
+		min-width: 115px
+		height: 40px
+		line-height: 2rem
+
 	.btn.btn-primary
 		text-transform: uppercase
 		font-size: 80%
 		font-weight: 100
-		letter-spacing: 0.2em
-		line-height: 1.8em
+		letter-spacing: 0.3em
 .questionsListContainer
 	.question-block-wrapper
 		border-bottom: 1px solid $white
 	.question-block
 		p
-			background-image: url("/question-icon.png")
 			padding: 5px 0 5px 30px
 			background-size: 25px
 			background-position-x: 0
@@ -69,6 +80,13 @@
 		p.active:after
 			transform: rotate(90deg)
 			transition: all 0.4s ease-out
+	.icon-container
+		img
+			width: 60px
+			position: relative
+			bottom: 10px
+	img
+		width: 20px
 .opinionsContainer
 	.btn-container
 		.btn-yellow

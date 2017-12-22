@@ -1,14 +1,21 @@
 import React from 'react'
 import OpinionButton from './OpinionButton'
+import icons from '../../images/icons'
+
 const QuestionItem = ({text, onClick, opinions = null}) => {
   return (
     <div
-      className="question-block px-5 py-4"
+      className="question-block container row px-1 py-4 no-gutters"
       onClick= { () => { onClick() } }>
-      <div className="question-block-wrapper">
-        <p className={ (opinions !== null) ? 'active' : '' }>{text}</p>
+      <div className="question-block-wrapper row col-12">
+        <div className="icon-container col-2 text-center">
+          <img src={ icons.question } />
+        </div>
+        <div className="col-10">
+          <p className={ (opinions !== null) ? 'active' : '' }>{text}</p>
+        </div>
       </div>
-      <div className="p-2">
+      <div className="p-2 col-12">
         {(opinions !== null) && (
           <OpinionBoard opinions={ opinions } />
         )}
@@ -50,7 +57,7 @@ class OpinionBoard extends React.Component {
     const {opinions} = this.props
     const {selectedOpinionIndex} = this.state
     return (
-      <div className="opinionsContainer">
+      <div className="opinionsContainer no-gutters">
         { opinions.map((opinion, index) => (
           <OpinionButton
             opinion = { opinion }
@@ -60,8 +67,13 @@ class OpinionBoard extends React.Component {
             active={ this.isOpinionIsSelected(index) } />
         ))}
         {(selectedOpinionIndex !== null) && (
-          <div className="col p-3">
-            {this.currentOpinionStatement()}
+          <div className="row container no-gutters px-3 pt-5">
+            <div className="col-2">
+              <img src={ icons.question } />
+            </div>
+            <div className="col-10">
+              {this.currentOpinionStatement()}
+            </div>
           </div>
         )}
       </div>
