@@ -7,6 +7,6 @@ class GlossaryTermImageUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process resize_to_fit: [590 , nil]
+    process resize_to_fit: [620 , nil]
   end
 end
