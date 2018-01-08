@@ -7,6 +7,7 @@ class GlossaryTermImageUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process resize_to_fit: [620 , nil]
+    # https://stackoverflow.com/questions/8570181/carrierwave-resizing-images-to-fixed-width
+    process resize_to_fit: [620 , -1], :quality => 100
   end
 end
