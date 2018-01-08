@@ -1,5 +1,5 @@
 class GlossaryTermImageUploader < CarrierWave::Uploader::Base
-  
+
   include CarrierWave::MiniMagick
 
   def store_dir
@@ -7,6 +7,6 @@ class GlossaryTermImageUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process resize_to_fit: [240, 135]
+    process resize_to_fit: [590 , nil]
   end
 end

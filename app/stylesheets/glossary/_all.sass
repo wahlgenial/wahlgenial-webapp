@@ -12,6 +12,7 @@
       line-height: 1rem
       border-radius: 1rem
       transition: all 0.2s ease
+      margin: .03rem
       &.empty
         opacity: 0.5
       &.not-empty:hover, &.not-empty.active
@@ -27,18 +28,19 @@
       transition: all 0.2s ease
       cursor: pointer
     &.selected
+      transition: height 0.25s ease-in
+      height: auto
       background-color: $yellow
-      .term-title
-        &:after
-          font-weight: normal
-          transform: rotate(90deg)
-          transition: all 0.3s ease-out
+    .card-img-top
+      border-top-left-radius: .75rem
+      border-top-right-radius: .75rem
   .term-title
     margin-bottom: 0
     &:after
       display: inline-block
       float: right
       content: '>'
+      content: url('images/icon-drop-down.svg'); width: 25px
       font-size: 1.3rem
       line-height: 1.3rem
       transform: rotate(0deg)

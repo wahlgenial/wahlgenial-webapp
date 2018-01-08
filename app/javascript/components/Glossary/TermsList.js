@@ -13,7 +13,11 @@ class TermsList extends React.Component {
 
   handleSelectTerm (termIndex) {
     const {selectedTermIndex} = this.state
-    if (selectedTermIndex !== termIndex) this.setState({selectedTermIndex: termIndex})
+    if (selectedTermIndex !== termIndex) {
+      this.setState({selectedTermIndex: termIndex})
+    } else {
+      this.setState({selectedTermIndex: -1})
+    }
   }
 
   render () {
@@ -22,10 +26,7 @@ class TermsList extends React.Component {
     return (
       <div className="col-lg-6 col-md-12 px-1 py-5 mx-auto text-center">
         <div className="row">
-          <div className="term-letter col-lg-2 col-md-12">
-            <h2>{letterData.letter}</h2>
-          </div>
-          <div className="col-lg-10 col-md-12">
+          <div className="col-lg-12 col-md-12">
             <div className="terms-list">
               {letterData.terms.map((term, index) => (
                 <TermItem
