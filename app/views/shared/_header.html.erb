@@ -8,8 +8,8 @@
         <div class="logo-container align-self-start">
           <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
         </div>
-        <div class="d-none d-lg-block d-md-block col-2 text-left p-4 ml-auto mr-5 ">
-          <h6>MENÜ</h6>
+        <div class="d-none d-lg-block d-md-block col-1 text-left p-4 mt-1 ml-auto mr-5 ">
+          <h6 class="font-weight-bold">MENÜ</h6>
         </div>
       </div>
       <div class="main-menu-list-container pt-3">
@@ -35,7 +35,8 @@
       </div>
       <div class="main-menu-footer p-3">
         <div class="d-flex justify-content-end">
-          <a class="footer-link" href="#"> IMPRESSUM </a>
+          <%= link_to 'IMPRESSUM', imprint_path, class: 'footer-link' %>
+
         </div>
       </div>
       <div class="main-menu-toggler-container">

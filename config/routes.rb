@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get 'home'
     get 'glossary'
     get 'election_apps'
+    get 'imprint'
   end
 end

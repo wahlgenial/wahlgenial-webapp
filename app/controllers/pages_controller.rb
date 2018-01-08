@@ -13,6 +13,9 @@ class PagesController < ApplicationController
     @apps_categories = election_apps_categories
   end
 
+  def imprint
+  end
+
   private
 
   def election_programs
