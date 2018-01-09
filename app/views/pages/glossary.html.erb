@@ -1,5 +1,5 @@
 <%- page_title('GLOSSAR') %>
-<div class="glossary">
+<div class="glossary-container h-100">
   <div class="logo-container p-2">
     <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
   </div>
@@ -7,7 +7,7 @@
     <h1 class="main-title pb-3 pt-4">
       GLOSSAR
     </h1>
-    <p class="w-25 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light">Was steckt eigentlich hinter den ganzen politischen Wörtern? Schau selbst nach!</p>
+    <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light">Was steckt eigentlich hinter den ganzen politischen Wörtern? Schau selbst nach!</p>
   </div>
   <%= react_component(
     'Glossary',
