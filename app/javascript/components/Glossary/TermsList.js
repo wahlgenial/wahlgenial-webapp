@@ -14,17 +14,16 @@ class TermsList extends React.Component {
   state = { selectedTermIndex: null }
 
   handleSelectTerm (termIndex) {
-    const {selectedTermIndex} = this.state
+    const {selectedTermIndex, handleSelectTerm} = this.props
     if (selectedTermIndex !== termIndex) {
-      this.setState({selectedTermIndex: termIndex})
+      handleSelectTerm(termIndex)
     } else {
-      this.setState({selectedTermIndex: -1})
+      handleSelectTerm(null)
     }
   }
 
   render () {
-    const {letterData} = this.props
-    const {selectedTermIndex} = this.state
+    const {letterData, selectedTermIndex} = this.props
     return (
       <div className="col-lg-6 col-md-12 px-1 py-5 mx-auto text-center">
         <div className="row">

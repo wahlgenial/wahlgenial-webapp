@@ -3,10 +3,21 @@ import LetterItem from './Glossary/LetterItem'
 import TermsList, {TermsEmpty} from './Glossary/TermsList'
 
 class Glossary extends React.Component {
-  state = { selectedLetter: null }
+  constructor (props) {
+    super(props)
+    this.handleSelectTerm = this.handleSelectTerm.bind(this)
+  }
+
+  state = {
+    selectedLetter: null,
+    selectedTermIndex: null
+  }
   handleSelectLetter (letter) {
     const {selectedLetter} = this.state
-    if (selectedLetter !== letter) this.setState({selectedLetter: letter})
+    if (selectedLetter !== letter) this.setState({selectedLetter: letter, selectedTermIndex: null})
+  }
+  handleSelectTerm (index) {
+    this.setState({selectedTermIndex: index})
   }
   filterLetter (letter) {
     return this.props.lettersCollection.filter((letterObject) => {
@@ -15,7 +26,7 @@ class Glossary extends React.Component {
   }
   render () {
     const {lettersCollection} = this.props
-    const {selectedLetter} = this.state
+    const {selectedLetter, selectedTermIndex} = this.state
     return (
       <div id="glossary" className="col-12">
         <div className="letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0" >
@@ -30,7 +41,7 @@ class Glossary extends React.Component {
         </div>
         {!selectedLetter
           ? <TermsEmpty />
-          : <TermsList letterData={ this.filterLetter(selectedLetter) } />
+          : <TermsList letterData={ this.filterLetter(selectedLetter) } selectedTermIndex={ selectedTermIndex } handleSelectTerm={ this.handleSelectTerm } />
         }
       </div>
     )
