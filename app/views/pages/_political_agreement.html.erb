@@ -1,5 +1,9 @@
 <div class="col-md-4 col-sm-6 text-center no-gutters">
-  <a href="<%= political_agreement.external_link.present? ? political_agreement.external_link : '#' %>">
+  <%  if political_agreement.external_link.present? %>
+    <a href="<%= political_agreement.external_link %>" target="_blank">
+  <% else %>
+    <a>
+  <% end %>
     <div class="card mx-auto mt-3">
       <div class="card-body">
         <div class="card-title pt-2 text-center">
