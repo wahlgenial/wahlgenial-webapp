@@ -1,5 +1,15 @@
 #whatBox
-  .what-description
+  a
+    color: $white
+    transition: all 0.2s ease-out
+    &:hover
+      text-decoration: none
+      .card-title
+        background-color: $lighter-pink
+        transition: all 0.2s ease-out
+      .card-footer
+        // background-color: $pompadour-light
+        transition: all 0.2s ease-out
   .political-agreements-container
     margin: 0 0 auto 0
     height: 75%
@@ -15,12 +25,13 @@
       img
         width: 100%
     .card-title
+      transition: all 0.2s ease-out
       background-color: $light-pink
       color: $pompadour
       font-size: 1rem
       font-weight: 600
       height: 90px
-      padding: 5px 30px
+      padding: 5px 20px
       margin: 0 0 auto 0
 
       overflow: hidden
@@ -29,6 +40,7 @@
       padding: 0
       background-color: $color_star_dust
     .card-footer
+      transition: all 0.2s ease-out
       background-color: $pompadour
       border-radius: 0 0 1.2rem 1.2rem
       position: absolute

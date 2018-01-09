@@ -1,35 +1,37 @@
 <div class="col-md-4 col-sm-6 text-center no-gutters">
-  <div class="card mx-auto mt-3">
-    <div class="card-body">
-      <div class="card-title pt-2 text-center">
-        <%= political_agreement.title %>
-      </div>
-      <div class="card-image">
-        <% unless political_agreement.image_url(:thumb).nil? %>
-          <img src="<%= political_agreement.image_url(:thumb) %>" />
-        <% end %>
-      </div>
-    </div>
-    <div class="card-footer text-center py-2">
-      <div class="row container no-gutters">
-        <div class="col-3 pt-1">
-          <%= political_agreement.votes_yes %>
-          <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
+  <a href="<%= political_agreement.external_link.present? ? political_agreement.external_link : '#' %>">
+    <div class="card mx-auto mt-3">
+      <div class="card-body">
+        <div class="card-title pt-2 text-center">
+          <%= political_agreement.title %>
         </div>
-        <div class="col-6">
-          <div class="final-result">
-            <% if political_agreement.votes_yes > political_agreement.votes_no %>
-              <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
-            <% else %>
-              <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
-            <% end %>
+        <div class="card-image">
+          <% unless political_agreement.image_url(:thumb).nil? %>
+            <img src="<%= political_agreement.image_url(:thumb) %>" />
+          <% end %>
+        </div>
+      </div>
+      <div class="card-footer text-center py-2">
+        <div class="row container no-gutters">
+          <div class="col-3 pt-1">
+            <%= political_agreement.votes_yes %>
+            <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
+          </div>
+          <div class="col-6">
+            <div class="final-result">
+              <% if political_agreement.votes_yes > political_agreement.votes_no %>
+                <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
+              <% else %>
+                <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-3 pt-1">
+            <%= political_agreement.votes_no %>
+            <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
           </div>
         </div>
-        <div class="col-3 pt-1">
-          <%= political_agreement.votes_no %>
-          <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
-        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
