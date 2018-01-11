@@ -1,12 +1,9 @@
+@import '../components/election_programs.sass'
+body
+	overflow: hidden
 #whoBox
-	background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
-.topicsButtonsWrapper
-	// height: 105%
-	margin: 0 auto
-	padding: 0
-	background: url(/arc.png) top center no-repeat
-	background-size: 100%
-
+	.wrapper
+		background-image: linear-gradient(45deg, #FF9D60 0%, #E95C73 100%)
 .who-description
 	h2
 		font-size: 1.88rem
@@ -23,57 +20,3 @@
 		width: 70%
 		float: right
 		clear: both
-
-.topicsButtonsContainer
-	padding: 0
-	@include media-breakpoint-up(sm)
-		margin: 0 -200px
-		height: 220px
-	.btn-container
-		padding: 0 8px
-	.btn-fat
-		margin-top: 10px
-		min-width: 115px
-		height: 40px
-		line-height: 2rem
-
-	.btn.btn-primary
-		text-transform: uppercase
-		font-size: 80%
-		font-weight: 100
-		letter-spacing: 0.3em
-.questionsListContainer
-	.question-block-wrapper
-		border-bottom: 1px solid $white
-	.question-block
-		p
-			padding: 5px 0 5px 30px
-			background-size: 25px
-			background-position-x: 0
-			background-repeat: no-repeat
-			background-position-y: 50%
-			cursor: pointer
-		p:after
-			font-size: 32px
-			font-weight: 100
-			content: '>'
-			position: absolute
-			right: 30px
-			transform: rotate(0deg)
-		p.active:after
-			transform: rotate(90deg)
-			transition: all 0.4s ease-out
-	.icon-container
-		img
-			width: 60px
-			position: relative
-			bottom: 10px
-	img
-		width: 20px
-.opinionsContainer
-	.btn-container
-		.btn-yellow
-			.party-name
-				float: left
-			.party-opinion
-				float: right

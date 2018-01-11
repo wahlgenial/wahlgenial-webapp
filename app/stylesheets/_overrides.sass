@@ -61,8 +61,8 @@
 	background-color: $white_30
 	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
-
-.btn-primary.active,
+.btn-primary
+	transition: all 0.2s ease-in
 .btn-primary:hover,
 .btn-primary:not([disabled]):not(.disabled):active,
 .btn-primary:not([disabled]):not(.disabled).active
@@ -71,3 +71,10 @@
 	background-color: $pompadour_light
 	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .1)
+	// transition: all 0.1s ease-out
+.btn-primary.active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.btn-primary:not([disabled]):not(.disabled).active
+	transition: all 0.15s ease-in
+	background-color: $white
+	color: $pompadour
