@@ -7,6 +7,7 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.(png|jpg|gif|svg)$/,
         use: [
+          { loader: 'resolve-url-loader' },
           { loader: 'url-loader' }
         ]
       },

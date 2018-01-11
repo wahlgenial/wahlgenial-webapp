@@ -42,3 +42,13 @@ Currently the only icons available for `icon_name` field are:
 - infos
 - questions
 - unknown
+
+## Hacks
+
+### Sass for WEBPACKER & STORYBOOK
+In `Sass` files, relative paths should be used to point to image assets Ex. `background: url('../javascript/images/arc.png')` instead of `background: url('images/arc.png')`  
+(path is relative to application.sass)
+
+
+ since both `storybook` and `webpacker gem` using same entry point `application.sass`, using absolute path Ex. `images/arc.png` is only possible for `webpacker`, it wasn't successful to setup `~/wahldatenhelfer/app/javaScript` as resolve path for storybook `webpack.config` which
+ tells webpack what directories should be searched when resolving modules. [webpack#resolve-modules](https://webpack.js.org/configuration/resolve/#resolve-modules)
