@@ -1,10 +1,10 @@
 import React from 'react'
 import TermItem from './TermItem'
-import callToActionImage from 'images/glossary-call-to-action.svg'
+import icons from '../../images/icons'
 export const TermsEmpty = _ => {
   return (
     <div className="call-to-action col-lg-6 col-md-12 px-1 py-5 mx-auto text-center">
-      <img className="" src={ callToActionImage } />
+      <img className="" src={ icons.glossaryCallToAction } />
       Wähle einen Buchstaben aus
     </div>
   )

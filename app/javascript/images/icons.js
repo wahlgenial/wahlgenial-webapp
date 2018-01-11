@@ -15,5 +15,7 @@ export default {
   smileNegative: require('./icon-smile-negative.svg'),
   smilePositive: require('./icon-smile-positive.svg'),
   smileNeutral: require('./icon-smile-neutral.svg'),
-  question: require('./icon-app-category-unknown.svg')
+  question: require('./icon-question.svg'),
+  glossaryCallToAction: require('./glossary-call-to-action.svg'),
+  arc: require('./arc.png')
 }

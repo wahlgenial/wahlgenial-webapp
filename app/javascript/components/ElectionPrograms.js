@@ -2,6 +2,7 @@ import React from 'react'
 
 import TopicButton from './ElectionPrograms/TopicButton'
 import QuestionsList from './ElectionPrograms/QuestionsList'
+import { isDeviceMobile } from '../utils/functions'
 
 class ElectionPrograms extends React.Component {
   constructor (props) {
@@ -25,10 +26,11 @@ class ElectionPrograms extends React.Component {
   render () {
     const {topics} = this.props
     const {selectedTopicIndex} = this.state
+    const topicsButtonsContainerClass = isDeviceMobile() ? 'justify-content-center' : 'flex-row'
     return (
-      <div>
+      <div className="col-12 p-0 m-0">
         <div className="topicsButtonsContainer row">
-          <span className="topicsButtonsWrapper d-flex justify-content-center">
+          <span className={ `topicsButtonsWrapper d-flex ${topicsButtonsContainerClass}` }>
             {topics.map((topic, index) => (
               <TopicButton
                 key={ index }
@@ -40,7 +42,7 @@ class ElectionPrograms extends React.Component {
             ))}
           </span>
         </div>
-        <div className="QuestionsListContainer h-100 no-gutters">
+        <div className="QuestionsListContainer h-100 no-gutters col-lg-12 p-0">
           {this.topicSelected() && (
             <QuestionsList questions={ this.selectedTopic().questions } />
           )}
