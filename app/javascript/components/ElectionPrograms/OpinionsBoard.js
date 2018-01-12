@@ -57,7 +57,7 @@ class OpinionsBoard extends React.Component {
           </div>
         </div>
         {(selectedOpinionIndex !== null) && (
-          <div className="row container no-gutters px-3 pt-5">
+          <div className="row container no-gutters px-3 pt-2">
             <div className="col-2">
               <img src={ icons[`opinion${this.currentOpinionDescriptionIcon()}`] } />
             </div>

@@ -5,7 +5,7 @@ const QuestionItem = ({text, onClick, opinions = null}) => {
   const activeClass = opinions !== null ? 'active' : ''
   return (
     <div className={ `question-block-wrapper ${activeClass}` }>
-      <div className="question-block container row col-12 m-0 px-2 py-5" onClick= { () => { onClick() } }>
+      <div className="question-block container row col-12 m-0 px-2 py-3" onClick= { () => { onClick() } }>
         <div className='icon-container col-2 text-center'>
           <img src={ icons.question } />
         </div>
