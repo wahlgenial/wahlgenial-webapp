@@ -15,6 +15,12 @@ export default {
   smileNegative: require('./icon-smile-negative.svg'),
   smilePositive: require('./icon-smile-positive.svg'),
   smileNeutral: require('./icon-smile-neutral.svg'),
+
+  // not camelCased since it is dynamically generated.
+  opinionnegative: require('./icon-smile-negative.svg'),
+  opinionpositive: require('./icon-smile-positive.svg'),
+  opinionneutral: require('./icon-smile-neutral.svg'),
+
   question: require('./icon-question.svg'),
   glossaryCallToAction: require('./glossary-call-to-action.svg'),
   arc: require('./arc.png')

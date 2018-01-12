@@ -32,7 +32,7 @@ class QuestionsList extends React.Component {
   render () {
     const {questions} = this.props
     return (
-      <div className="questionsListContainer col-lg-12 m-0 p-0">
+      <div className="questionsListContainer">
         {questions.map((question, index) => (
           <QuestionItem
             opinions={ this.handleOpinionData(index) }

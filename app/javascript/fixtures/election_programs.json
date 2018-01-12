@@ -11,7 +11,13 @@
                 "statement": "Statement Party#1 about Question#1" },
               { "opinion": "neutral",
                 "party":"Party#2",
-                "statement": "Statement Party#2 about Question#1" }
+                "statement": "Statement Party#2 about Question#1" },
+              { "opinion": "neutral",
+                "party":"Party#3",
+                "statement": "Statement Party#3 about Question#1" },
+              { "opinion": "neutral",
+                "party":"Party#4",
+                "statement": "Statement Party#4 about Question#1" }
                 ]
               },
               { "title": "Question#2",

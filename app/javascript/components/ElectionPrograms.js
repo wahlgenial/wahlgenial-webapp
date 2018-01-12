@@ -29,7 +29,7 @@ class ElectionPrograms extends React.Component {
     const topicsButtonsContainerClass = isDeviceMobile() ? 'justify-content-center' : 'flex-row'
     return (
       <div className="col-12 p-0 m-0">
-        <div className="topicsButtonsContainer row">
+        <div className="topicsButtonsContainer row pb-2">
           <span className={ `topicsButtonsWrapper d-flex ${topicsButtonsContainerClass}` }>
             {topics.map((topic, index) => (
               <TopicButton
@@ -42,7 +42,7 @@ class ElectionPrograms extends React.Component {
             ))}
           </span>
         </div>
-        <div className="QuestionsListContainer h-100 no-gutters col-lg-12 p-0">
+        <div className="QuestionsListContainer no-gutters col-lg-12 p-0">
           {this.topicSelected() && (
             <QuestionsList questions={ this.selectedTopic().questions } />
           )}

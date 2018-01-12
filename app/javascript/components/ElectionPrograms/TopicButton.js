@@ -8,7 +8,7 @@ const TopicsButton = ({title, onPress, active, index, topicsCount}) => {
     const shitPrecentage = 1 / topicsCount
     let sum = (theRatio > 0.5) ? (1.00 - theRatio) : (theRatio + shitPrecentage)
     if (sum >= 0.5) { sum = 0.5 } // middle child
-    return Math.ceil(sum * 80) // change this number to adjust
+    return Math.ceil(sum * 120) // change this number to adjust
   }
 
   const mobileButton = _ => (

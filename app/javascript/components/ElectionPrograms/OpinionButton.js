@@ -11,12 +11,12 @@ const OpinionButton = ({opinion, onPress, active, opinionIndex, topicsCount, onC
     }
   }
   return (
-    <div className="btn-container mx-2 w-25 d-inline-block no-gutters">
-      <div className={ 'btn btn-yellow w-100' + (active ? ' active' : '') } onClick={ () => { onClick(opinionIndex) } }>
+    <div className="btn-container">
+      <div className={ 'btn btn-yellow mx-2 my-1' + (active ? ' active' : '') } onClick={ () => { onClick(opinionIndex) } }>
         <div className="party-name align-self-start">
           {opinion.party}
         </div>
-        <div className="party-opinion align-self-end">
+        <div className="party-opinion-icon">
           { partyOpinionIcon() }
         </div>
       </div>
