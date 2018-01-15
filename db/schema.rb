@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20180115154854) do
 
   create_table "election_programs_parties", force: :cascade do |t|
     t.string "name"
-    t.integer "ordering"
+    t.integer "ordering", default: 0
   end
 
   create_table "election_programs_questions", force: :cascade do |t|
