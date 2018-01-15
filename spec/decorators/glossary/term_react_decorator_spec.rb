@@ -50,10 +50,7 @@ RSpec.describe Glossary::TermReactDecorator do
               :description => "zzTerm Description",
               :image => nil,
               :image_thumb => nil}]
-        },
-        { "letter" => "Ä", "count" => 0, "terms" => [] },
-        { "letter" => "Ö", "count" => 0, "terms" => [] },
-        { "letter" => "Ü", "count" => 0, "terms" => [] } ]
+        }]
     end
 
     it 'returns the correct data tree' do

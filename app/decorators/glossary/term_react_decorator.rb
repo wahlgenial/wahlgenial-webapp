@@ -3,7 +3,7 @@ class Glossary::TermReactDecorator < Draper::Decorator
     collections = []
     grouped_objects = grouped_by_title
 
-    ('A'..'Z').to_a.push('Ä', 'Ö', 'Ü').each do |letter|
+    ('A'..'Z').to_a.each do |letter|
       letter_hash = {}
       letter_records = grouped_objects[letter]
       letter_hash['letter'] = letter
