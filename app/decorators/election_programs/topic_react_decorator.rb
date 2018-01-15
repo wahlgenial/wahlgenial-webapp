@@ -10,7 +10,7 @@ class ElectionPrograms::TopicReactDecorator < Draper::Decorator
     object.questions.each do |question|
       question_hash = { title: question.title, text: question.text, opinions: [] }
 
-      question.opinions.each do |opinion|
+      question.opinions.sort_by{ |opinion| opinion.party.ordering.to_i }.each do |opinion|
         opinion_hash = {
           opinion: opinion.opinion,
           party: opinion.party.name,

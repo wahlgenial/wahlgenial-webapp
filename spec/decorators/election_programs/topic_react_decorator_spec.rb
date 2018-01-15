@@ -9,8 +9,8 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
           { title: 'question',
             text: 'the question text',
             opinions: [
-              { opinion: 'positive', party: 'party1', statement: 'Part1 statement' },
-              { opinion: 'positive', party: 'party2', statement: 'Part2 statement' }
+              { opinion: 'positive', party: 'party2', statement: 'Part2 statement' },
+              { opinion: 'positive', party: 'party1', statement: 'Part1 statement' }
             ]
           }
         ]
@@ -18,8 +18,8 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
     end
 
     it 'returns the correct data tree' do
-      party_1 = create(:party, name: 'party1')
-      party_2 = create(:party, name: 'party2')
+      party_1 = create(:party, name: 'party1', ordering: 2)
+      party_2 = create(:party, name: 'party2', ordering: 1)
       topic = create(:topic, title: 'topic', details: 'The topic details')
       question = create(:question, title: 'question', text: 'the question text', topic: topic)
       create(:opinion, opinion: 'positive', party: party_1, statement: 'Part1 statement', question: question)
