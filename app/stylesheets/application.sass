@@ -1,6 +1,6 @@
+@import "settings"
 @import "~bootstrap/scss/bootstrap"
 @import "~fullpage.js/dist/jquery.fullpage"
-@import "settings"
 
 // default confgurations overriding
 @import "overrides"
@@ -8,9 +8,17 @@
 // custom css files
 @import "general"
 @import "header"
-@import "home_page/all"
+
+// home page
+@import "home_page/why_section"
+@import "home_page/who_section"
+@import "home_page/how_section"
+@import "home_page/what_section"
+
+// pages
 @import "election_apps/all"
-
 @import "./glossary"
-
 @import "./imprint"
+
+// components
+@import "./components/election_programs.sass"

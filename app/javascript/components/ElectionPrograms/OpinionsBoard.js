@@ -1,6 +1,5 @@
 import React from 'react'
 import OpinionButton from './OpinionButton'
-import icons from '../../images/icons'
 
 class OpinionsBoard extends React.Component {
   constructor (props) {
@@ -31,11 +30,17 @@ class OpinionsBoard extends React.Component {
     return opinions[selectedOpinionIndex].statement
   }
 
-  currentOpinionDescriptionIcon () {
+  currentOpinionDescriptionText () {
     const {selectedOpinionIndex} = this.state
     if (selectedOpinionIndex === null) return 'neutral'
     const {opinions} = this.props
-    return opinions[selectedOpinionIndex].opinion
+    if (opinions[selectedOpinionIndex].opinion === 'positive') {
+      return 'Ja!'
+    } else if (opinions[selectedOpinionIndex].opinion === 'negative') {
+      return 'Nein!'
+    } else {
+      return 'Enthalten'
+    }
   }
 
   render () {
@@ -58,8 +63,8 @@ class OpinionsBoard extends React.Component {
         </div>
         {(selectedOpinionIndex !== null) && (
           <div className="row container no-gutters px-3 pt-2">
-            <div className="col-2">
-              <img src={ icons[`opinion${this.currentOpinionDescriptionIcon()}`] } />
+            <div className="col-2 text-opinion">
+              {this.currentOpinionDescriptionText()}
             </div>
             <div className="col-10">
               {this.currentOpinionStatement()}
