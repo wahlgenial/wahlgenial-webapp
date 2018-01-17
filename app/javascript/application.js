@@ -2,6 +2,8 @@ import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
+import WhySectionVideo from './components/WhySectionVideo'
+import HowSectionVideo from './components/HowSectionVideo'
 
 require('./_dependencies')
 const mountFullpage = () => {
@@ -66,7 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   mountComponents({
     ElectionPrograms,
     Glossary,
-    ElectionApps
+    ElectionApps,
+    WhySectionVideo,
+    HowSectionVideo
   })
   // mountComponents is needed since there is an issue with jquery3 onReady method
   // https://github.com/reactjs/react-rails/issues/742

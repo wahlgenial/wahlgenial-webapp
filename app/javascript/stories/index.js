@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import ElectionProgramsStory from './ElectionProgramsStory'
 import GlossaryStory from './GlossaryStory'
 import ElectionAppsStory from './ElectionAppsStory'
+import VideoPlayerStory from './VideoPlayerStory'
 import '../../stylesheets/application.sass'
 
 storiesOf('Election Programs')
@@ -13,3 +14,6 @@ storiesOf('GLossary')
 
 storiesOf('ElectionApps')
   .add('Whole View', () => <ElectionAppsStory />)
+
+storiesOf('VideoPlayerStory')
+  .add('Whole View', () => <VideoPlayerStory />)
