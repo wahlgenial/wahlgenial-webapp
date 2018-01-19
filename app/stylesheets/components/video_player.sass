@@ -1,4 +1,11 @@
 .why-section-video
+  height: 100vh
+  width: 100vw
+  position: relative
+  @include media-breakpoint-down(sm)
+    height: 66vh
+    width: 100vw
+
   .video-background-container
     user-select: none
     z-index: 101
@@ -17,9 +24,12 @@
 
 .how-section-video
   height: 100vh
-  width: 100vh
+  width: 100vw
   position: relative
-  
+  @include media-breakpoint-down(sm)
+    height: 66vh
+    width: 100vw
+
   .video-background-container
     user-select: none
     z-index: 101
