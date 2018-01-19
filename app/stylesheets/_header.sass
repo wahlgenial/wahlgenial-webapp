@@ -10,6 +10,10 @@ header
 			transition: all 0.2s ease-out
 			text-decoration: none
 			color: $pompadour
+	@include media-breakpoint-down(sm)
+		.logo-container
+			img
+				width: 80px
 	.main-menu
 		height: 100%
 		width: 100%
@@ -26,14 +30,44 @@ header
 		&.open
 			top: 0
 	.main-menu-toggler-container
-		img
-			width: 24px
 		position: absolute
 		right: 30px
 		top: 30px
+		img
+			width: 24px
 		.main-menu-close
 			img
 				width: 22px
+		@include media-breakpoint-down(sm)
+			width: 100vw
+			top: 0
+			right: 0
+			display: block
+			.main-menu-toggler
+				padding: 1rem
+				float: right
+				img
+					width: 28px
+	.main-menu-container-open
+		@include media-breakpoint-down(sm)
+			-webkit-box-shadow: 0px 4px 29px -11px rgba(0,0,0,0.75)
+			-moz-box-shadow: 0px 4px 29px -11px rgba(0,0,0,0.75)
+			box-shadow: 0px 4px 29px -11px rgba(0,0,0,0.75)
+			background-color: $squash
+			width: 100vw
+			top: 0
+			right: 0
+			display: block
+			.main-menu-close
+				padding: 1rem
+			.main-menu-toggler
+				float: right
+				img
+					width: 20px
+		.mobile-logo-img
+			padding: 0.6rem
+			img
+				width: 78px
 	.main-menu-logo
 		img
 			width: 120px

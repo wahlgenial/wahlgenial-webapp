@@ -4,15 +4,18 @@
 .topicsButtonsWrapper
 	margin: 0 auto
 	padding: 0
+
 	@include media-breakpoint-up(md)
 		background: url('../javascript/images/arc.png') top center no-repeat
 		background-size: 100%
 	@include media-breakpoint-down(md)
 		background: none
+		padding: 0.5rem 3rem
 .topicsButtonsContainer
 	@include media-breakpoint-down(md)
 		overflow-x: scroll
-		padding: 1rem
+		padding: 0
+
 	padding: 0
 	.btn-primary
 		text-transform: uppercase
