@@ -12,7 +12,9 @@
     <title><%= content_for?(:page_title) ? yield(:page_title) : 'Wahldatenhelfer' %></title>
   </head>
   <body>
-    <%= render 'shared/header' %>
-    <%= yield %>
+    <div class="content-wrapper">
+      <%= render 'shared/header' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
