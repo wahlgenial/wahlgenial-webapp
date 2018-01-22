@@ -1,31 +1,16 @@
+html, body
+	overflow: hidden
+	height: 100vh
 body
 	font-family: $font_0
 	font-weight: 300
 	background-color: $orange
 	color: $white
-	overflow: hidden
-	height: 100vh
 	background-attachment: fixed !important
-	min-height: 100vh
-	background: -moz-linear-gradient(-45deg, #ffa355 0%, #d85c75 100%)
-	background: -webkit-linear-gradient(-45deg, #ffa355 0%,#d85c75 100%)
-	background: linear-gradient(-45deg, #ffa355 0%,#d85c75 100%) #d85c75
-	background-image: linear-gradient(-45deg, #ffa355 0%,#d85c75 100%) #d85c75
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
-	background-attachment: fixed
-	background-repeat: no-repeat
+	background-size: cover !important
 .content-wrapper
+	height: 100%
 	overflow: scroll
-	height: 100vh
-	background-attachment: fixed !important
-	min-height: 100vh
-	background: -moz-linear-gradient(-45deg, #ffa355 0%, #d85c75 100%)
-	background: -webkit-linear-gradient(-45deg, #ffa355 0%,#d85c75 100%)
-	background: linear-gradient(-45deg, #ffa355 0%,#d85c75 100%) #d85c75
-	background-image: linear-gradient(-45deg, #ffa355 0%,#d85c75 100%) #d85c75
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
-	background-attachment: fixed
-	background-repeat: no-repeat
 footer
 	padding: 40px 0 20px 0
 @include media-breakpoint-down(sm)
@@ -49,6 +34,16 @@ h1.main-title
 	@include media-breakpoint-down(sm)
 		margin-top: 4rem
 		padding-top: 4rem
+.gradient-content
+	background: $orange
+	min-height: 100vh
+	background: -moz-linear-gradient(-45deg, #ffa355 0%, #d85c75 100%)
+	background: -webkit-linear-gradient(-45deg, #ffa355 0%,#d85c75 100%)
+	background: linear-gradient(135deg, #ffa355 0%,#d85c75 100%) #d85c75
+	background-image: linear-gradient(136deg, #ffa355 0%,#d85c75 100%) #d85c75
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
+	background-attachment: fixed
+	background-repeat: no-repeat
 .more-apps
 	float: right
 	width: 180px
