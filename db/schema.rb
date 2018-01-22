@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180115154854) do
+ActiveRecord::Schema.define(version: 20180122084838) do
 
   create_table "bundestag_vote_political_agreements", force: :cascade do |t|
     t.string "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20180115154854) do
     t.string "icon_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "ordering", default: 0
   end
 
   create_table "election_programs_opinions", force: :cascade do |t|
