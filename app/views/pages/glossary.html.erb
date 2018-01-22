@@ -1,5 +1,5 @@
 <%- page_title('GLOSSAR') %>
-<div class="glossary-container h-100 clearfix">
+<div class="glossary-container h-100 clearfix pb-5">
   <div class="logo-container p-2 d-none d-lg-block d-md-block">
     <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
   </div>
@@ -9,10 +9,12 @@
     </h1>
     <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light">Was steckt eigentlich hinter den ganzen politischen Wörtern? Schau selbst nach!</p>
   </div>
-  <%= react_component(
-    'Glossary',
-    lettersCollection: @terms.to_h) %>
-      <div class="more-apps">
-        <%= render '/shared/more_apps' %>
-      </div>
+  <div class="glossary-wrapper col-lg-12">
+    <%= react_component(
+      'Glossary',
+      lettersCollection: @terms.to_h) %>
+  </div>
+  <div class="more-apps">
+    <%= render '/shared/more_apps' %>
+  </div>
 </div>

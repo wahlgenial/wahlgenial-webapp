@@ -28,7 +28,7 @@ class Glossary extends React.Component {
     const {lettersCollection} = this.props
     const {selectedLetter, selectedTermIndex} = this.state
     return (
-      <div className="col-12 p-0 m-0">
+      <div className="col-12 p-0 mx-1 row">
         <div className="letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0" >
           {lettersCollection.map((letter, index) => (
             <LetterItem

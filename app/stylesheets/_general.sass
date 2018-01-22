@@ -35,9 +35,9 @@ h1.main-title
 	padding: 0
 	margin: 0
 	text-align: right
-	.ghost-container
-		width: 180px
-		padding: 0 20px
+	.ghost
+		width: 200px
+		padding: 0 0 0 20px
 		float: right
 		img
 			width: 70px
@@ -46,3 +46,8 @@ h1.main-title
 		height: 40px
 		border-radius: 1.5rem 0 0 1.5rem
 		border-right-color: transparent
+		&:hover
+			background-color: $pompadour
+		&:not([disabled]):not(.disabled):active
+			background-color: $pompadour
+			color: $white
