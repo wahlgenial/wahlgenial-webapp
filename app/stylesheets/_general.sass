@@ -1,17 +1,9 @@
-html, body
-	overflow: hidden
-	height: 100vh
 body
 	font-family: $font_0
 	font-weight: 300
 	background-color: $orange
 	color: $white
-	background-attachment: fixed !important
-	background-size: cover !important
-	background: linear-gradient(135deg, #ffa355 0%,#d85c75 100%) #d85c75
-.content-wrapper
-	height: 100%
-	overflow: scroll
+	background: $orange
 footer
 	padding: 40px 0 20px 0
 @include media-breakpoint-down(sm)
@@ -37,7 +29,6 @@ h1.main-title
 		padding-top: 4rem
 .gradient-content
 	background: $orange
-	min-height: 100vh
 	background: -moz-linear-gradient(-45deg, #ffa355 0%, #d85c75 100%)
 	background: -webkit-linear-gradient(-45deg, #ffa355 0%,#d85c75 100%)
 	background: linear-gradient(135deg, #ffa355 0%,#d85c75 100%) #d85c75
@@ -45,6 +36,7 @@ h1.main-title
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
 	background-attachment: fixed
 	background-repeat: no-repeat
+	background-size: 100vw 100vh
 .more-apps
 	float: right
 	width: 180px

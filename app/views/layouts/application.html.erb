@@ -11,10 +11,8 @@
     <%= csrf_meta_tags %>
     <title><%= content_for?(:page_title) ? yield(:page_title) : 'Wahldatenhelfer' %></title>
   </head>
-  <body>
-    <div class="content-wrapper gradient-content">
-      <%= render 'shared/header' %>
-      <%= yield %>
-    </div>
+  <body class="gradient-content">
+    <%= render 'shared/header' %>
+    <%= yield %>
   </body>
 </html>
