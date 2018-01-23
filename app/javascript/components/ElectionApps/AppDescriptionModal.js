@@ -17,7 +17,7 @@ const AppDescriptionModal = ({isOpen, toggleModal, name, logo, image, descriptio
       onAfterOpen = { () => { onAfterOpenCallback() } }
       onRequestClose = { () => { onRequestCloseCallback() } }
       className={ {
-        base: 'app-description-modal',
+        base: 'app-description-modal gradient-modal',
         afterOpen: 'app-description-modal-opened',
         beforeClose: 'app-description-modal-closed'
       } }
@@ -34,7 +34,7 @@ const AppDescriptionModal = ({isOpen, toggleModal, name, logo, image, descriptio
       aria={ { labelledby: 'heading', describedby: 'app-description' } }>
       <div id="heading">
         <div style={ styles.closeIconContainer } onClick={ () => { toggleModal() } }>
-          <img style={ styles.closeIcon } src={ icons.menuClose } />
+          <img style={ styles.closeIcon } src={ icons.back } />
         </div>
       </div>
       <div id="app-description" style={ styles.appDescription }>
@@ -53,7 +53,7 @@ const styles = {
   closeIconContainer: {
     cursor: 'pointer',
     position: 'fixed',
-    top: '7rem',
+    top: '69px', // navbar height
     width: '3rem',
     height: '3rem',
     padding: '0.7rem',
@@ -77,10 +77,10 @@ const styles = {
       position: 'absolute',
       WebkitOverflowScrolling: 'touch',
       outline: 'none',
-      top: '7rem',
+      top: '69px',
       left: 0,
       right: 0,
-      bottom: '4px',
+      bottom: 0,
       overflow: 'scroll',
       padding: '0'
     }

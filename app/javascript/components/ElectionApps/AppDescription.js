@@ -7,7 +7,7 @@ const AppDescription = ({name, image, logo, description, link}) => {
     <div id="AppDescription" className="row col-12 no-gutters">
       <a name="app-description"></a>
       <div className="col-lg-6 col-sm-12 order-lg-2 order-sm-1 text-center">
-        <img className={ 'my-3 ' + (isDeviceMobile() ? 'w-50 px-4' : 'w-75') } src={ isDeviceMobile() ? logo : image } />
+        <img className={ 'mt-5 pt-2 mb-3 ' + (isDeviceMobile() ? 'w-50 px-4' : 'w-75') } src={ isDeviceMobile() ? logo : image } />
       </div>
       <div className="d-flex flex-column col-lg-6 col-sm-12 order-lg-1 order-sm-2 text-left pb-5 px-1 no-gutters">
         <h2 className="app-title text-center text-lg-left">{name}</h2>

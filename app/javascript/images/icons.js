@@ -10,6 +10,7 @@ export default {
   menuClose: require('./icon-menu-close.svg'),
   dropeDown: require('./icon-drop-down.svg'),
   share: require('./icon-share.svg'),
+  back: require('./icon-arrow-back.svg'),
   thumbUp: require('./icon-thumb-up.svg'),
   thumbDown: require('./icon-thumb-down.svg'),
   smileNegative: require('./icon-smile-negative.svg'),
