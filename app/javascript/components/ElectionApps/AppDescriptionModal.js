@@ -80,7 +80,7 @@ const styles = {
       top: '69px',
       left: 0,
       right: 0,
-      bottom: 0,
+      height: '100vh',
       overflow: 'scroll',
       padding: '0'
     }
