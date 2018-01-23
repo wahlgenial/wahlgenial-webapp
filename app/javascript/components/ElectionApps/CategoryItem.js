@@ -17,21 +17,23 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppS
   return (
     <div id="CategoryItem" className="px-4 col-12 text-center">
       <div className="m-auto category-container">
-        <div className="category-title text-left">
+        <div className="category-title text-left pt-4 pb-2">
           <div className="category-title-icon pr-1">
             <img src={ handleIcon(iconName) } title={ title } />
           </div>
           <h2>{title}</h2>
         </div>
-        {apps.map((app, index) => (
-          <AppItem
-            key={ index }
-            onClick={ () => { handleClick(index) } }
-            name={ app.name }
-            description={ app.description }
-            link={ app.link }
-            selected={ handleAppSelected(index, categoryIndex) } />
-        ))}
+        <div className="col-12 container no-gutters d-md-flex d-lg-flex d-sm-block">
+          {apps.map((app, index) => (
+            <AppItem
+              key={ index }
+              onClick={ () => { handleClick(index) } }
+              name={ app.name }
+              description={ app.description }
+              link={ app.link }
+              selected={ handleAppSelected(index, categoryIndex) } />
+          ))}
+        </div>
       </div>
     </div>
   )

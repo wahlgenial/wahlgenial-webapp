@@ -1,4 +1,4 @@
-#AppItem
+.app-item
   .app-block
     width: 13rem
     height: 19rem
@@ -10,17 +10,17 @@
     clear: none
     &:hover
       cursor: pointer
-
+      background-color: $pompadour
   // mobile version
   @include media-breakpoint-down(sm)
     margin: 0 !important
-    padding: 0 !important
+    padding: 6px 0 !important
     .card-text
       display: none
     .app-block
       border-radius: 0.1rem
       display: inline-block
-      padding: 0 1rem
+      padding: 0
       &:hover
         border-radius: 0.1rem
 
@@ -30,7 +30,7 @@
       border: 0
       background-color: $white_transparent
       border-radius: 0.1rem 0 0
-      border-bottom: 0.1rem solid $white
+      border-bottom: 1px solid $white
       overflow: hidden
     .card-body
       margin: 0 !important
@@ -50,7 +50,7 @@
         float: left
         width: 20%
         img
-          width: 0.8rem
+          width: 25px
       .more-text
         display: none
     .app-description
@@ -67,8 +67,6 @@
       a
         color: $white
         font-size: 1rem
-        &:hover
-          .card-footer
       .card-footer
         background-color: $yellow
         writing-mode: initial
@@ -126,6 +124,7 @@
     .card-text
       line-height: 1.2rem
     .card-footer
+      text-align: left
       background-color: $white
       position: absolute
       bottom: 0
@@ -136,5 +135,3 @@
         color: $pompadour
         font-weight: bold
         font-size: 1.1rem
-        &:hover
-          .card-footer
