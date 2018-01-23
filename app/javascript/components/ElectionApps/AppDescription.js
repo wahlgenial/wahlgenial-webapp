@@ -3,6 +3,9 @@ import {isDeviceMobile} from '../../utils/functions'
 import icons from '../../images/icons'
 
 const AppDescription = ({name, image, logo, description, link}) => {
+  const appName = _ => {
+    return `Zum ${name.substring(0, 16) + (name.length > 17 ? '...' : '')}`
+  }
   return (
     <div id="AppDescription" className="row col-12 no-gutters">
       <a name="app-description"></a>
@@ -21,15 +24,19 @@ const AppDescription = ({name, image, logo, description, link}) => {
                 &#x1F680;
               </div>
               <div className="text">
-                {`Zum ${name}`}
+                {appName()}
               </div>
 
             </a>
           </div>
           <div className="col-lg-6 col-sm-12">
             <a className="btn btn-md btn-default" href="#">
-              <img className="icon pr-3" src={ icons.share } />
-              <div className="text">weiter empfehlen</div>
+              <div className="icon">
+                <img className="icon pr-3" src={ icons.share } />
+              </div>
+              <div className="text">
+                weiter empfehlen
+              </div>
             </a>
           </div>
         </div>
