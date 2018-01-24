@@ -3,14 +3,12 @@ import icons from '../../images/icons'
 import {ShareButtons, generateShareIcon} from 'react-share'
 const {
   FacebookShareButton,
-  GooglePlusShareButton,
   TwitterShareButton,
   WhatsappShareButton,
   EmailShareButton
 } = ShareButtons
 const EmailIcon = generateShareIcon('email')
 const FacebookIcon = generateShareIcon('facebook')
-const GooglePlusIcon = generateShareIcon('google')
 const TwitterIcon = generateShareIcon('twitter')
 const WhatsappIcon = generateShareIcon('whatsapp')
 
@@ -43,36 +41,26 @@ class ShareButton extends React.Component {
 const SocialButtons = ({url}) => {
   return (
     <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
-      <EmailShareButton subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
-        <EmailIcon size={ 50 } round />
-      </EmailShareButton>
       <FacebookShareButton
         url={ url }
         quote='Facebook share'>
         <FacebookIcon size={ 50 } round />
       </FacebookShareButton>
-      <TwitterShareButton url={ url } title='Tiwtter share' >
-        <TwitterIcon size={ 50 } round />
-      </TwitterShareButton>
       <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
         <WhatsappIcon size={ 50 } round />
       </WhatsappShareButton>
-      <GooglePlusShareButton url={ url } title='Google+ share' >
-        <GooglePlusIcon size={ 50 } round />
-      </GooglePlusShareButton>
+      <TwitterShareButton url={ url } title='Tiwtter share' >
+        <TwitterIcon size={ 50 } round />
+      </TwitterShareButton>
+      <EmailShareButton subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
+        <EmailIcon size={ 50 } round />
+      </EmailShareButton>
     </div>
   )
 }
 const styles = {
-  buttonsWrapper: {
-    height: '50px',
-    overflow: 'hidden'
-  },
-  buttonWrapper: {
-    height: '40px'
-  },
-  buttonsContainer: {
-    position: 'relative'
-  }
+  buttonsWrapper: { height: '50px', overflow: 'hidden' },
+  buttonWrapper: { height: '40px' },
+  buttonsContainer: { position: 'relative' }
 }
 export default ShareButton
