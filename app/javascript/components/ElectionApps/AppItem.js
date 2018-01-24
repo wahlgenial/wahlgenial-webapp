@@ -17,7 +17,9 @@ const AppItem = ({name, description, link, selected, onClick}) => {
         <div className="app-block card">
           <div className="app-description" onClick={ (e) => { handleClick(e) } }>
             <div className="card-body text-left clearfix">
-              <h4 className="card-title">{name}</h4>
+              <div className="card-title-wrapper">
+                <h4 className="card-title">{name}</h4>
+              </div>
               <p className="card-text">{descriptionTurncate()}</p>
               <h5 className="more-text">
                 mehr
