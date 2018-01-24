@@ -25,7 +25,12 @@
       .icon
         position: absolute
   .share-button-container
-    transition: all 0.3s ease-out
+    cursor: pointer
+    transition: all 0.2s ease-out
+    .SocialMediaShareButton
+      transition: all 0.2s ease-out
+      &:hover, &:active
+        opacity: 0.85
   .app-title
     @include media-breakpoint-down(sm)
       border-bottom: 1px solid $white

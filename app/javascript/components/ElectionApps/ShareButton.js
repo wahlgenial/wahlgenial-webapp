@@ -1,5 +1,19 @@
 import React from 'react'
 import icons from '../../images/icons'
+import {ShareButtons, generateShareIcon} from 'react-share'
+const {
+  FacebookShareButton,
+  GooglePlusShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  EmailShareButton
+} = ShareButtons
+const EmailIcon = generateShareIcon('email')
+const FacebookIcon = generateShareIcon('facebook')
+const GooglePlusIcon = generateShareIcon('google')
+const TwitterIcon = generateShareIcon('twitter')
+const WhatsappIcon = generateShareIcon('whatsapp')
+
 class ShareButton extends React.Component {
   state = { shareToggled: false }
   handleShareToggle (event) {
@@ -9,9 +23,9 @@ class ShareButton extends React.Component {
   render () {
     const {shareToggled} = this.state
     return (
-      <div className="btn btn-md btn-default" style={ styles.buttonsWrapper }>
-        <div className="share-button-container" style={ { ...styles.buttonsContainer, top: shareToggled ? '-40px' : '0' } } >
-          <div style={ styles.buttonWrapper } onClick={ (e) => { this.handleShareToggle(e) } }>
+      <div style={ styles.buttonsWrapper }>
+        <div className="share-button-container" style={ { ...styles.buttonsContainer, top: shareToggled ? '-50px' : '0' } } >
+          <div className="btn btn-md btn-default" style={ styles.buttonWrapper } onClick={ (e) => { this.handleShareToggle(e) } }>
             <div className="icon">
               <img className="icon pr-3" src={ icons.share } />
             </div>
@@ -28,16 +42,30 @@ class ShareButton extends React.Component {
 
 const SocialButtons = ({url}) => {
   return (
-    <div style={ styles.buttonWrapper }>
-      <a href={ `https://www.facebook.com/sharer/sharer.php?u=${url}` } target="_blank">
-        Share on Facebook
-      </a>
+    <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
+      <EmailShareButton subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
+        <EmailIcon size={ 50 } round />
+      </EmailShareButton>
+      <FacebookShareButton
+        url={ url }
+        quote='Facebook share'>
+        <FacebookIcon size={ 50 } round />
+      </FacebookShareButton>
+      <TwitterShareButton url={ url } title='Tiwtter share' >
+        <TwitterIcon size={ 50 } round />
+      </TwitterShareButton>
+      <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
+        <WhatsappIcon size={ 50 } round />
+      </WhatsappShareButton>
+      <GooglePlusShareButton url={ url } title='Google+ share' >
+        <GooglePlusIcon size={ 50 } round />
+      </GooglePlusShareButton>
     </div>
   )
 }
 const styles = {
   buttonsWrapper: {
-    height: '40px',
+    height: '50px',
     overflow: 'hidden'
   },
   buttonWrapper: {
