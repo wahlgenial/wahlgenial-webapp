@@ -9,8 +9,8 @@ class ElectionApps extends React.Component {
     this.toggleAppModal = this.toggleAppModal.bind(this)
     this.isAppSelected = this.isAppSelected.bind(this)
     this.state = {
-      selectedCategoryIndex: 0,
-      selectedAppIndex: 0,
+      selectedCategoryIndex: null,
+      selectedAppIndex: null,
       // copy categories keys into array
       categoryIndexOrder: Object.keys(this.props.appsCategories),
       appModalIsOpen: false

@@ -18,6 +18,11 @@ class ShareButton extends React.Component {
     this.setState({shareToggled: !this.state.shareToggled})
     event.preventDefault()
   }
+
+  componentWillReceiveProps () {
+    this.setState({shareToggled: null})
+  }
+
   render () {
     const {shareToggled} = this.state
     return (
@@ -39,6 +44,8 @@ class ShareButton extends React.Component {
 }
 
 const SocialButtons = ({url}) => {
+  console.log({url})
+  if (!url) url = '#'
   return (
     <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
       <FacebookShareButton
