@@ -73,6 +73,7 @@ const styles = {
       bottom: 0
     },
     content: {
+      // transition: 'all 0.2s ease-out',
       backgroundImage: 'linear-gradient(201deg, #d85c75, #ffa256 99%, #ffa355)',
       position: 'absolute',
       WebkitOverflowScrolling: 'touch',

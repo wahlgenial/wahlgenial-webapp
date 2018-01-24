@@ -44,16 +44,16 @@ const SocialButtons = ({url}) => {
       <FacebookShareButton
         url={ url }
         quote='Facebook share'>
-        <FacebookIcon size={ 50 } round />
+        <FacebookIcon size={ 40 } round />
       </FacebookShareButton>
       <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
-        <WhatsappIcon size={ 50 } round />
+        <WhatsappIcon size={ 40 } round />
       </WhatsappShareButton>
       <TwitterShareButton url={ url } title='Tiwtter share' >
-        <TwitterIcon size={ 50 } round />
+        <TwitterIcon size={ 40 } round />
       </TwitterShareButton>
       <EmailShareButton subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
-        <EmailIcon size={ 50 } round />
+        <EmailIcon size={ 40 } round />
       </EmailShareButton>
     </div>
   )

@@ -9,8 +9,8 @@ const AppDescription = ({name, image, logo, description, link}) => {
   return (
     <div id="AppDescription" className="row col-12 no-gutters">
       <a name="app-description"></a>
-      <div className="col-lg-6 col-sm-12 order-lg-2 order-sm-1 text-center">
-        <img className={ 'mt-5 pt-2 mb-3 ' + (isDeviceMobile() ? 'w-50 px-4' : 'w-75') } src={ isDeviceMobile() ? logo : image } />
+      <div className="description-img col-lg-6 col-sm-12 order-lg-2 order-sm-1 text-center">
+        <img className={ 'mt-5 pt-2 mb-3 ' + (isDeviceMobile() ? 'w-50 px-4' : '') } src={ isDeviceMobile() ? logo : image } />
       </div>
       <div className="d-flex flex-column col-lg-6 col-sm-12 order-lg-1 order-sm-2 text-left pb-5 px-1 no-gutters">
         <div className="px-4">
@@ -32,7 +32,7 @@ const AppDescription = ({name, image, logo, description, link}) => {
             </a>
           </div>
           <div className="col-lg-6 col-sm-12">
-            <ShareButton url={ link } />
+            <ShareButton AppName={ name } url={ link } />
           </div>
         </div>
       </div>
