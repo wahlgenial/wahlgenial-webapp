@@ -1,6 +1,6 @@
 import React from 'react'
 import {isDeviceMobile} from '../../utils/functions'
-import icons from '../../images/icons'
+import ShareButton from './ShareButton'
 
 const AppDescription = ({name, image, logo, description, link}) => {
   const appName = _ => {
@@ -32,14 +32,7 @@ const AppDescription = ({name, image, logo, description, link}) => {
             </a>
           </div>
           <div className="col-lg-6 col-sm-12">
-            <a className="btn btn-md btn-default" href="#">
-              <div className="icon">
-                <img className="icon pr-3" src={ icons.share } />
-              </div>
-              <div className="text">
-                weiter empfehlen
-              </div>
-            </a>
+            <ShareButton url={ link } />
           </div>
         </div>
       </div>
