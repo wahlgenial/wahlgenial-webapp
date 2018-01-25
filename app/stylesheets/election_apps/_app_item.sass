@@ -139,3 +139,11 @@
         color: $pompadour
         font-weight: bold
         font-size: 1.1rem
+        transition: all 0.3s ease-out
+        &:hover
+          transition: all 0.3s ease-out
+          .card-footer
+            &:before
+              position: absolute
+              left: 12px
+              content: '\01F680'

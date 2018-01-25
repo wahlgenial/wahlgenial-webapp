@@ -3,9 +3,6 @@ import {isDeviceMobile} from '../../utils/functions'
 import ShareButton from './ShareButton'
 
 const AppDescription = ({name, image, logo, description, link}) => {
-  const appName = _ => {
-    return `Zum ${name.substring(0, 16) + (name.length > 17 ? '...' : '')}`
-  }
   return (
     <div id="AppDescription" className="row col-12 no-gutters">
       <a name="app-description"></a>
@@ -26,7 +23,7 @@ const AppDescription = ({name, image, logo, description, link}) => {
                 &#x1F680;
               </div>
               <div className="text">
-                {appName()}
+                Zur App
               </div>
 
             </a>
