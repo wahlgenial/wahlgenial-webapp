@@ -61,6 +61,9 @@ const menuTogglerEventListener = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  })
   if (viewNotMobile()) { mountFullpage() }
   mountToolitp()
   menuTogglerEventListener()

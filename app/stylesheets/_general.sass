@@ -8,8 +8,6 @@ body
 	-moz-hyphens: auto
 	-ms-hyphens: auto
 	hyphens: auto
-	&.ReactModal__Body--open
-		overflow: hidden
 footer
 	padding: 40px 0 20px 0
 @include media-breakpoint-down(sm)
@@ -25,9 +23,6 @@ h2
 .main-menu-open
     height: auto
     overflow: hidden
-.ReactModal__Body--open
-		position : fixed
-    height: auto
     overflow: hidden
 h1.main-title
 	font-size: 2.25rem
@@ -52,15 +47,6 @@ h1.main-title
 	background-attachment: fixed
 	background-repeat: no-repeat
 	background-size: 100% 100%
-.gradient-modal
-	background: $orange
-	background: -moz-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-	background: -webkit-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-	background: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-	background-image: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355) #d85c75
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
-	background-attachment: fixed
-	background-repeat: no-repeat
 .more-apps
 	float: right
 	width: 180px

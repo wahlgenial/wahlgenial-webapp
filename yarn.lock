@@ -6192,6 +6192,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-bootstrap4-modal@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-bootstrap4-modal/-/react-bootstrap4-modal-1.2.0.tgz#4a5ba6b21aaa1b4286db87d6d161602b03c8af69"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.10"
+
 react-docgen@^2.15.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-2.19.0.tgz#a9e356277aa31f42df163f0b4917d3b077985f9d"
@@ -6271,14 +6278,6 @@ react-modal@^2.4.1:
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
-
-react-modal@^3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.8.tgz#7d6b1958f44828babd2a1ce826c28fa40d026b0f"
-  dependencies:
-    exenv "^1.2.0"
-    prop-types "^15.5.10"
-    warning "^3.0.0"
 
 react-rails-ujs@^1.1.0:
   version "1.1.0"
