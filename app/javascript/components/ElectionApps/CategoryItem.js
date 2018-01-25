@@ -15,7 +15,7 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppS
     }
   }
   return (
-    <div id="CategoryItem" className="px-4 col-12 text-center">
+    <div id="CategoryItem" className="px-4 mt-4 col-12 text-center">
       <div className="m-auto category-container">
         <div className="category-title text-left">
           <div className="category-title-icon">
