@@ -10,7 +10,8 @@
     clear: none
     &:hover
       cursor: pointer
-      background-color: $pompadour
+      @include media-breakpoint-up(sm)
+        background-color: $pompadour
   // mobile version
   @include media-breakpoint-down(sm)
     margin: 0 !important
