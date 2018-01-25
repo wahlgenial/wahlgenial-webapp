@@ -39,8 +39,14 @@
     @include media-breakpoint-down(sm)
       border-bottom: 1px solid $white
       padding: 1.5rem
-
+body
+  &.modal-open
+    position : fixed
+    height: auto
+    overflow: hidden
 .app-description-modal
+  .description-img
+    margin-top: -69px
   .modal
     min-height: 100%
     z-index: 101
@@ -51,14 +57,18 @@
     z-index: 100
   .modal, .modal-backdrop
     top: 69px
+  .modal-heading
+    position: sticky
+    top: 0
+    z-index: 202
   .modal-close-icon-container
-    position: fixed
     cursor: pointer
     width: 4rem
     height: 4rem
     padding: 1rem
-    z-index: 101
+    z-index: 203
   .modal-content
+    overflow: scroll
     height: 100%
     border: 0
     border-radius: 0

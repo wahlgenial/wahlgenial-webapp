@@ -7,7 +7,7 @@ const AppDescriptionModal = ({isOpen, toggleModal, name, logo, image, descriptio
   return (
     <div className="app-description-modal gradient-modal">
       <Modal visible={ isOpen } onClickBackdrop={ () => { toggleModal() } }>
-        <div id="heading">
+        <div class="modal-heading">
           <div className="modal-close-icon-container" onClick={ () => { toggleModal() } }>
             <img src={ icons.back } />
           </div>
