@@ -54,10 +54,10 @@ const styles = {
     cursor: 'pointer',
     position: 'fixed',
     top: '69px', // navbar height
-    width: '3rem',
-    height: '3rem',
-    padding: '0.7rem',
-    zIndex: 201
+    width: '4rem',
+    height: '4rem',
+    padding: '1rem',
+    zIndex: 202
 
   },
   closeIcon: {
@@ -73,17 +73,21 @@ const styles = {
       bottom: 0
     },
     content: {
-      // transition: 'all 0.2s ease-out',
+      transition: 'all 0.2s ease-out',
+      opacity: 0.92,
       backgroundImage: 'linear-gradient(201deg, #d85c75, #ffa256 99%, #ffa355)',
       position: 'absolute',
-      WebkitOverflowScrolling: 'touch',
+      // WebkitOverflowScrolling: 'touch',
       outline: 'none',
       top: '69px',
       left: 0,
       right: 0,
       height: '100vh',
+      maxHheight: '100%',
+      overflowYy: 'auto',
+      overflowX: 'hidden',
       overflow: 'scroll',
-      padding: '0'
+      padding: '0 0 10rem 0'
     }
   }
 }
