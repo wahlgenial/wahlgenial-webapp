@@ -93,7 +93,7 @@ class ElectionAppsMobile extends React.Component {
                               </div>
                             </div>
                             <div className="align-self-end my-auto">
-                              <a className="btn btn-yellow" href={ !app.link ? '#' : app.link }> Los geht's </a>
+                              <a className="btn btn-yellow" href={ !app.link ? '#' : app.link } target="_blank"> Los geht's </a>
                             </div>
                           </div>
                         </div>
