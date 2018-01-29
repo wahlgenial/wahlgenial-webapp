@@ -28,7 +28,7 @@ class ShareButton extends React.Component {
     const {shareToggled} = this.state
     return (
       <div style={ styles.buttonsWrapper }>
-        <div className="share-button-container" style={ { ...styles.buttonsContainer, top: shareToggled ? '-50px' : '0' } } >
+        <div className="share-button-container" style={ { ...styles.buttonsContainer, top: shareToggled ? '-48px' : '0' } } >
           <div className="btn btn-md btn-default" style={ styles.buttonWrapper } onClick={ (e) => { this.handleShareToggle(e) } }>
             <div className="icon">
               <img className="icon pr-3" src={ icons.share } />

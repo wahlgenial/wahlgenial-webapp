@@ -1,6 +1,6 @@
 import React from 'react'
 import AppDescriptionModal from './AppDescriptionModal'
-import {ElectionAppsCategoriesIcons} from '../../images/icons'
+import icons, {ElectionAppsCategoriesIcons} from '../../images/icons'
 
 class ElectionAppsMobile extends React.Component {
   constructor (props) {
@@ -76,7 +76,7 @@ class ElectionAppsMobile extends React.Component {
                 </div>
                 <div className="apps">
                   {category.apps.map((app, appIndex) => (
-                    <div key={ appIndex } className="app row container no-gutters d-flex flex-row">
+                    <div key={ appIndex } className="app no-gutters d-flex flex-row">
                       <div className="col-6" onClick={ () => { this.handleAppSelect(categoryIndex, appIndex) } }>
                         <div className="d-flex h-100">
                           <div className="align-self-center">
@@ -86,8 +86,15 @@ class ElectionAppsMobile extends React.Component {
                       </div>
                       <div className="app-info col-6">
                         <div className="d-flex h-100">
-                          <div className="align-self-center">
-                           I'm vertically centered
+                          <div className="align-self-center d-flex flex-row justify-content-around">
+                            <div className="align-self-start my-auto">
+                              <div className="more-icon mr-3" onClick={ () => { this.handleAppSelect(categoryIndex, appIndex) } }>
+                                <img src={ icons.info } />
+                              </div>
+                            </div>
+                            <div className="align-self-end my-auto">
+                              <a className="btn btn-yellow" href={ !app.link ? '#' : app.link }> Los geht's </a>
+                            </div>
                           </div>
                         </div>
                       </div>

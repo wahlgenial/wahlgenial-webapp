@@ -29,7 +29,7 @@ const AppItem = ({name, description, link, selected, onClick}) => {
               </div>
             </div>
           </div>
-          <div className="footer-link" href={ !link ? '#' : link }>
+          <div className="footer-link">
             <a href={ !link ? '#' : link }>
               <div className="card-footer py-2">
                  Los geht's
