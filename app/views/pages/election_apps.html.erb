@@ -3,12 +3,6 @@
   <div class="logo-container p-2 d-none d-lg-block d-md-block">
     <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
   </div>
-  <div class="text-center">
-    <h1 class="main-title">
-      WAHL-APPS
-    </h1>
-    <p class="mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
-  </div>
   <%= react_component(
     'ElectionApps',
     appsCategories: @apps_categories.to_h) %>

@@ -47,7 +47,7 @@ class ShareButton extends React.Component {
 const SocialButtons = ({url}) => {
   return (
     <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
-      <FacebookShareButton url={ url } quote='Facebook share'>
+      <FacebookShareButton url={ url } appId='782288638629205' quote='Facebook share'>
         <FacebookIcon size={ 38 } round />
       </FacebookShareButton>
       <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
@@ -63,7 +63,7 @@ const SocialButtons = ({url}) => {
   )
 }
 const styles = {
-  buttonsWrapper: { height: '50px', overflow: 'hidden' },
+  buttonsWrapper: { height: '48px', overflow: 'hidden' },
   buttonWrapper: { height: '40px' },
   buttonsContainer: { position: 'relative' }
 }

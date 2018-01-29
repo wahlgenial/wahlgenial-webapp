@@ -1,13 +1,104 @@
-@import "./election_apps/app_description"
-@import "./election_apps/app_item"
-@import "./election_apps/category_item"
+// @import "./election_apps/app_description"
+// @import "./election_apps/app_item"
+// @import "./election_apps/category_item"
+//
+//
+// .election-apps
+//   background: url('../javascript/images/europe.svg')
+//   background-size:  270px 277.65px
+//   background-repeat: no-repeat
+//   background-position-y: -46px
+//   background-position-x: 97%
+//   @include media-breakpoint-down(md)
+//     background: none
 
+.election-apps-mobile
+  .main-title
+    margin-top: $header_height
+    padding: 2.4rem 0 2rem
+    font-size: 1.3rem
+  .category
+    margin-bottom: 4rem
+  .category-title-icon
+    img
+      width: 68px
+  .category-title
+    font-size: 1.2rem
+    padding-top: 1.3rem
+  .apps
+    padding: 2rem 1rem
+  .app
+    cursor:  pointer
+    border-bottom: 2px solid $white
+  .app-title
+    font-size: 1.1rem
+    padding: 1rem 0.2rem 1rem 0
+  .app-info
 
-.election-apps
-  background: url('../javascript/images/europe.svg')
-  background-size:  270px 277.65px
-  background-repeat: no-repeat
-  background-position-y: -46px
-  background-position-x: 97%
-  @include media-breakpoint-down(md)
-    background: none
+  .description-img
+    margin-top: -$header_height
+  .modal
+    min-height: 100%
+    z-index: 101
+  .modal-dialog
+    height: 100%
+    margin: 0
+  .modal-backdrop
+    z-index: 100
+  .modal, .modal-backdrop
+    top: $header_height
+  .modal-heading
+    position: sticky
+    top: 0
+    z-index: 202
+  .modal-close-icon-container
+    cursor: pointer
+    width: 4rem
+    height: 4rem
+    padding: 1rem
+    z-index: 203
+  .description-img
+    padding-top: 3rem
+    img
+      width: 180px
+  .modal-content
+    border: 0
+    border-radius: 0
+    background: $orange
+    background: -moz-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
+    background: -webkit-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
+    background: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
+    background-image: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355) #d85c75
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
+
+  .share-button-container
+    cursor: pointer
+    transition: all 0.2s ease-out
+    .SocialMediaShareButton
+      transition: all 0.2s ease-out
+      &:hover, &:active
+        opacity: 0.85
+  .btn-container
+    padding: 1rem 0
+    .btn-cta
+      background-color: $white
+      border-color: $pompadour
+      color: $pompadour
+      padding: 1rem 2rem
+      margin-bottom: 120px
+      &:hover,
+      &:active
+        background-color: $pompadour_lighter
+    .btn
+      border-width: 2px
+      display: inline-block
+      width: 100%
+      padding: 0.4rem 0.8rem
+      margin: 0.3rem auto
+      img
+        width: 34px
+        top: 2px
+      .text
+        margin: auto
+      .icon
+        position: absolute
