@@ -24,6 +24,7 @@ class ShareButton extends React.Component {
   }
 
   render () {
+    const {url} = this.props
     const {shareToggled} = this.state
     return (
       <div style={ styles.buttonsWrapper }>
@@ -36,7 +37,7 @@ class ShareButton extends React.Component {
               weiter empfehlen
             </div>
           </div>
-          <SocialButtons url={ this.props.url } />
+          <SocialButtons url={ url } />
         </div>
       </div>
     )
@@ -44,23 +45,19 @@ class ShareButton extends React.Component {
 }
 
 const SocialButtons = ({url}) => {
-  console.log({url})
-  if (!url) url = '#'
   return (
     <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
-      <FacebookShareButton
-        url={ url }
-        quote='Facebook share'>
-        <FacebookIcon size={ 40 } round />
+      <FacebookShareButton url={ url } quote='Facebook share'>
+        <FacebookIcon size={ 38 } round />
       </FacebookShareButton>
       <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
-        <WhatsappIcon size={ 40 } round />
+        <WhatsappIcon size={ 38 } round />
       </WhatsappShareButton>
       <TwitterShareButton url={ url } title='Tiwtter share' >
-        <TwitterIcon size={ 40 } round />
+        <TwitterIcon size={ 38 } round />
       </TwitterShareButton>
-      <EmailShareButton subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
-        <EmailIcon size={ 40 } round />
+      <EmailShareButton url={ url } subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
+        <EmailIcon size={ 38 } round />
       </EmailShareButton>
     </div>
   )
