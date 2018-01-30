@@ -9,10 +9,6 @@ class PagesController < ApplicationController
     @terms = Glossary::TermReactDecorator.decorate terms
   end
 
-  def election_apps
-    @apps_categories = election_apps_categories
-  end
-
   def imprint
   end
 
@@ -22,7 +18,4 @@ class PagesController < ApplicationController
     ElectionPrograms::TopicReactDecorator.decorate_collection(ElectionPrograms::Topic.includes(questions: {opinions: :party}))
   end
 
-  def election_apps_categories
-    ElectionApps::CategoryReactDecorator.decorate(ElectionApps::Category.includes(:apps))
-  end
 end
