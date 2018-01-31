@@ -1,6 +1,6 @@
 import React from 'react'
 import {ElectionAppsCategoriesIcons} from '../../images/icons'
-import AppItem from './AppItem'
+import AppItemDesktop from './AppItemDesktop'
 
 const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppSelected}) => {
   const handleClick = (appId) => {
@@ -15,25 +15,20 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppS
     }
   }
   return (
-    <div id="CategoryItem" className="px-4 mt-4 col-12 text-center">
-      <div className="m-auto category-container">
-        <div className="category-title text-left">
-          <div className="category-title-icon">
-            <img src={ handleIcon(iconName) } title={ title } />
-          </div>
-          <h2>{title}</h2>
-        </div>
-        <div className="col-12 container no-gutters d-md-flex d-lg-flex d-sm-block">
-          {apps.map((app, index) => (
-            <AppItem
-              key={ index }
-              onClick={ () => { handleClick(index) } }
-              name={ app.name }
-              description={ app.description }
-              link={ app.link }
-              selected={ handleAppSelected(index, categoryIndex) } />
-          ))}
-        </div>
+    <div className="m-auto">
+      <div className="category-title">
+        <img className="category-title-icon" src={ handleIcon(iconName) } title={ title } />
+        <h2 className="category-title-text">{title}</h2>
+      </div>
+      <div className="apps-container d-flex">
+        {apps.map((app, index) => (
+          <AppItemDesktop
+            key={ index }
+            onClick={ () => { handleClick(index) } }
+            name={ app.name }
+            description={ app.description }
+            link={ app.link } />
+        ))}
       </div>
     </div>
   )

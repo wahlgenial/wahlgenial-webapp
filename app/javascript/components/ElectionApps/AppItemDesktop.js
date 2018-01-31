@@ -16,9 +16,6 @@ const AppItem = ({name, description, link, onClick}) => {
             <h5 className="more-text">
               mehr
             </h5>
-            <div className="more-icon">
-              <img src={ icons.info } />
-            </div>
           </div>
         </div>
         <div className="footer-link">
