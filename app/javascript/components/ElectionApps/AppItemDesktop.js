@@ -1,5 +1,4 @@
 import React from 'react'
-import icons from '../../images/icons'
 const AppItem = ({name, description, link, onClick}) => {
   const descriptionTurncate = () => {
     return description.substring(0, 98) + '...'

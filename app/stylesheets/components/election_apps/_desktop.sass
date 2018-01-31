@@ -1,0 +1,73 @@
+.election-apps-desktop
+  .category-container
+    width: fit-content
+    width: -moz-fit-content
+    padding-bottom: 3rem
+  .category-title
+    position: relative
+    left: -60px
+    padding-bottom: 1rem
+    overflow: visible
+    .category-title-icon
+      width: 55px
+      position: absolute
+      top: -20px
+    .category-title-text
+      font-size: 1.2rem
+      line-height: 1rem
+      margin: 0 60px
+  .apps-container
+    margin-bottom: 50px
+  .app-block
+    width: 13rem
+    height: 19rem
+    border: 0.2rem solid $white
+    background-color: $white_transparent
+    transition: all 0.3s ease-out
+    border-radius: 0.6rem
+    overflow: hidden
+    clear: none
+    &:hover
+      cursor: pointer
+      background-color: $pompadour
+    .card-title-wrapper
+      height: 85px
+      display: flex
+    .card-title
+      font-size: 1.3rem
+      font-weight: 600
+      margin-top: auto
+    .card-body
+      padding: 15px 10px 0 20px
+      height: 100%
+      .more-text
+        position: absolute
+        bottom: 45px
+        color: $white
+        font-weight: bold
+        font-size: 1.1rem
+      .more-icon
+        display: none
+    .card-text
+      line-height: 1.2rem
+    .card-footer
+      text-align: center
+      background-color: $white
+      position: absolute
+      bottom: 0
+      width: 100%
+      border: 0
+    .footer-link
+      text-align: center
+      a
+        color: $pompadour
+        font-weight: bold
+        font-size: 1.1rem
+        transition: all 0.3s ease-out
+        &:hover
+          transition: all 0.3s ease-out
+          .card-footer
+            &:before
+              position: absolute
+              left: 12px
+              content: '\01F680'

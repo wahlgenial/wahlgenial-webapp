@@ -1,6 +1,7 @@
 import React from 'react'
 import CategoryItem from './CategoryItem'
-const logoImage = require('../../images/wahl-daten-helfer-logo.svg')
+import HeaderLogo from '../HeaderLogo'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class ElectionAppsHome extends React.Component {
   constructors (props) {
@@ -50,36 +51,41 @@ class ElectionAppsHome extends React.Component {
   }
 
   render () {
-    const {appsCategories} = this.props
+    const {appsCategories, history} = this.props
     return (
-      <div className="election-apps">
-        <div className="logo-container p-2 d-none d-lg-block d-md-block">
-          <a href="/">
-            <img src={ logoImage } title='' />
-          </a>
-        </div>
-        <div className="text-center mb-5">
-          <h1 className="main-title">
-            WAHL-APPS
-          </h1>
-          <p className="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
-        </div>
-        <div className="election-apps-desktop">
-          {appsCategories.map((category, index) => {
-            return (category.apps && category.apps.length !== 0) && (
-              <div key={ index } className="category-container mx-auto my-3">
-                <CategoryItem
-                  key={ index }
-                  categoryIndex={ index }
-                  iconName={ category.icon_name }
-                  title={ category.title }
-                  apps={ category.apps }
-                  handleAppSelected={ this.isAppSelected }
-                  onClick = { () => { console.log('cliked!') } } />
-              </div>
-            )
-          })}
-        </div>
+      <div>
+        <HeaderLogo />
+        <ReactCSSTransitionGroup
+          transitionAppear={ true }
+          transitionAppearTimeout={ 600 }
+          transitionEnterTimeout={ 600 }
+          transitionLeaveTimeout={ 200 }
+          transitionName="electionsapps" >
+          <div className="election-apps">
+            <div className="text-center mb-5">
+              <h1 className="main-title">
+                WAHL-APPS
+              </h1>
+              <p className="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
+            </div>
+            <div className="election-apps-desktop">
+              {appsCategories.map((category, index) => {
+                return (category.apps && category.apps.length !== 0) && (
+                  <div key={ index } className="category-container mx-auto my-3">
+                    <CategoryItem
+                      key={ index }
+                      categoryIndex={ index }
+                      iconName={ category.icon_name }
+                      title={ category.title }
+                      apps={ category.apps }
+                      handleAppSelected={ this.isAppSelected }
+                      onClick = { () => { history.push('/wahl_apps/1/2') } } />
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </ReactCSSTransitionGroup>
       </div>
     )
   }

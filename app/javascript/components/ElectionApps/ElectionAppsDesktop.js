@@ -1,12 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import ElectionAppsHome from './ElectionAppsHome'
-
-const Topic = (props) => (
-  <div>
-    <h3>{props.message} {props.match.params.id}</h3>
-  </div>
-)
+import AppDescriptionDesktop from './AppDescriptionDesktop'
 
 class ElectionAppsDesktop extends React.Component {
   state = { selectedCategory: false, selectedApp: false }
@@ -53,9 +48,9 @@ class ElectionAppsDesktop extends React.Component {
           { (this.shouldRedirect()) &&
             (<Redirect from="/wahl_apps/" to="/wahl_apps"/>)
           }
-          <Route path="/wahl_apps/:category/:app" render={ (props) => <Topic { ...props } message="topic selected" /> }/>
+          <Route path="/wahl_apps/:category/:app" render={ (props) => <AppDescriptionDesktop { ...props } message="topic selected" /> }/>
           <Route exact path='/wahl_apps/' render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } /> } />
-          <pre>{JSON.stringify(this.state)}</pre>
+          {/* <pre>{JSON.stringify(this.state)}</pre> */}
         </div>
       </BrowserRouter>
     )

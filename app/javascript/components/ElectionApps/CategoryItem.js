@@ -1,9 +1,11 @@
 import React from 'react'
 import {ElectionAppsCategoriesIcons} from '../../images/icons'
 import AppItemDesktop from './AppItemDesktop'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppSelected}) => {
   const handleClick = (appId) => {
+    console.log(':D')
     onClick(categoryIndex, appId)
   }
 
@@ -15,22 +17,29 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppS
     }
   }
   return (
-    <div className="m-auto">
-      <div className="category-title">
-        <img className="category-title-icon" src={ handleIcon(iconName) } title={ title } />
-        <h2 className="category-title-text">{title}</h2>
+    <ReactCSSTransitionGroup
+      transitionAppear={ true }
+      transitionAppearTimeout={ 600 }
+      transitionEnterTimeout={ 600 }
+      transitionLeaveTimeout={ 200 }
+      transitionName="category" >
+      <div className="m-auto">
+        <div className="category-title">
+          <img className="category-title-icon" src={ handleIcon(iconName) } title={ title } />
+          <h2 className="category-title-text">{title}</h2>
+        </div>
+        <div className="apps-container d-flex">
+          {apps.map((app, index) => (
+            <AppItemDesktop
+              key={ index }
+              onClick={ () => { handleClick(index) } }
+              name={ app.name }
+              description={ app.description }
+              link={ app.link } />
+          ))}
+        </div>
       </div>
-      <div className="apps-container d-flex">
-        {apps.map((app, index) => (
-          <AppItemDesktop
-            key={ index }
-            onClick={ () => { handleClick(index) } }
-            name={ app.name }
-            description={ app.description }
-            link={ app.link } />
-        ))}
-      </div>
-    </div>
+    </ReactCSSTransitionGroup>
   )
 }
 export default CategoryItem

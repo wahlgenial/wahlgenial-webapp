@@ -9,6 +9,7 @@
     "popper.js": "^1.12.7",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap4-modal": "^1.2.0",
     "react-dom": "^16.0.0",
     "react-rails-ujs": "^1.1.0",

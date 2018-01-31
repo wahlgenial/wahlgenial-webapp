@@ -1,150 +1,47 @@
-// @import "./election_apps/app_description"
-// @import "./election_apps/app_item"
-// @import "./election_apps/category_item"
-//
-//
+@import "./election_apps/transitions"
+@import "./election_apps/desktop"
+@import "./election_apps/mobile"
+
 .election-apps
   background: url('../javascript/images/europe.svg')
   background-size:  270px 277.65px
   background-repeat: no-repeat
   background-position-y: -46px
   background-position-x: 97%
-//   @include media-breakpoint-down(md)
-//     background: none
-.election-apps-desktop
-  .category-container
-    width: fit-content
-    width: -moz-fit-content
-    padding-bottom: 3rem
-  .category-title
-    position: relative
-    left: -60px
-    padding-bottom: 1rem
-    overflow: visible
-    .category-title-icon
-      width: 55px
-      position: absolute
-      top: -20px
-    .category-title-text
-      font-size: 1.2rem
-      line-height: 1rem
-      margin: 0 60px
-  .apps-container
-    margin-bottom: 50px
-  .app-block
-    width: 13rem
-    height: 19rem
-    border: 0.2rem solid $white
-    background-color: $white_transparent
-    transition: all 0.3s ease-out
-    border-radius: 0.6rem
-    overflow: hidden
-    clear: none
-    &:hover
-      cursor: pointer
-      background-color: $pompadour
-    .card-title-wrapper
-      height: 85px
-      display: flex
-    .card-title
-      font-size: 1.3rem
-      font-weight: 600
-      margin-top: auto
-    .card-body
-      padding: 15px 10px 0 20px
-      height: 100%
-      .more-text
-        position: absolute
-        bottom: 45px
-        color: $white
-        font-weight: bold
-        font-size: 1.1rem
-      .more-icon
-        display: none
-    .card-text
-      line-height: 1.2rem
-    .card-footer
-      text-align: center
+
+.app-description
+  .back-icon
+    img
+      width: 16px
+      margin-right: 0.5rem
+      transform: rotate(180deg)
+    a
+      text-decoration: none
+      color: $white
+  .description-img
+    img
+      height: 300px
+  .btn-container
+    padding: 1rem 0
+    .btn-cta
       background-color: $white
-      position: absolute
-      bottom: 0
-      width: 100%
-      border: 0
-    .footer-link
-      text-align: center
-      a
-        color: $pompadour
-        font-weight: bold
-        font-size: 1.1rem
-        transition: all 0.3s ease-out
-        &:hover
-          transition: all 0.3s ease-out
-          .card-footer
-            &:before
-              position: absolute
-              left: 12px
-              content: '\01F680'
-
-
-.election-apps-mobile
-  .main-title
-    margin-top: $header_height
-    padding: 2.4rem 0 2rem
-    font-size: 1.3rem
-  .category
-    margin-bottom: 4rem
-  .category-title-icon
-    img
-      width: 68px
-  .category-title
-    font-size: 1.2rem
-    padding-top: 1.3rem
-  .apps
-    padding: 2rem 1rem
-  .app
-    cursor:  pointer
-    border-bottom: 2px solid $white
-  .app-title
-    font-size: 1.1rem
-    padding: 1rem 0.2rem
-  .app-info
-
-  .description-img
-    margin-top: -$header_height
-  .modal
-    min-height: 100%
-    z-index: 101
-  .modal-dialog
-    height: 100%
-    margin: 0
-  .modal-backdrop
-    z-index: 100
-  .modal, .modal-backdrop
-    top: $header_height
-  .modal-heading
-    position: sticky
-    top: 0
-    z-index: 202
-  .modal-close-icon-container
+      border-color: $pompadour
+      color: $pompadour
+      &:hover,
+      &:active
+        background-color: $pompadour_lighter
+  .share-button-container
     cursor: pointer
-    width: 4rem
-    height: 4rem
-    padding: 1rem
-    z-index: 203
-  .description-img
-    padding-top: 3rem
-    img
-      width: 180px
-  .modal-content
-    min-height: 100%
-    border: 0
-    border-radius: 0
-    background: $orange
-    background: -moz-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-    background: -webkit-linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-    background: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355)
-    background-image: linear-gradient(204deg, #d85c75, #ffa256 99%, #ffa355) #d85c75
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa355', endColorstr='#d85c75',GradientType=1 )
+    transition: all 0.2s ease-out
+    .SocialMediaShareButton
+      transition: all 0.2s ease-out
+      &:hover, &:active
+        opacity: 0.85
+  .app-title
+    @include media-breakpoint-down(sm)
+      border-bottom: 1px solid $white
+      padding: 1.5rem
+
   .share-button-container
     cursor: pointer
     transition: all 0.2s ease-out
@@ -176,8 +73,4 @@
         margin: auto
       .icon
         position: absolute
-  a
-    color: $white
-  .more-icon
-    img
-      width: 28px
+        
