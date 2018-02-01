@@ -3,10 +3,9 @@ import {ElectionAppsCategoriesIcons} from '../../images/icons'
 import AppItemDesktop from './AppItemDesktop'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppSelected}) => {
-  const handleClick = (appId) => {
-    console.log(':D')
-    onClick(categoryIndex, appId)
+const CategoryItem = ({iconName, title, categorySlug, apps, onClick}) => {
+  const handleOnClick = (appSlug) => {
+    onClick(categorySlug, appSlug)
   }
 
   const handleIcon = (iconString) => {
@@ -32,7 +31,7 @@ const CategoryItem = ({iconName, title, categoryIndex, apps, onClick, handleAppS
           {apps.map((app, index) => (
             <AppItemDesktop
               key={ index }
-              onClick={ () => { handleClick(index) } }
+              onClick={ () => { handleOnClick(app.slug) } }
               name={ app.name }
               description={ app.description }
               link={ app.link } />

@@ -1,43 +1,51 @@
 import React from 'react'
-import { BrowserRouter, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import ElectionAppsHome from './ElectionAppsHome'
 import AppDescriptionDesktop from './AppDescriptionDesktop'
 
 class ElectionAppsDesktop extends React.Component {
-  state = { selectedCategory: false, selectedApp: false }
-  componentWillMount () {
-    this.selectAppFromParams()
+  constructor (props) {
+    super(props)
+    this.handleAppSelect = this.handleAppSelect.bind(this)
+    this.state = {
+      selectedCategorySlug: false,
+      selectedAppSlug: false
+    }
+  }
+
+  componentWillMount () { this.selectAppFromParams() }
+
+  handleAppSelect (categorySlug, appSlug, historyHandler) {
+    this.setState({
+      selectedCategorySlug: categorySlug,
+      selectedAppSlug: appSlug
+    })
+    if (historyHandler) {
+      historyHandler.push(`/wahl_apps/${categorySlug}/${appSlug}`)
+    }
   }
 
   extractParamsFromUri () {
     const params = window.location.href.replace(/(.*wahl_apps)/, '')
-    return params.split('/')
+    return params.split('/').filter((value) => { if (value !== '') return true })
   }
 
   selectAppFromParams () {
-    const paramsArray = this.extractParamsFromUri().filter(
-      (value) => { if (value !== '') return true }
-    )
+    const paramsArray = this.extractParamsFromUri()
     if (paramsArray.length !== 0) {
-      this.setState({
-        selectedCategory: paramsArray[0],
-        selectedApp: paramsArray[1]
-      })
+      this.handleAppSelect(paramsArray[0], paramsArray[1])
     }
   }
 
-  shouldRedirect () {
-    const {selectedCategory, selectedApp} = this.state
-    const {pathname} = window.location
-    if (!selectedCategory || !selectedApp) {
-      if (pathname === '/wahl_apps/' || pathname === '/wahl_apps') {
-        return false
-      } else {
-        return true
-      }
-    } else {
-      return false
-    }
+  selectedApp () {
+    // this method should be more advanced
+    let selectedApp = null
+    this.props.appsCategories.map((category) => {
+      category.apps.map((app) => {
+        if (app.slug === this.state.selectedAppSlug) { selectedApp = app }
+      })
+    })
+    return selectedApp
   }
 
   render () {
@@ -45,12 +53,8 @@ class ElectionAppsDesktop extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          { (this.shouldRedirect()) &&
-            (<Redirect from="/wahl_apps/" to="/wahl_apps"/>)
-          }
-          <Route path="/wahl_apps/:category/:app" render={ (props) => <AppDescriptionDesktop { ...props } message="topic selected" /> }/>
-          <Route exact path='/wahl_apps/' render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } /> } />
-          {/* <pre>{JSON.stringify(this.state)}</pre> */}
+          <Route path="/wahl_apps/:category/:app" render={ () => <AppDescriptionDesktop data={ this.selectedApp() } /> }/>
+          <Route exact path='/wahl_apps/' render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } handleAppSelect={ this.handleAppSelect } /> } />
         </div>
       </BrowserRouter>
     )

@@ -10,7 +10,7 @@ class VideoPlayer extends React.Component {
         autoplay: 0,
         showinfo: 0,
         rel: 0,
-        modestbranding: 1
+        modestbranding: 0
       }
     })
   }
@@ -37,17 +37,13 @@ class VideoPlayer extends React.Component {
   }
 
   handlePlay () {
-    console.log('handlePlay')
-    console.log(this._player)
   }
 
   handlePause () {
-    console.log('handlePause')
   }
 
   handleEnd () {
     // the content should get back
-    console.log('handleEnd')
   }
 
   onStateChange () {

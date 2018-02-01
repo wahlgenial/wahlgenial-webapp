@@ -4,6 +4,7 @@ class ElectionApps::CategoryReactDecorator < Draper::Decorator
     collections = []
     object.each do |category_record|
       category = {
+        slug: category_record.slug,
         title: category_record.title,
         description: category_record.description,
         icon_name: category_record.icon_name,
@@ -12,6 +13,7 @@ class ElectionApps::CategoryReactDecorator < Draper::Decorator
       if category_record.apps.any?
         category_record.apps.each do |record_app|
           app = {
+            slug: record_app.slug,
             name: record_app.name,
             description: record_app.description,
             link: record_app.link,

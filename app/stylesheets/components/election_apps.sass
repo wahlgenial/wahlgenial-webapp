@@ -9,68 +9,34 @@
   background-position-y: -46px
   background-position-x: 97%
 
-.app-description
-  .back-icon
-    img
-      width: 16px
-      margin-right: 0.5rem
-      transform: rotate(180deg)
-    a
-      text-decoration: none
-      color: $white
-  .description-img
-    img
-      height: 300px
-  .btn-container
-    padding: 1rem 0
-    .btn-cta
-      background-color: $white
-      border-color: $pompadour
-      color: $pompadour
-      &:hover,
-      &:active
-        background-color: $pompadour_lighter
-  .share-button-container
-    cursor: pointer
+.share-button-container
+  cursor: pointer
+  transition: all 0.2s ease-out
+  .SocialMediaShareButton
     transition: all 0.2s ease-out
-    .SocialMediaShareButton
-      transition: all 0.2s ease-out
-      &:hover, &:active
-        opacity: 0.85
-  .app-title
-    @include media-breakpoint-down(sm)
-      border-bottom: 1px solid $white
-      padding: 1.5rem
-
-  .share-button-container
-    cursor: pointer
-    transition: all 0.2s ease-out
-    .SocialMediaShareButton
-      transition: all 0.2s ease-out
-      &:hover, &:active
-        opacity: 0.85
-  .btn-container
-    padding: 1rem 0
-    .btn-cta
-      background-color: $white
-      border-color: $pompadour
-      color: $pompadour
-      padding: 1rem 2rem
-      margin-bottom: 120px
-      &:hover,
-      &:active
-        background-color: $pompadour_lighter
-    .btn
-      border-width: 2px
-      display: inline-block
-      width: 100%
-      padding: 0.4rem 0.8rem
-      margin: 0.3rem auto
-      img
-        width: 34px
-        top: 2px
-      .text
-        margin: auto
-      .icon
-        position: absolute
-        
+    &:hover, &:active
+      opacity: 0.85
+.btn-container
+  padding: 1rem 0
+  .btn-cta
+    background-color: $white
+    border-color: $pompadour
+    color: $pompadour
+    padding: 1rem 2rem
+    margin-bottom: 120px
+    &:hover,
+    &:active
+      background-color: $pompadour_lighter
+  .btn
+    border-width: 2px
+    display: inline-block
+    width: 100%
+    padding: 0.4rem 0.8rem
+    margin: 0.3rem auto
+    img
+      width: 34px
+      top: 2px
+    .text
+      margin: auto
+    .icon
+      position: absolute

@@ -71,3 +71,30 @@
               position: absolute
               left: 12px
               content: '\01F680'
+
+.app-description
+  min-height: 100%
+  .back-icon
+    img
+      width: 16px
+      margin-right: 0.5rem
+      transform: rotate(180deg)
+    a
+      text-decoration: none
+      color: $white
+  .description-img
+    img
+      height: 300px
+  .btn-container
+    padding: 1rem 0
+    .btn-cta
+      background-color: $white
+      border-color: $pompadour
+      color: $pompadour
+      &:hover,
+      &:active
+        background-color: $pompadour_lighter
+  .app-title
+    @include media-breakpoint-down(sm)
+      border-bottom: 1px solid $white
+      padding: 1.5rem

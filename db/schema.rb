@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180201095417) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bundestag_vote_political_agreements", force: :cascade do |t|
     t.string "title"
     t.string "image"
@@ -47,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180201095417) do
     t.datetime "updated_at", null: false
     t.integer "ordering", default: 0
     t.string "slug"
+    t.index ["slug"], name: "index_election_apps_categories_on_slug", unique: true
   end
 
   create_table "election_programs_opinions", force: :cascade do |t|
