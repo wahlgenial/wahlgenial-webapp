@@ -10,7 +10,8 @@ class VideoPlayer extends React.Component {
         autoplay: 0,
         showinfo: 0,
         rel: 0,
-        modestbranding: 0
+        modestbranding: 0,
+        start: this.props.startTime
       }
     })
   }

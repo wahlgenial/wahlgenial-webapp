@@ -17,9 +17,9 @@ const AppDescriptionDesktop = ({data}) => {
         transitionName="app-description" >
 
         <div className="container app-description">
-          <div className="back-icon container py-5">
+          <div className="back-icon container py-5 ml-4">
             <Link to='/wahl_apps'>
-              <img className="back-icon" src={ icons.dropeDown } />
+              <img src={ icons.dropeDown } />
               zurück zur Übersicht
             </Link>
           </div>

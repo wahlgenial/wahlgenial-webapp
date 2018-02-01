@@ -1,8 +1,8 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer'
-const HowSectionVideo = ({children, videoId}) => {
+const HowSectionVideo = ({children, videoId, startTime = 0}) => {
   return (
-    <VideoPlayer videoId={ videoId }>
+    <VideoPlayer videoId={ videoId } startTime={ startTime }>
       <div className="how-description col-lg-6 col-md-8 col-sm-12 m-auto text-center">
         <div className="col-lg-6 col-md-8 col-sm-12 m-auto">
           <h2 className="py-5">WIE GEHT <span className="color-call-to-action">WÄHLEN?</span></h2>
