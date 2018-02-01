@@ -4,6 +4,7 @@
 
 ### Requirements:
 - Ruby 2.4.2
+- PostgreSQL 9.6 or later.
 
 ### Installation:
 - copy `config/database.yml.example` into `config/database.yml`

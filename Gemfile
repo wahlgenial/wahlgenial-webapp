@@ -3,20 +3,17 @@ source 'https://rubygems.org'
 ruby '2.4.2'
 
 gem 'rails', '~> 5.1.4'
-gem 'jbuilder', '~> 2.0'
-gem 'haml'
+gem 'pg'
+gem 'rails_admin', '~> 1.2'
 
 gem 'webpacker'
 gem 'react-rails'
 gem 'draper'
 
-gem 'rails_admin', '~> 1.2'
-
 gem 'carrierwave'
 gem 'mini_magick'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
   gem 'guard-rails', require: false
@@ -26,7 +23,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'fog'
 end
 
