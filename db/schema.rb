@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122084838) do
+ActiveRecord::Schema.define(version: 20180201095417) do
 
   create_table "bundestag_vote_political_agreements", force: :cascade do |t|
     t.string "title"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20180122084838) do
     t.datetime "updated_at", null: false
     t.string "logo"
     t.string "link"
+    t.string "slug"
+    t.index ["slug"], name: "index_election_apps_apps_on_slug", unique: true
   end
 
   create_table "election_apps_categories", force: :cascade do |t|
@@ -44,6 +46,7 @@ ActiveRecord::Schema.define(version: 20180122084838) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "ordering", default: 0
+    t.string "slug"
   end
 
   create_table "election_programs_opinions", force: :cascade do |t|
