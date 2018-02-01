@@ -35,7 +35,7 @@ const AppDescriptionDesktop = ({data}) => {
                 </div>
                 <div className="container row btn-container">
                   <div className="col-lg-6 col-sm-12">
-                    <a className="btn-cta btn btn-md btn-default" href='#' target="_blank">
+                    <a className="btn-cta btn btn-md btn-default" href={ link } target="_blank">
                       <div className="icon">
                         &#x1F680;
                       </div>
@@ -45,7 +45,7 @@ const AppDescriptionDesktop = ({data}) => {
                     </a>
                   </div>
                   <div className="col-lg-6 col-sm-12">
-                    <ShareButton AppName='NAME' url={ link } />
+                    <ShareButton AppName={ name } url={ link } />
                   </div>
                 </div>
               </div>
