@@ -1,7 +1,7 @@
 import React from 'react'
 import LetterItem from './Glossary/LetterItem'
+import CallToActionGhost from './CallToActionGhost'
 import TermsList, {TermsEmpty} from './Glossary/TermsList'
-
 class Glossary extends React.Component {
   constructor (props) {
     super(props)
@@ -28,8 +28,8 @@ class Glossary extends React.Component {
     const {lettersCollection} = this.props
     const {selectedLetter, selectedTermIndex} = this.state
     return (
-      <div className="col-12 p-0 mx-1 row">
-        <div className="letters-board d-flex justify-content-center flex-wrap w-100 p-0 m-0" >
+      <div className="container-fluid m-0 p-0">
+        <div className="letters-board w-100 d-flex flex-wrap justify-content-center">
           {lettersCollection.map((letter, index) => (
             <LetterItem
               key={ index }
@@ -41,8 +41,12 @@ class Glossary extends React.Component {
         </div>
         {!selectedLetter
           ? <TermsEmpty />
-          : <TermsList letterData={ this.filterLetter(selectedLetter) } selectedTermIndex={ selectedTermIndex } handleSelectTerm={ this.handleSelectTerm } />
-        }
+          : (
+            <div className="container-fluid no-gutters">
+              <TermsList letterData={ this.filterLetter(selectedLetter) } selectedTermIndex={ selectedTermIndex } handleSelectTerm={ this.handleSelectTerm } />
+              <CallToActionGhost text='Mach dir die Entscheidung nicht so schwer' />
+            </div>
+          )}
       </div>
     )
   }

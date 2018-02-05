@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import CallToActionGhost from '../CallToActionGhost'
 import ShareButton from './ShareButton'
 import HeaderLogo from '../HeaderLogo'
 import icons from '../../images/icons'
@@ -53,6 +54,9 @@ const AppDescriptionDesktop = ({data}) => {
                 <img className='mt-5 pt-2 mb-3.1' src={ image } />
               </div>
             </div>
+          </div>
+          <div className="contaienr">
+            <CallToActionGhost text='Beliebte Wahl-Apps' link={ false } />
           </div>
         </div>
       </ReactCSSTransitionGroup>

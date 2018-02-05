@@ -28,7 +28,7 @@ default: &default
     - .gif
     - .jpeg
     - .jpg
-
+  entry: [ 'bootstrap-loader', './app' ]
 development:
   <<: *default
   compile: true

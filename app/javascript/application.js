@@ -1,5 +1,6 @@
 import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
+import CallToActionGhost from './components/CallToActionGhost'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
 import WhySectionVideo from './components/WhySectionVideo'
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuLinksNavigator()
   mountComponents({
     ElectionPrograms,
+    CallToActionGhost,
     Glossary,
     ElectionApps,
     WhySectionVideo,

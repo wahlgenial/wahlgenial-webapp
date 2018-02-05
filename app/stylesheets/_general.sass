@@ -47,23 +47,28 @@ h1.main-title
 	background-attachment: fixed
 	background-repeat: no-repeat
 	background-size: 100% 100%
-.more-apps
+.call-to-action-ghost
 	float: right
-	width: 180px
+	width: 200px
 	padding: 0
 	margin: 0
+	margin-right: -15px
 	text-align: right
-	.ghost
-		width: 200px
-		padding: 0 0 0 20px
-		float: right
-		img
-			width: 70px
+	@include media-breakpoint-down(sm)
+		margin: 0
+		float: none
+		width: 100%
+		text-align: center
+	img
+		width: 60px
+	p
+		padding: 0 1.5rem
 	.btn-default
-		width: 180px
+		width: 190px
 		height: 40px
-		border-radius: 1.5rem 0 0 1.5rem
-		border-right-color: transparent
+		@include media-breakpoint-up(md)
+			border-radius: 1.5rem 0 0 1.5rem
+			border-right-color: transparent
 
 .btn-default
 	&:hover, &:not([disabled]):not(.disabled):active
