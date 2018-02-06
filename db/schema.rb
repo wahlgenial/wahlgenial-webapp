@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201095417) do
+ActiveRecord::Schema.define(version: 20180206071555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20180201095417) do
     t.string "logo"
     t.string "link"
     t.string "slug"
+    t.boolean "published", default: false, null: false
     t.index ["slug"], name: "index_election_apps_apps_on_slug", unique: true
   end
 
