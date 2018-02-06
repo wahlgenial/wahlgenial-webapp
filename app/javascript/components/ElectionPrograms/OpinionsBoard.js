@@ -63,11 +63,13 @@ class OpinionsBoard extends React.Component {
         </div>
         {(selectedOpinionIndex !== null) && (
           <div className="row container no-gutters px-3 pt-2">
-            <div className="col-2 text-opinion">
-              {this.currentOpinionDescriptionText()}
-            </div>
-            <div className="col-10">
+            <div className="col-md-10 col-sm-12 order-md-2">
               {this.currentOpinionStatement()}
+            </div>
+            <div className="text-opinion col-md-2 col-sm-12 order-md-1 d-flex py-3">
+              <div className="text-center m-auto">
+                {this.currentOpinionDescriptionText()}
+              </div>
             </div>
           </div>
         )}
