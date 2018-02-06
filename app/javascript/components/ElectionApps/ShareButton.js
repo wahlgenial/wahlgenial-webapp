@@ -34,7 +34,7 @@ class ShareButton extends React.Component {
               <img className="icon pr-3" src={ icons.share } />
             </div>
             <div className="text">
-              weiter empfehlen
+              teilen
             </div>
           </div>
           <SocialButtons url={ url } />
