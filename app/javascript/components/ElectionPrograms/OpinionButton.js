@@ -1,19 +1,20 @@
 import React from 'react'
-import icons from '../../images/icons'
+import {Positive, Negative, Neutral} from './SmilIcons'
+
 const OpinionButton = ({opinion, onPress, active, opinionIndex, topicsCount, onClick}) => {
   const partyOpinionIcon = () => {
     if (opinion.opinion === 'positive') {
-      return (<img src={ icons.smilePositive } />)
+      return (<Positive />)
     } else if (opinion.opinion === 'negative') {
-      return (<img src={ icons.smileNegative } />)
+      return (<Negative />)
     } else {
-      return (<img src={ icons.smileNeutral } />)
+      return (<Neutral />)
     }
   }
   return (
     <div className="btn-container">
-      <div className={ 'btn btn-yellow mx-2 my-1' + (active ? ' active' : '') } onClick={ () => { onClick(opinionIndex) } }>
-        <div className="party-name align-self-start">
+      <div className={ 'btn btn-yellow' + (active ? ' active' : '') } onClick={ () => { onClick(opinionIndex) } }>
+        <div className="party-name">
           {opinion.party}
         </div>
         <div className="party-opinion-icon">
