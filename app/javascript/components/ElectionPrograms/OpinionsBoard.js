@@ -49,7 +49,7 @@ class OpinionsBoard extends React.Component {
     return (
       <div className="opinionsContainer col-12 no-gutters mt-3 py-3">
         <div className="col-md-8 lg-sm-12 mx-auto">
-          <p>Das sagen die Parteien</p>
+          <p>Das sagen die Parteien </p>
           <div className="d-flex align-content-stretch flex-wrap justify-content-center">
             { opinions.map((opinion, index) => (
               <OpinionButton
