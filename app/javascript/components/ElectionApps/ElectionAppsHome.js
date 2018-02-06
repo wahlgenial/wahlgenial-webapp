@@ -21,7 +21,7 @@ const ElectionAppsHome = ({appsCategories, handleAppSelect, history}) => {
             <h1 className="main-title">
               WAHL-APPS
             </h1>
-            <p className="w-50 mx-auto text-center">Was steckt eigentlich hinter den ganzen politischen Wörtern? <br /> Schau selbst nach!</p>
+            <p className="w-50 mx-auto text-center">Noch nicht klar, wen du wählen kannst? Schluss mit dem Suchen und Fragen. <br /> Diese Apps und Websites helfen dir, dich zu entscheiden.</p>
           </div>
           <div className="election-apps-desktop">
             {appsCategories.map((category, index) => {
