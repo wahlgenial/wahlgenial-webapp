@@ -49,16 +49,16 @@ class ShareButton extends React.Component {
 const SocialButtons = ({url}) => {
   return (
     <div className='d-flex justify-content-between px-3' style={ styles.buttonWrapper }>
-      <FacebookShareButton url={ url } appId='782288638629205' quote='Facebook share'>
+      <FacebookShareButton url={ url } appId='782288638629205' quote={ constants.share.facebookMessage }>
         <FacebookIcon size={ 38 } round />
       </FacebookShareButton>
-      <WhatsappShareButton url={ url } title={ constants.whatsappMessage } separator=":: ">
+      <WhatsappShareButton url={ url } title={ constants.share.whatsappMessage } separator=":: ">
         <WhatsappIcon size={ 38 } round />
       </WhatsappShareButton>
-      <TwitterShareButton url={ url } title='Tiwtter share' >
+      <TwitterShareButton url={ url } title={ constants.share.twitterMessage } >
         <TwitterIcon size={ 38 } round />
       </TwitterShareButton>
-      <EmailShareButton url={ url } subject='Probier mal diese Wahl-app aus' body={ `${url}` } >
+      <EmailShareButton url={ url } subject={ constants.share.emailSubject } body={ constants.share.emailBody.replace('%url', url) } >
         <EmailIcon size={ 38 } round />
       </EmailShareButton>
     </div>
