@@ -42,7 +42,7 @@ const AppDescriptionModal = ({isOpen, toggleModal, selectedAppDetails}) => {
               </a>
             </div>
             <div className="col-lg-6 mt-2 col-12">
-              <ShareButton AppName={ name() } url={ link() } />
+              <ShareButton />
             </div>
           </div>
         </div>

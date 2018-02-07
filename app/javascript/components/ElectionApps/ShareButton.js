@@ -26,7 +26,7 @@ class ShareButton extends React.Component {
   }
 
   render () {
-    const {url} = this.props
+    const url = window.location.href
     const {shareToggled} = this.state
     return (
       <div style={ styles.buttonsWrapper }>

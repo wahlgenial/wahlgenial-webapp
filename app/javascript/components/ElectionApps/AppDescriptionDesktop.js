@@ -47,7 +47,7 @@ const AppDescriptionDesktop = ({data}) => {
                     </a>
                   </div>
                   <div className="col-lg-6 col-sm-12">
-                    <ShareButton AppName={ name } url={ link } />
+                    <ShareButton />
                   </div>
                 </div>
               </div>
