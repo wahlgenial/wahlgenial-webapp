@@ -12,7 +12,7 @@ const WhySectionVideo = ({children, videoId}) => {
             <h1 className="pt-5">
               <span>WARUM</span> <br/><span className="color-call-to-action">WÄHLEN?</span>
             </h1>
-            <p className="text-left col-lg-6 pt-4 why-text">
+            <p className="text-left col-lg-6 pt-4">
               Wer die Wahl hat, hat die Qual … sagt man. Dabei ist Wählen nicht nur super wichtig, sondern auch gar nicht so kompliziert. <br />
               Du hast deine eigenen Sorgen und Vorstellungen – lass nicht <br />andere entscheiden, ob man sich darum kümmert.
             </p>
