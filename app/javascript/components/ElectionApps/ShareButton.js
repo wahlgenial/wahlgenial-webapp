@@ -1,6 +1,8 @@
 import React from 'react'
 import icons from '../../images/icons'
 import {ShareButtons, generateShareIcon} from 'react-share'
+import constants from '../../utils/constants'
+
 const {
   FacebookShareButton,
   TwitterShareButton,
@@ -46,11 +48,11 @@ class ShareButton extends React.Component {
 
 const SocialButtons = ({url}) => {
   return (
-    <div className='d-flex justify-content-between px-3'style={ styles.buttonWrapper }>
+    <div className='d-flex justify-content-between px-3' style={ styles.buttonWrapper }>
       <FacebookShareButton url={ url } appId='782288638629205' quote='Facebook share'>
         <FacebookIcon size={ 38 } round />
       </FacebookShareButton>
-      <WhatsappShareButton url={ url } title='WhatsApp share' separator=":: ">
+      <WhatsappShareButton url={ url } title={ constants.whatsappMessage } separator=":: ">
         <WhatsappIcon size={ 38 } round />
       </WhatsappShareButton>
       <TwitterShareButton url={ url } title='Tiwtter share' >
