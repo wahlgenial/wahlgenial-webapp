@@ -56,6 +56,8 @@
 			width: 20px
 			overflow: visible
 			transition: width 0.2s ease-out
+			@include media-breakpoint-down(sm)
+				display: none
 	.question-text
 	// question-block hover collection
 	&:hover
@@ -76,10 +78,13 @@
 		font-weight: 300
 		&:after
 			font-weight: 100
-			content: url('../javascript/images/icon-drop-down.svg'); width: 22px
+			content: url('../javascript/images/icon-drop-down.svg')
+			width: 22px
 			position: absolute
 			right: 10px
-			top: 20%
+			top: 40%
+			@include media-breakpoint-up(sm)
+				top: 20%
 			transform: rotate(0deg)
 			transition: all 0.1s ease-out
 	// question-block active collection
