@@ -5,6 +5,7 @@ import CallToActionGhost from '../CallToActionGhost'
 import ShareButton from './ShareButton'
 import HeaderLogo from '../HeaderLogo'
 import icons from '../../images/icons'
+import constants from '../../utils/constants'
 const AppDescriptionDesktop = ({data}) => {
   const {description, image, /* image_thumb, logo, logo_thumb, slug */ link, name} = data
   return (
@@ -19,7 +20,7 @@ const AppDescriptionDesktop = ({data}) => {
 
         <div className="container app-description">
           <div className="back-icon container py-5 ml-4">
-            <Link to='/wahl_apps'>
+            <Link to={ constants.electionsAppsPath }>
               <img src={ icons.dropeDown } />
               zurück zur Übersicht
             </Link>

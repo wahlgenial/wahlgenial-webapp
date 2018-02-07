@@ -1,3 +1,4 @@
 export default {
-  electionsAppsPath: '/wahl_apps'
+  electionsAppsPath: '/wahl-apps',
+  electionsAppsReg: /(.*wahl-apps)/
 }

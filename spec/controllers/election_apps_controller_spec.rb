@@ -15,7 +15,7 @@ RSpec.describe 'Election Apps nested params', type: :request do
       create(:category, title: 'a Category')
     end
     it "returns http success" do
-      get '/wahl_apps/all/those/who/have/made/it'
+      get '/wahl-apps/all/those/who/have/made/it'
       expect(response).to have_http_status(:success)
       expect(controller.instance_variable_get('@apps_categories').inspect).to include('a Category')
       expect(controller.params[:params_string]).to eql('all/those/who/have/made/it')

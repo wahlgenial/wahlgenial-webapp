@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import ElectionAppsHome from './ElectionAppsHome'
 import AppDescriptionDesktop from './AppDescriptionDesktop'
+import constants from '../../utils/constants'
 
 class ElectionAppsDesktop extends React.Component {
   constructor (props) {
@@ -21,12 +22,12 @@ class ElectionAppsDesktop extends React.Component {
       selectedAppSlug: appSlug
     })
     if (historyHandler) {
-      historyHandler.push(`/wahl_apps/${categorySlug}/${appSlug}`)
+      historyHandler.push(`${constants.electionsAppsPath}/${categorySlug}/${appSlug}`)
     }
   }
 
   extractParamsFromUri () {
-    const params = window.location.href.replace(/(.*wahl_apps)/, '')
+    const params = window.location.href.replace(constants.electionsAppsReg, '')
     return params.split('/').filter((value) => { if (value !== '') return true })
   }
 
@@ -53,8 +54,8 @@ class ElectionAppsDesktop extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path="/wahl_apps/:category/:app" render={ () => <AppDescriptionDesktop data={ this.selectedApp() } /> }/>
-          <Route exact path='/wahl_apps/' render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } handleAppSelect={ this.handleAppSelect } /> } />
+          <Route path={ `${constants.electionsAppsPath}/:category/:app` } render={ () => <AppDescriptionDesktop data={ this.selectedApp() } /> }/>
+          <Route exact path={ constants.electionsAppsPath } render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } handleAppSelect={ this.handleAppSelect } /> } />
         </div>
       </BrowserRouter>
     )
