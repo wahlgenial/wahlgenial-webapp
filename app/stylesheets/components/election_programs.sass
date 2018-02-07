@@ -46,9 +46,12 @@
 	cursor: pointer
 	border-bottom: 2px solid $white
 	.question-block
+		max-height: 6rem
+		@include media-breakpoint-up(sm)
+			max-height: 3.3rem
 		opacity: 0.9
 	.icon-container
-		height: 20px
+		min-height: 40px
 		img
 			width: 20px
 			overflow: visible

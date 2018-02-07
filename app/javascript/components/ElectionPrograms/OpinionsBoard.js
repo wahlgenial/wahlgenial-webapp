@@ -66,7 +66,7 @@ class OpinionsBoard extends React.Component {
             <div className="col-md-10 col-sm-12 order-md-2">
               {this.currentOpinionStatement()}
             </div>
-            <div className="text-opinion col-md-2 col-sm-12 order-md-1 d-flex py-3">
+            <div className="text-opinion col-md-2 col-sm-12 order-md-1 d-flex">
               <div className="text-center m-auto">
                 {this.currentOpinionDescriptionText()}
               </div>

@@ -5,12 +5,12 @@ const QuestionItem = ({text, onClick, opinions = null}) => {
   const activeClass = opinions !== null ? 'active' : ''
   return (
     <div className={ `question-block-wrapper ${activeClass}` }>
-      <div className="question-block container row col-12 m-0 px-2 py-3" onClick= { () => { onClick() } }>
-        <div className='icon-container col-2 text-left pl-3 m-0'>
-          <img src={ icons.question } />
+      <div className="question-block container row" onClick= { () => { onClick() } }>
+        <div className='icon-container col-2 d-flex p-0 m-0'>
+          <img className="m-auto" src={ icons.question } />
         </div>
-        <div className="col-10 p-0 m-0">
-          <div className="question-text">{text}</div>
+        <div className="col-10 d-flex p-0 m-0">
+          <div className="question-text w-100 my-auto">{text}</div>
         </div>
       </div>
       {(opinions !== null) && (
