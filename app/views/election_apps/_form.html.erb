@@ -2,7 +2,7 @@
   <div class="card bg-light col-10 mb-5 py-2 border border-danger text-danger">
     <div class="card-body">
       <h5 class="card-title pb-4">
-        <%= t('.errors', number: pluralize(election_apps.errors.count, "error")) %>
+        <%= t('common.errors', number: pluralize(election_app.errors.count, "")) %>
       </h5>
       <% election_app.errors.full_messages.each do |message| %>
         <p class="card-text">
@@ -39,7 +39,7 @@
 
   <div class="col-10">
     <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="col-10">

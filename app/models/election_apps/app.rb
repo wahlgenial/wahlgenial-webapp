@@ -5,6 +5,8 @@ class ElectionApps::App < ApplicationRecord
   mount_uploader :screenshot, ElectionAppsAppScreenshotUploader
   mount_uploader :logo, ElectionAppsAppLogoUploader
 
+  validates :name, presence: true
+  validates :link, presence: true
   validates :slug, uniqueness: true
 
   private
