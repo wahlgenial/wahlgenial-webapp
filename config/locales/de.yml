@@ -1,0 +1,9 @@
+de:
+  common:
+    cancel: Stornieren
+    accept: Akzeptieren
+  election_apps:
+    new:
+      title: Neue App einreichen
+    create:
+      success: Election App is created successfully
