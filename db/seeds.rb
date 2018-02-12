@@ -51,10 +51,10 @@ if Rails.env.development?
   end
 
   election_apps_apps = [
-       { id: 1, name: 'App 1', description: 'Here is description for App 1', image: '', category_id: 1, logo: '', link: '#' },
-       { id: 2, name: 'App 2', description: 'Here is description for App 2', image: '', category_id: 1, logo: '', link: '#' },
-       { id: 3, name: 'App 3', description: 'Here is description for App 3', image: '', category_id: 1, logo: '', link: '#' },
-       { id: 4, name: 'App 4', description: 'Here is description for App 4', image: '', category_id: 2, logo: '', link: '#' } ]
+       { id: 1, name: 'App 1', description: 'Here is description for App 1', screenshot: '', category_id: 1, logo: '', link: '#' },
+       { id: 2, name: 'App 2', description: 'Here is description for App 2', screenshot: '', category_id: 1, logo: '', link: '#' },
+       { id: 3, name: 'App 3', description: 'Here is description for App 3', screenshot: '', category_id: 1, logo: '', link: '#' },
+       { id: 4, name: 'App 4', description: 'Here is description for App 4', screenshot: '', category_id: 2, logo: '', link: '#' } ]
   begin
     ElectionApps::App.create(election_apps_apps)
   rescue
@@ -64,7 +64,7 @@ if Rails.env.development?
   political_agreements = [
 
     { id: 1,
-      title:'Endgültiges Ergebnis der Namentlichen Abstimmung Nr. 1' ,
+      title: 'Endgültiges Ergebnis der Namentlichen Abstimmung Nr. 1',
       image: '',
       votes_total: 664, votes_yes: 504, votes_no: 152, votes_abstentions: 8, votes_unset: 45, votes_unvalid: 0 },
 

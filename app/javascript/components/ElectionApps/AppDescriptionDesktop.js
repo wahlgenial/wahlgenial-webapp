@@ -7,7 +7,7 @@ import HeaderLogo from '../HeaderLogo'
 import icons from '../../images/icons'
 import constants from '../../utils/constants'
 const AppDescriptionDesktop = ({data}) => {
-  const {description, image, /* image_thumb, logo, logo_thumb, slug */ link, name} = data
+  const {description, screenshot, /* screenshot_thumb, logo, logo_thumb, slug */ link, name} = data
   return (
     <div>
       <HeaderLogo />
@@ -52,7 +52,7 @@ const AppDescriptionDesktop = ({data}) => {
                 </div>
               </div>
               <div className="description-img col-lg-6 text-center">
-                <img className='mt-5 pt-2 mb-3.1' src={ image } />
+                <img className='mt-5 pt-2 mb-3.1' src={ screenshot } />
               </div>
             </div>
           </div>

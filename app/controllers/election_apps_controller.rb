@@ -25,7 +25,7 @@ class ElectionAppsController < ApplicationController
     params.require(:election_apps_app).permit(
       :name,
       :description,
-      :image,
+      :screenshot,
       :category_id,
       :logo,
       :link )

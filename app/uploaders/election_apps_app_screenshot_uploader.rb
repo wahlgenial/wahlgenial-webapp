@@ -1,4 +1,4 @@
-class ElectionAppsAppImageUploader < CarrierWave::Uploader::Base
+class ElectionAppsAppScreenshotUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

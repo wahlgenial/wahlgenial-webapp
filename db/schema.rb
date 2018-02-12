@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180212120314) do
     t.string "logo"
     t.string "link"
     t.string "slug"
-    t.boolean "published", default: false, null: false
+    t.boolean "published", default: false
     t.index ["slug"], name: "index_election_apps_apps_on_slug", unique: true
   end
 

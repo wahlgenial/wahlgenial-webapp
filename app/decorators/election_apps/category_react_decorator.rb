@@ -17,8 +17,8 @@ class ElectionApps::CategoryReactDecorator < Draper::Decorator
             name: record_app.name,
             description: record_app.description,
             link: record_app.link,
-            image: record_app.image_url,
-            image_thumb: record_app.image_url(:thumb),
+            screenshot: record_app.screenshot_url,
+            screenshot_thumb: record_app.screenshot_url(:thumb),
             logo: record_app.logo_url,
             logo_thumb: record_app.logo_url(:small),
           }

@@ -2,7 +2,7 @@ class ElectionApps::App < ApplicationRecord
   belongs_to :category
   before_validation :slug_generator, on: :create
 
-  mount_uploader :image, ElectionAppsAppImageUploader
+  mount_uploader :screenshot, ElectionAppsAppScreenshotUploader
   mount_uploader :logo, ElectionAppsAppLogoUploader
 
   validates :slug, uniqueness: true
