@@ -1,0 +1,54 @@
+<% if election_app.errors.any? %>
+  <div class="card bg-light col-10 mb-5 py-2 border border-danger text-danger">
+    <div class="card-body">
+      <h5 class="card-title pb-4">
+        <%= t('.errors', number: pluralize(election_apps.errors.count, "error")) %>
+      </h5>
+      <% election_app.errors.full_messages.each do |message| %>
+        <p class="card-text">
+          <%= fa_icon('long-arrow-right') %>
+          <%= message %>
+         </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<%= form_for election_app, url: election_apps_path do |f| %>
+
+  <div class="col-10">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="col-10 pt-3">
+    <%= f.label :category %>
+    <%= select_tag "category_id", options_for_select(ElectionApps::Category.all.collect {|c| [ c.title, c.id ] })%>
+  </div>
+
+  <div class="col-10 pt-3">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field(:image_cache) %>
+  </div>
+
+  <div class="col-10 pt-3">
+    <%= f.label :logo %>
+    <%= f.file_field :logo %>
+    <%= f.hidden_field(:logo_cache) %>
+  </div>
+
+  <div class="col-10">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="col-10">
+    <%= f.label :link %>
+    <%= f.text_field :link, class: 'form-control' %>
+  </div>
+  <div class="form-group col-10">
+    <div class="col-10 ml-auto p-5">
+      <%= f.submit class: 'election_app-submission btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

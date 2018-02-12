@@ -1,0 +1,15 @@
+<%
+  title = t '.title'
+  page_title(title)
+%>
+<div class="col-6 mx-auto">
+  <div class="mt-5">
+    <div class="pt-3">
+      <%= render '/shared/notices' %>
+      <h4><%= title %></h4>
+    </div>
+    <div class="card-block px-4 py-5">
+      <%= render 'form', election_app: @election_app %>
+    </div>
+  </div>
+</div>
