@@ -8,7 +8,8 @@ class ElectionAppsController < ApplicationController
   end
 
   def create
-    if (@election_app = ElectionApps::App.create(election_app_params))
+    @election_app = ElectionApps::App.new(election_app_params)
+    if (@election_app.save)
       redirect_to new_election_app_path, notice: t('.success')
     else
       render :new

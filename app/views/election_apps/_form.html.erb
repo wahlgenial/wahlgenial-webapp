@@ -21,8 +21,8 @@
   </div>
 
   <div class="col-10 pt-3">
-    <%= f.label :category %>
-    <%= select_tag "category_id", options_for_select(ElectionApps::Category.all.collect {|c| [ c.title, c.id ] })%>
+    <%= f.label :category_id %>
+    <%= f.select :category_id, options_for_select(ElectionApps::Category.all.collect {|c| [ c.title, c.id ] })%>
   </div>
 
   <div class="col-10 pt-3">
