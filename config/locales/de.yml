@@ -24,7 +24,7 @@ de:
               blank: App Link muss ausgefüllt werden
     attributes:
       "calendar/event":
-        year: Yare
+        year: Jahr
         date: Termin
         federal_state: Bundesland
         organization: Organ
