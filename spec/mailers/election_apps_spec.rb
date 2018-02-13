@@ -1,5 +1,12 @@
 require "rails_helper"
 
 RSpec.describe ElectionAppsMailer, type: :mailer do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'sends an email' do
+    expect { ElectionAppsMailer.new_app_registered(
+      ElectionApps::App.new,
+      'http://url.ext',
+      {user_ip: '127.0.0.1', user_agent: 'Somthing :/'}
+    ).deliver }
+      .to change { ActionMailer::Base.deliveries.count }.by(1)
+  end
 end
