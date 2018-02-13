@@ -1,4 +1,5 @@
 class ElectionAppsController < ApplicationController
+  include ApplicationHelper
   def index
     @apps_categories = election_apps_categories
   end
@@ -10,6 +11,11 @@ class ElectionAppsController < ApplicationController
   def create
     @election_app = ElectionApps::App.new(election_app_params)
     if (@election_app.save)
+      ElectionAppsMailer.new_app_registered(
+        @election_app,
+        rails_admin.show_url(model_name: 'election_apps~app', id: @election_app.id),
+        user_details
+      ).deliver
       redirect_to new_election_app_path, notice: t('.success')
     else
       render :new
