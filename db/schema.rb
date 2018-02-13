@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212120314) do
+ActiveRecord::Schema.define(version: 20180212144243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20180212120314) do
     t.string "external_link"
   end
 
+  create_table "calendar_events", force: :cascade do |t|
+    t.string "year"
+    t.string "date"
+    t.string "federal_state"
+    t.string "organization"
+    t.string "period"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "election_apps_apps", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -39,7 +49,7 @@ ActiveRecord::Schema.define(version: 20180212120314) do
     t.string "logo"
     t.string "link"
     t.string "slug"
-    t.boolean "published", default: false
+    t.boolean "published", default: false, null: false
     t.index ["slug"], name: "index_election_apps_apps_on_slug", unique: true
   end
 

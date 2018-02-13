@@ -1,0 +1,40 @@
+<%-
+  title = t '.title'
+  page_title title
+
+%>
+<div class="calendar-container gradient-content h-100 clearfix pb-5">
+  <div class="logo-container p-2 d-none d-lg-block d-md-block">
+    <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+  </div>
+  <div class="text-center">
+    <h1 class="main-title"> <%= title %> </h1>
+    <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light"> <%= t '.introduction' %> </p>
+  </div>
+  <div class="calendar-wrapper col-lg-10 col-md-12 mx-auto">
+    <% if @calendar_events.any? %>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th><%= Calendar::Event.human_attribute_name(:year) %></th>
+            <th><%= Calendar::Event.human_attribute_name(:date) %></th>
+            <th><%= Calendar::Event.human_attribute_name(:federal_state) %></th>
+            <th><%= Calendar::Event.human_attribute_name(:organization) %></th>
+            <th><%= Calendar::Event.human_attribute_name(:period) %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @calendar_events.each do |event| %>
+          <tr>
+            <td><%= event.year %></td>
+            <td><%= event.date %></td>
+            <td><%= event.federal_state %></td>
+            <td><%= event.organization %></td>
+            <td><%= event.period %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>

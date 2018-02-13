@@ -8,7 +8,11 @@ de:
       title: Neue App einreichen
     create:
       success: Election App is created successfully
-
+  calendar:
+    link_text: Die Wahltermine
+    index:
+      title: Wahltermine
+      introduction: Die nächsten Wahlen in Deutschland
   activerecord:
     errors:
       models:
@@ -18,3 +22,10 @@ de:
               blank: App Name muss ausgefüllt werden
             link:
               blank: App Link muss ausgefüllt werden
+    attributes:
+      "calendar/event":
+        year: Yare
+        date: Termin
+        federal_state: Bundesland
+        organization: Organ
+        period: Wahlperiode

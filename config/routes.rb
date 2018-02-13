@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # matchnig `wahl-apps/a/b/c/d....`
   get 'wahl-apps/(*params_string)', to: 'election_apps#index', as: 'apps'
+  get 'calendar', to: 'calendar#index', as: 'calendar'
 
   root 'pages#home'
 
