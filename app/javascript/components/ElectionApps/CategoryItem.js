@@ -27,7 +27,7 @@ const CategoryItem = ({iconName, title, categorySlug, apps, onClick}) => {
           <img className="category-title-icon" src={ handleIcon(iconName) } title={ title } />
           <h2 className="category-title-text">{title}</h2>
         </div>
-        <div className="apps-container d-flex">
+        <div className="apps-container d-flex flex-wrap justify-content-center">
           {apps.map((app, index) => (
             <AppItemDesktop
               key={ index }

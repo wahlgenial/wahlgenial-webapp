@@ -4,7 +4,7 @@ const AppItem = ({name, description, link, onClick}) => {
     return description.substring(0, 98) + '...'
   }
   return (
-    <div className="app-item mx-1">
+    <div className="app-item mx-1 mb-2">
       <div className="app-block card">
         <div className="app-description" onClick={ () => { onClick() } }>
           <div className="card-body text-left clearfix">
@@ -19,9 +19,7 @@ const AppItem = ({name, description, link, onClick}) => {
         </div>
         <div className="footer-link">
           <a href={ !link ? '#' : link }>
-            <div className="card-footer py-2">
-               Los geht's
-            </div>
+            <div className="card-footer py-2"> Los geht's </div>
           </a>
         </div>
       </div>
