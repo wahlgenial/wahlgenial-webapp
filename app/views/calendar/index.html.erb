@@ -13,7 +13,7 @@
   </div>
   <div class="calendar-wrapper col-lg-10 col-md-12 mx-auto">
     <% if @calendar_events.any? %>
-      <table class="table table-hover">
+      <table class="table table-striped table-hover table-rounded">
         <thead>
           <tr>
             <th><%= Calendar::Event.human_attribute_name(:year) %></th>
@@ -36,5 +36,8 @@
         </tbody>
       </table>
     <% end %>
+  </div>
+  <div class="m-0 p-0 text-center clearfix">
+    <%= react_component('CallToActionGhost', class: 'col-12') %>
   </div>
 </div>
