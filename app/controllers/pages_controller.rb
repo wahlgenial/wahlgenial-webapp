@@ -4,11 +4,6 @@ class PagesController < ApplicationController
     @political_agreements = BundestagVote::PoliticalAgreement.all.limit(3)
   end
 
-  def glossary
-    terms = Glossary::Term.order_by_title
-    @terms = Glossary::TermReactDecorator.decorate terms
-  end
-
   def imprint
   end
 
