@@ -69,6 +69,41 @@ h1.main-title
 		@include media-breakpoint-up(md)
 			border-radius: 1.5rem 0 0 1.5rem
 			border-right-color: transparent
+.election-calendar-btn-container-desktop
+	display: none
+	position: absolute
+	top: 0
+	right: -100px
+	@include media-breakpoint-up(md)
+		display: block
+.election-calendar-btn-container-mobile
+	display: none
+	position: relative
+	top: -70px
+	@include media-breakpoint-down(sm)
+		display: block
+.btn-calendar
+	transform: rotate(-12deg)
+	border: 7px solid $white
+	width: 120px
+	height: 120px
+	border-radius: 70px
+	.text-header
+		border-bottom: 1px solid $white
+		line-height: 1rem
+		.text-top
+			font-size: 12px
+			padding-right: 12px
+		.text-bottom
+			font-size: 17px
+			font-weight: bold
+			letter-spacing: 2px
+			padding-left: 12px
+			padding-bottom: 6px
+	.text-body
+		font-size: 20px
+		font-weight: 600
+		color: $pompadour
 
 .btn-default
 	&:hover, &:not([disabled]):not(.disabled):active
