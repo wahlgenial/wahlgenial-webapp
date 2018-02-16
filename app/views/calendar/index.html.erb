@@ -1,7 +1,6 @@
 <%-
   title = t '.title'
   page_title title
-
 %>
 <div class="calendar-container gradient-content h-100 clearfix pb-5">
   <div class="logo-container p-2 d-none d-lg-block d-md-block">
@@ -37,7 +36,7 @@
       </table>
     <% end %>
   </div>
-  <div class="m-0 p-0 text-center clearfix">
-    <%= react_component('CallToActionGhost', class: 'col-12') %>
+  <div class="mt-5">
+    <%= react_component('CalendarFooter') %>
   </div>
 </div>

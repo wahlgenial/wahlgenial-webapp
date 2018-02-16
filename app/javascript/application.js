@@ -1,6 +1,7 @@
 import { mountComponents } from 'react-rails-ujs'
 import ElectionPrograms from './components/ElectionPrograms'
 import CallToActionGhost from './components/CallToActionGhost'
+import CalendarFooter from './components/CalendarFooter'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
 import WhySectionVideo from './components/WhySectionVideo'
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mountComponents({
     ElectionPrograms,
     CallToActionGhost,
+    CalendarFooter,
     Glossary,
     ElectionApps,
     WhySectionVideo,
