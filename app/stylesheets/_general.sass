@@ -25,7 +25,7 @@ h2
     overflow: hidden
     overflow: hidden
 h1.main-title
-	font-size: 2.25rem
+	font-size: 1.9rem
 	font-weight: bold
 	padding-bottom: 0.25rem
 	margin-bottom: 0.25rem
@@ -33,6 +33,10 @@ h1.main-title
 		font-size: 1.6rem
 		margin-top: 4rem
 		padding-top: 4rem
+h3.sub-title
+	font-size: 1.1rem
+	font-weight: bold
+	margin-bottom: 1rem
 .gradient-content
 	background: $orange
 	background: -moz-linear-gradient(-45deg, #ffa355 0%, #d85c75 100%)
@@ -108,7 +112,9 @@ h1.main-title
 .btn-default
 	&:hover, &:not([disabled]):not(.disabled):active
 		background-color: $pompadour
-
+.field_with_errors
+	label
+		color: $danger
 .unselectable
 	-webkit-user-select: none
 	-moz-user-select: none

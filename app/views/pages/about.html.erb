@@ -1,0 +1,92 @@
+<%
+  title = t '.title'
+  page_title title
+%>
+<div class="about-container">
+  <div class="logo-container p-2 d-none d-lg-block d-md-block">
+    <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+  </div>
+  <div class="about container-fluid mb-5">
+    <h1 class="main-title text-center"> <%= title %> </h1>
+    <div class="container-fluid col-lg-6 col-md-10 mx-auto">
+      <div class="row mt-5 p-0">
+        <h3 class="sub-title">Unser Ziel</h3>
+        <p>
+          Wir möchten dir die Wahl erleichtern! Die Entscheidung zu fällen,
+          welche Partei man wählen soll, ist gar nicht so leicht! Dabei gibt es jedoch so einige Angebote,
+          die sich eben diesem Problem widmen. Wir möchten dir die Möglichkeit geben,
+          dich über Parteien und ihre Programme zu informieren.
+          (Durch deine Wahl kannst du deine Zukunft mit gestalten.)
+          Also schau dich doch einfach bei unseren Wahl-Apps um,
+          und entscheide du, wie duch dich informieren möchtest!
+        </p>
+      </div>
+      <div class="container row mx-0 p-0 mt-5">
+        <h3 class="sub-title">Wer wir sind?</h3>
+        <ul class="list-unstyled">
+          <li class="media mt-3">
+            <%= link_to image_tag(asset_pack_path('images/tatjana-lajendaecker.jpg'), class: 'rounded-circle'), :root %>
+            <div class="media-body ml-4 pt-2">
+              <h5 class="mt-0 mb-1">Tatjana Lajendäcker</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </li>
+          <li class="media mt-3">
+            <%= link_to image_tag(asset_pack_path('images/jan-kus.jpg'), class: 'rounded-circle'), :root %>
+            <div class="media-body ml-4 pt-2">
+              <h5 class="mt-0 mb-1">Jan Kus</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row mt-5 p-0">
+        <h3 class="sub-title">Wie ist das Projekt entstanden?</h3>
+        <p>
+          Die ganze Idee begann mit einem Hackathon zur Bundestagswahl 2013,
+          dort haben wir den Wahl-Daten-Helfer ins Leben gerufen.
+          Seit dem hat sich viel getan: Aus dem Wahl.daten.
+          helfer ist der XXX geworden, der jungen Menschen ein Informationsangebot rund ums Thema Wahlen
+          und Politik liefern und ihnen die Entscheidung bei den nächsten Wahlen erleichtern soll.
+        </p>
+      </div>
+      <div class="elections-turnouts row mt-5 p-0 text-center">
+        <%= image_tag(asset_pack_path('images/germany.svg'), class: 'mx-auto mb-2') %>
+        <div class="text-center w-100">
+          <h5>Wahlbeteiligung</h5>
+          bei den Bundestagswahlen 2017
+        </div>
+        <div class="col-12 p-0 m-0 my-2 d-flex flex-row justify-content-between">
+          <div class="turnouts-item">
+            <div class="header">69,9<span class="precent">%</span></div>
+            <div class="footer">18-20 Jährige</div>
+          </div>
+          <div class="turnouts-item">
+            <div class="header">67<span class="precent">%</span></div>
+            <div class="footer">21-24 Jährige</div>
+          </div>
+          <div class="turnouts-item">
+            <div class="header">75,8<span class="precent">%</span></div>
+            <div class="footer">über 25 Jährige</div>
+          </div>
+        </div>
+        <small class="reference pt-2 w-100 text-right">Quelle: Bundeswahlleiter</small>
+      </div>
+      <div class="app-submission-form row mt-5 py-5 px-3">
+        <h3 class="sub-title">Offen für neue Wahlapps</h3>
+        <a name='submit_app'></a>
+        <p>
+          Du kennst auch ein Webangebot,
+          das für junge Wähler interessant ist und auf unserer Seite noch fehlt?
+          Dann verrate es uns doch einfach.
+        </p>
+        <div class="container">
+          <%= render '/shared/notices' %>
+          <div class="card-block">
+            <%= render 'election_apps/form', election_app: @election_app %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

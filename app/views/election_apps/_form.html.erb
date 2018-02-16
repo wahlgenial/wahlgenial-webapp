@@ -1,5 +1,5 @@
 <% if election_app.errors.any? %>
-  <div class="card bg-light col-10 mb-5 py-2 border border-danger text-danger">
+  <div class="card col-12 mb-3 py-2 border-danger text-danger">
     <div class="card-body">
       <h5 class="card-title pb-4">
         <%= t('common.errors', number: pluralize(election_app.errors.count, "")) %>
@@ -13,42 +13,41 @@
     </div>
   </div>
 <% end %>
-<%= form_for election_app, url: election_apps_path do |f| %>
-
-  <div class="col-10">
+<%= form_for election_app, url: new_app_path(anchor: 'submit_app') do |f| %>
+  <div class="col-12">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="col-10 pt-3">
+  <div class="col-12 pt-3">
     <%= f.label :category_id %>
     <%= f.select :category_id, options_for_select(ElectionApps::Category.all.collect {|c| [ c.title, c.id ] })%>
   </div>
+  <div class="col-12 mt-4">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
 
-  <div class="col-10 pt-3">
+  <div class="col-12 my-4">
+    <%= f.label :link %>
+    <%= f.text_field :link, class: 'form-control' %>
+  </div>
+
+  <div class="col-12 pt-4">
     <%= f.label :screenshot %>
     <%= f.file_field :screenshot %>
     <%= f.hidden_field(:screenshot_cache) %>
   </div>
 
-  <div class="col-10 pt-3">
+  <div class="col-12 pt-3">
     <%= f.label :logo %>
     <%= f.file_field :logo %>
     <%= f.hidden_field(:logo_cache) %>
   </div>
 
-  <div class="col-10">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: 'form-control' %>
-  </div>
-
-  <div class="col-10">
-    <%= f.label :link %>
-    <%= f.text_field :link, class: 'form-control' %>
-  </div>
-  <div class="form-group col-10">
-    <div class="col-10 ml-auto p-5">
-      <%= f.submit class: 'election_app-submission btn btn-primary' %>
+  <div class="form-group col-12">
+    <div class="col-12 ml-auto pt-5 text-center">
+      <%= f.submit class: 'election_app-submission btn btn-default w-75' %>
     </div>
   </div>
 <% end %>
