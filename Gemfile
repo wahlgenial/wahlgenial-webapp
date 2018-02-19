@@ -13,6 +13,8 @@ gem 'draper'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'rack-tracker'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
