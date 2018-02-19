@@ -46,5 +46,20 @@
     width: 100%
     height: 100%
 .gradient-background
-  z-index: 102
+  z-index: 103
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, .5) 60%, rgba(0, 0, 0, .3) 70%, rgba(0, 0, 0, .1) 80%, rgba(0, 0, 0, 0) 90% )
+.video-cover
+  z-index: 102
+  background-color: $black
+  img
+    height: 100%
+.video-cover-enter
+  opacity: 0.01
+.video-cover-enter.video-cover-enter-active
+  opacity: 1
+  transition: opacity 500ms ease-in
+.video-cover-leave
+  opacity: 1
+.video-cover-leave.video-cover-leave-active
+  opacity: 0.5
+  transition: opacity 1100ms ease-in

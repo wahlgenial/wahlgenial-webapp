@@ -1,8 +1,11 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 class VideoPlayer extends React.Component {
-  state = { playerLoaded: false }
+  state = {
+    playerLoaded: false,
+    playerStarted: false
+  }
 
   playerParameters () {
     return ({
@@ -25,10 +28,10 @@ class VideoPlayer extends React.Component {
     const {target} = this._player
     if (target.getPlayerState() === 1) {
       this._player.target.pauseVideo()
-      this.setState({videoPlaying: false})
+      this.setState({videoPlaying: false, playerStarted: true})
     } else {
       this._player.target.playVideo()
-      this.setState({videoPlaying: true})
+      this.setState({videoPlaying: true, playerStarted: true})
     }
   }
 
@@ -38,6 +41,8 @@ class VideoPlayer extends React.Component {
   }
 
   handlePlay () {
+    const {target} = this._player
+    console.log(target)
   }
 
   handlePause () {
@@ -52,7 +57,8 @@ class VideoPlayer extends React.Component {
   }
 
   render () {
-    const { playerLoaded } = this.state
+    const { playerStarted, playerLoaded } = this.state
+    console.log()
     return (
       <div className='container-fluid no-gutters' onClick = { () => { this.playToggle() } }>
         {(playerLoaded && !this.isVideoPlaying()) && (
@@ -60,6 +66,12 @@ class VideoPlayer extends React.Component {
             {this.props.children}
           </div>
         )}
+        <ReactCSSTransitionGroup transitionName="video-cover">
+          {(!playerStarted && (
+            <div className="video-cover control-container">
+              <img src={ this.props.coverImage } />
+            </div>))}
+        </ReactCSSTransitionGroup>
         <div className="video-background-container">
           <div className="video-background">
             <Youtube

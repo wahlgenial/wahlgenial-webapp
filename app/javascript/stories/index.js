@@ -4,6 +4,7 @@ import ElectionProgramsStory from './ElectionProgramsStory'
 import GlossaryStory from './GlossaryStory'
 import ElectionAppsStory from './ElectionAppsStory'
 import VideoPlayerStory from './VideoPlayerStory'
+import TransitionStory from './TransitionStory'
 import '../../stylesheets/application.sass'
 
 storiesOf('Election Programs')
@@ -17,3 +18,6 @@ storiesOf('ElectionApps')
 
 storiesOf('VideoPlayerStory')
   .add('Whole View', () => <VideoPlayerStory />)
+
+storiesOf('TransitionStory')
+  .add('Whole View', () => <TransitionStory />)

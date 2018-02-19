@@ -1,8 +1,9 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer'
+const whyCoverImage = require('../images/why-video-cover.png')
 const WhySectionVideo = ({children, videoId}) => {
   return (
-    <VideoPlayer videoId={ videoId }>
+    <VideoPlayer videoId={ videoId } coverImage = { whyCoverImage }>
       <div className='col-lg-12'>
         <div className="logo-container p-2 h-25">
           {/* <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %> */}
