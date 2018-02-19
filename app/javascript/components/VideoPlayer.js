@@ -62,14 +62,14 @@ class VideoPlayer extends React.Component {
     return (
       <div className='container-fluid no-gutters' onClick = { () => { this.playToggle() } }>
         {(playerLoaded && !this.isVideoPlaying()) && (
-          <div className="control-container gradient-background">
+          <div className="control-container gradient-background d-flex">
             {this.props.children}
           </div>
         )}
         <ReactCSSTransitionGroup transitionName="video-cover">
           {(!playerStarted && (
-            <div className="video-cover control-container">
-              <img src={ this.props.coverImage } />
+            <div className="video-cover control-container d-flex">
+              <img className="mx-auto" src={ this.props.coverImage } />
             </div>))}
         </ReactCSSTransitionGroup>
         <div className="video-background-container">

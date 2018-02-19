@@ -6,16 +6,16 @@ const WhySectionVideo = ({children, videoId}) => {
     <VideoPlayer videoId={ videoId } coverImage = { whyCoverImage }>
       <div className='col-lg-12'>
         <div className="logo-container p-2 h-25">
-          {/* <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %> */}
+          <img src={ require('../images/wahl-daten-helfer-logo.svg') } />
         </div>
-        <div className="why-description pl-5 p-5 text-left my-auto h-50">
-          <div className="col-12 col-lg-8">
-            <h1 className="pt-5">
+        <div className="why-description text-left my-auto h-50">
+          <div className="col-12 col-lg-10">
+            <h1 className="pt-4">
               <span>WARUM</span> <br/><span className="color-call-to-action">WÄHLEN?</span>
             </h1>
-            <p className="text-left col-lg-6 pt-4">
+            <p className="text-left col-lg-6 p-0 mt-4 pr-5">
               Wer die Wahl hat, hat die Qual … sagt man. Dabei ist Wählen nicht nur super wichtig, sondern auch gar nicht so kompliziert. <br />
-              Du hast deine eigenen Sorgen und Vorstellungen – lass nicht <br />andere entscheiden, ob man sich darum kümmert.
+              Du hast deine eigenen Sorgen und Vorstellungen – lass nicht andere entscheiden, ob man sich darum kümmert.
             </p>
           </div>
         </div>
