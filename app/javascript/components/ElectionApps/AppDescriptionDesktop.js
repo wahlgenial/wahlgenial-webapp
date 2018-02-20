@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import CallToActionGhost from '../CallToActionGhost'
 import ShareButton from './ShareButton'
+import AppItemDesktop from './AppItemDesktop'
 import HeaderLogo from '../HeaderLogo'
 import icons from '../../images/icons'
 import constants from '../../utils/constants'
-const AppDescriptionDesktop = ({data}) => {
+const AppDescriptionDesktop = ({data, featuredApps, handleAppSelect, history}) => {
   const {description, screenshot, /* screenshot_thumb, logo, logo_thumb, slug */ link, name} = data
+  const handleOnClick = (a, b) => {
+    handleAppSelect(a, b, history)
+  }
   return (
-    <div>
+    <div class="election-apps-desktop">
       <HeaderLogo />
       <ReactCSSTransitionGroup
         transitionAppear={ true }
@@ -56,8 +60,18 @@ const AppDescriptionDesktop = ({data}) => {
               </div>
             </div>
           </div>
-          <div className="contaienr">
+          <div className="contaienr pt-5">
             <CallToActionGhost text='Beliebte Wahl-Apps' link={ false } />
+            <div className="d-flex flex-wrap justify-content-center">
+              {featuredApps.map((app, index) => (
+                <AppItemDesktop
+                  key={ index }
+                  onClick={ () => { handleOnClick(app.categorySlug, app.slug) } }
+                  name={ app.name }
+                  description={ app.description }
+                  link={ app.link } />
+              ))}
+            </div>
           </div>
         </div>
       </ReactCSSTransitionGroup>

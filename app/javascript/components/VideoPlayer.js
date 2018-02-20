@@ -41,8 +41,6 @@ class VideoPlayer extends React.Component {
   }
 
   handlePlay () {
-    const {target} = this._player
-    console.log(target)
   }
 
   handlePause () {
@@ -58,7 +56,6 @@ class VideoPlayer extends React.Component {
 
   render () {
     const { playerStarted, playerLoaded } = this.state
-    console.log()
     return (
       <div className='container-fluid no-gutters' onClick = { () => { this.playToggle() } }>
         {(playerLoaded && !this.isVideoPlaying()) && (

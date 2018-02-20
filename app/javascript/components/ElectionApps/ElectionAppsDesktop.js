@@ -25,7 +25,18 @@ class ElectionAppsDesktop extends React.Component {
       historyHandler.push(`${constants.electionsAppsPath}/${categorySlug}/${appSlug}`)
     }
   }
-
+  filterFeaturedApps (appsCategories) {
+    let featuredApps = []
+    appsCategories.filter((category) => {
+      category.apps.filter((app) => {
+        if (app.featured === true) {
+          app.categorySlug = category.slug
+          featuredApps.push(app)
+        }
+      })
+    })
+    return featuredApps
+  }
   extractParamsFromUri () {
     const params = window.location.href.replace(constants.electionsAppsReg, '')
     return params.split('/').filter((value) => { if (value !== '') return true })
@@ -54,8 +65,23 @@ class ElectionAppsDesktop extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path={ `${constants.electionsAppsPath}/:category/:app` } render={ () => <AppDescriptionDesktop data={ this.selectedApp() } /> }/>
-          <Route exact path={ constants.electionsAppsPath } render= { (props) => <ElectionAppsHome { ...props } appsCategories={ appsCategories } handleAppSelect={ this.handleAppSelect } /> } />
+          <Route
+            path={ `${constants.electionsAppsPath}/:category/:app` }
+            render={
+              (props) => (
+                <AppDescriptionDesktop
+                  data={ this.selectedApp() }
+                  featuredApps = { this.filterFeaturedApps(appsCategories) }
+                  handleAppSelect={ this.handleAppSelect }
+                  history={ props.history }/>)
+            } />
+          <Route
+            exact path={ constants.electionsAppsPath }
+            render= {
+              (props) => (
+                <ElectionAppsHome { ...props }
+                  appsCategories={ appsCategories }
+                  handleAppSelect={ this.handleAppSelect } />) } />
         </div>
       </BrowserRouter>
     )
