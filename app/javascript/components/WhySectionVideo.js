@@ -1,6 +1,6 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer'
-const whyCoverImage = require('../images/why-video-cover.png')
+const whyCoverImage = require('../images/why-video-cover.jpg')
 const WhySectionVideo = ({children, videoId}) => {
   return (
     <VideoPlayer videoId={ videoId } coverImage = { whyCoverImage }>

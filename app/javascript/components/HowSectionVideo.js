@@ -1,6 +1,6 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer'
-const howCoverImage = require('../images/how-video-cover.png')
+const howCoverImage = require('../images/how-video-cover.jpg')
 const HowSectionVideo = ({children, videoId, startTime = 0}) => {
   return (
     <VideoPlayer videoId={ videoId } startTime={ startTime } coverImage = { howCoverImage }>
