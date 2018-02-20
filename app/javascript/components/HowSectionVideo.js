@@ -1,5 +1,6 @@
 import React from 'react'
 import VideoPlayer from './VideoPlayer'
+import PlayButton from './PlayButton'
 const howCoverImage = require('../images/how-video-cover.jpg')
 const HowSectionVideo = ({children, videoId, startTime = 0}) => {
   return (
@@ -13,6 +14,7 @@ const HowSectionVideo = ({children, videoId, startTime = 0}) => {
           Was passiert, wenn du deine Stimme abgibst und wie machst du das?<br />
           In nur zwei Minuten hast du es kapiert.
         </div>
+        <PlayButton />
       </div>
     </VideoPlayer>
   )

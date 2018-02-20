@@ -68,8 +68,9 @@ class VideoPlayer extends React.Component {
         )}
         <ReactCSSTransitionGroup transitionName="video-cover">
           {(!playerStarted && (
-            <div className="video-cover control-container d-flex">
-              <img className="mx-auto" src={ this.props.coverImage } />
+            <div
+              className="video-cover control-container d-flex"
+              style={ {background: `url(${this.props.coverImage})`, ...videoCoverStyles} }>
             </div>))}
         </ReactCSSTransitionGroup>
         <div className="video-background-container">
@@ -88,6 +89,12 @@ class VideoPlayer extends React.Component {
       </div>
     )
   }
+}
+const videoCoverStyles = {
+  backgroundColor: '#000',
+  backgroundSize: 'auto 100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center center'
 }
 
 VideoPlayer.defadivtProps = {}
