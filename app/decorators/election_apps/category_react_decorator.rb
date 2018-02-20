@@ -21,6 +21,7 @@ class ElectionApps::CategoryReactDecorator < Draper::Decorator
             screenshot_thumb: record_app.screenshot_url(:thumb),
             logo: record_app.logo_url,
             logo_thumb: record_app.logo_url(:small),
+            featured: record_app.featured
           }
           category[:apps].push(app)
         end
