@@ -2,7 +2,7 @@ de:
   mailers:
     new_app_registered:
       from: 'notifications@wahldatenhelfer.de'
-      to: 'amed@railslove.com'
+      to: 'tatjana@railslove.com'
       subject: "`%{app_name}` has been added to `%{category_title}`"
   common:
     cancel: Stornieren
