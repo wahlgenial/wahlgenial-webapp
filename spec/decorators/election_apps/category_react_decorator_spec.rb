@@ -17,7 +17,8 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
               screenshot: nil,
               screenshot_thumb: nil,
               logo: nil,
-              logo_thumb: nil },
+              logo_thumb: nil,
+              featured: true },
             { name: "App Name 2",
               slug: "app-name-2",
               description: "Description",
@@ -25,7 +26,8 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
               screenshot: nil,
               screenshot_thumb: nil,
               logo: nil,
-              logo_thumb: nil },
+              logo_thumb: nil,
+              featured: false },
             { name: "App Name 3",
               slug: "app-name-3",
               description: "Description",
@@ -33,7 +35,8 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
               screenshot: nil,
               screenshot_thumb: nil,
               logo: nil,
-              logo_thumb: nil }
+              logo_thumb: nil,
+              featured: false }
         ]
       },
       { title: "Second Category",
@@ -48,17 +51,18 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
             screenshot: nil,
             screenshot_thumb: nil,
             logo: nil,
-            logo_thumb: nil } ]
+            logo_thumb: nil,
+            featured: true } ]
       }]
     end
 
     it 'returns the correct data tree' do
       category_1 = create(:category, title: 'First Category')
       category_2 = create(:category, title: 'Second Category')
-      create(:app, name: 'App Name 1', category: category_1, link: 'http://link.app/')
+      create(:app, name: 'App Name 1', category: category_1, link: 'http://link.app/', featured: true)
       create(:app, name: 'App Name 2', category: category_1, link: 'http://link.app/')
       create(:app, name: 'App Name 3', category: category_1, link: 'http://link.app/')
-      create(:app, name: 'App Name 4', category: category_2, link: 'http://link.app/')
+      create(:app, name: 'App Name 4', category: category_2, link: 'http://link.app/', featured: true)
 
       election_apps_categories = ElectionApps::CategoryReactDecorator.decorate(ElectionApps::Category.includes(:apps))
       expect(election_apps_categories.to_h).to eql(output)
