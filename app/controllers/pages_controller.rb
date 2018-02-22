@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def home
     @election_programs = election_programs
     @political_agreements = BundestagVote::PoliticalAgreement.all.limit(3)
+    @last_election = Calendar::Event.order(:datetime).last
   end
 
   def imprint
@@ -13,7 +14,7 @@ class PagesController < ApplicationController
   end
 
   def create_app
-    
+
     @election_app = ElectionApps::App.new(election_app_params)
     if (@election_app.save)
       ElectionAppsMailer.new_app_registered(
