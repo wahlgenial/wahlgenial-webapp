@@ -44,6 +44,4 @@ class PagesController < ApplicationController
       :logo,
       :link )
   end
-
-
 end

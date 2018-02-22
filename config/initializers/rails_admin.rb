@@ -44,6 +44,12 @@ RailsAdmin.config do |config|
   end
 
 
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic('Administration') do |username, password|
+      username == ENV["ADMIN_USER"] && password == ENV["ADMIN_PASS"]
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory

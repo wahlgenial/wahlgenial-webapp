@@ -85,6 +85,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.middleware.use(Rack::Tracker) do
-    handler :google_analytics, { tracker: 'U-XXXXX-Y' }
+    handler :google_analytics, { tracker: ENV['GOOGLE_TRACKER_ID'] }
   end
 end

@@ -13,8 +13,29 @@
 - `$ yarn`
 
 Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and development environment.
+## Deploy
+WAHLDATENHELFER uses many services:
+- [Mailgun](https://www.mailgun.com/) email service to send notifications.
+- [RailsAdmin](https://github.com/sferik/rails_admin) rails content management  
+- [Google analytics](https://analytics.google.com) web analytics service
+- [Amazon Web Services](https://aws.amazon.com/) cloud services platform for files storage.
 
+That :point_up: leads to configure the following :point_down: env variables:
 
+- RailsAdmin authentication:
+  - `ENV["ADMIN_USER"]`
+  - `ENV["ADMIN_PASS"]`
+- MAILGUN
+  - `ENV['MAILGUN_SMTP_PORT']`
+  - `ENV['MAILGUN_SMTP_SERVER']`
+  - `ENV['MAILGUN_SMTP_LOGIN']`
+  - `ENV['MAILGUN_SMTP_PASSWORD']`
+- Google analytics tracker
+  - `ENV['GOOGLE_TRACKER_ID']`
+- AWS:
+  - `ENV['AWS_ACCESS_KEY_ID'],`
+  - `ENV['AWS_SSECRET_ACCESS_KEY'],`
+  - `ENV['AWS_BUCKET_NAME']`
 ## Development
 
 ### Dummy content
