@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
     @election_programs = election_programs
     @political_agreements = BundestagVote::PoliticalAgreement.all.limit(3)
-    @last_election = Calendar::Event.order(:datetime).last
+    @comming_event = Calendar::Event.first
   end
 
   def imprint

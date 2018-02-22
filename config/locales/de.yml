@@ -17,7 +17,7 @@ de:
     link_text: Die Wahltermine
     index:
       title: Wahltermine
-      introduction: Die nächsten Wahlen in Deutschland
+      introduction: Schau nach wann in deinem Bundesland die nächsten Wahlen anstehen
   activerecord:
     errors:
       models:

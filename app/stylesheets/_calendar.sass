@@ -8,10 +8,9 @@
     color: $table_text_color
     background: $white
     border-radius: 1rem
-
 .table-rounded thead th
   border: none
-  background: $orange
+  background: $orange_light
   color: $white
 
 .table-rounded thead th:first-child
@@ -34,6 +33,22 @@
 .table-striped tbody tr:nth-of-type(2n+1)
   background-color: $table_bg_color1
 
+.comming-election-sticker
+  width: 100px
+  height: 100px
+  background: url('../javascript/images/stoerer-termine.png') 100% 100%
+  background-size: 100% 100%
+  position: absolute
+  left: -90px
+  top: -10px
+  @include media-breakpoint-down(md)
+    display: none
+
+.period-block
+  font-weight: bold
+  text-align: center
+  @include media-breakpoint-down(sm)
+    display: none
 .calendar-footer
   min-height: 100%
   .call-to-action-ghost

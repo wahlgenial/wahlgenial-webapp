@@ -10,26 +10,31 @@
     <h1 class="main-title"> <%= title %> </h1>
     <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light"> <%= t '.introduction' %> </p>
   </div>
-  <div class="calendar-wrapper col-lg-10 col-md-12 mx-auto">
+  <div class="calendar-wrapper col-lg-10 col-md-12 mx-auto p-1">
     <% if @calendar_events.any? %>
-      <table class="table table-striped table-hover table-rounded">
+      <table class="table table-responsive table-striped table-hover table-rounded">
         <thead>
-          <tr>
+          <tr class="text-uppercase">
             <th><%= Calendar::Event.human_attribute_name(:year) %></th>
             <th><%= Calendar::Event.human_attribute_name(:date) %></th>
             <th><%= Calendar::Event.human_attribute_name(:federal_state) %></th>
             <th><%= Calendar::Event.human_attribute_name(:organization) %></th>
-            <th><%= Calendar::Event.human_attribute_name(:period) %></th>
+            <th class="period-block"><%= Calendar::Event.human_attribute_name(:period) %></th>
           </tr>
         </thead>
         <tbody>
           <% @calendar_events.each do |event| %>
           <tr>
-            <td><%= event.year %></td>
+            <td>
+              <% if event.id == @comming_event.id %>
+                <div class="comming-election-sticker"></div>
+              <% end %>
+              <%= event.year %>
+            </td>
             <td><%= event.date %></td>
             <td><%= event.federal_state %></td>
             <td><%= event.organization %></td>
-            <td><%= event.period %></td>
+            <td class="period-block"><%= event.period %></td>
           </tr>
           <% end %>
         </tbody>
