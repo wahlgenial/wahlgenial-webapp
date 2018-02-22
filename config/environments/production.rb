@@ -88,3 +88,11 @@ Rails.application.configure do
     handler :google_analytics, { tracker: ENV['GOOGLE_TRACKER_ID'] }
   end
 end
+
+RailsAdmin.config do |config|
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic('Administration') do |username, password|
+      username == ENV["ADMIN_USER"] && password == ENV["ADMIN_PASS"]
+    end
+  end
+end

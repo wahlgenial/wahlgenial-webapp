@@ -12,7 +12,6 @@
 - `$ rails db:setup`
 - `$ yarn`
 
-Wahldatenhelfer uses `postgresql` in production, `sqlite` for both test and development environment.
 ## Deploy
 WAHLDATENHELFER uses many services:
 - [Mailgun](https://www.mailgun.com/) email service to send notifications.
@@ -36,6 +35,7 @@ That :point_up: leads to configure the following :point_down: env variables:
   - `ENV['AWS_ACCESS_KEY_ID'],`
   - `ENV['AWS_SSECRET_ACCESS_KEY'],`
   - `ENV['AWS_BUCKET_NAME']`
+  
 ## Development
 
 ### Dummy content
