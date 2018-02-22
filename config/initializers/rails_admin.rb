@@ -32,6 +32,18 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Calendar::Event' do
+    base do
+      field :datetime
+      field :year
+      field :date
+      field :federal_state
+      field :organization
+      field :period
+    end
+  end
+
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory

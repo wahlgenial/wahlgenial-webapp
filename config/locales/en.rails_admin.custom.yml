@@ -1,0 +1,5 @@
+en:
+  admin:
+    help:
+      "calendar/event":
+        datetime: it helps to order records and show latest
