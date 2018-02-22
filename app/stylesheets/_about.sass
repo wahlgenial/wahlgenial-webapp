@@ -1,8 +1,14 @@
 .about-container
+  h4
+    font-size: 14px
+    font-weight: bold
+  p
+    font-size: 14px
   .media
     img
       width: 150px
       height: 150px
+      border: 2px solid $white
   .media-body
     font-size: 0.9rem
     line-height: 1.3rem
@@ -20,6 +26,9 @@
         font-size: 1.3rem
       .footer
         font-size: 1rem
+    .turnouts-item:not(:last-child)
+      border-right: 2px solid $white
+
   .app-submission-form
     border: 2px solid $white
     border-radius: 0.7rem
@@ -28,3 +37,9 @@
     .btn-default
       color: $pompadour
       border-radius: 1.5rem
+      &:hover
+        color: $white
+  .support
+    img
+      max-height: 100px
+      width: 100%

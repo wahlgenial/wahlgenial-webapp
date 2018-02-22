@@ -2,7 +2,7 @@
   title = t '.title'
   page_title title
 %>
-<div class="about-container">
+<article class="about-container">
   <div class="logo-container p-2 d-none d-lg-block d-md-block">
     <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
   </div>
@@ -10,7 +10,7 @@
     <h1 class="main-title text-center"> <%= title %> </h1>
     <div class="container-fluid col-lg-6 col-md-10 mx-auto">
       <div class="row mt-5 p-0">
-        <h3 class="sub-title">Unser Ziel</h3>
+        <h2 class="sub-title">Unser Ziel</h2>
         <p>
           Wir möchten dir die Wahl erleichtern! Die Entscheidung zu fällen,
           welche Partei man wählen soll, ist gar nicht so leicht! Dabei gibt es jedoch so einige Angebote,
@@ -23,22 +23,20 @@
       </div>
       <div class="container row mx-0 p-0 mt-5">
         <h3 class="sub-title">Wer wir sind?</h3>
-        <ul class="list-unstyled">
-          <li class="media mt-3">
+          <div class="media mt-3">
             <%= link_to image_tag(asset_pack_path('images/tatjana-lajendaecker.jpg'), class: 'rounded-circle'), :root %>
-            <div class="media-body ml-4 pt-2">
-              <h5 class="mt-0 mb-1">Tatjana Lajendäcker</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            <div class="media-body my-auto ml-4">
+              <h4 class="mt-0 mb-1">Tatjana Lajendäcker</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
             </div>
-          </li>
-          <li class="media mt-3">
+          </div>
+          <div class="media mt-3">
             <%= link_to image_tag(asset_pack_path('images/jan-kus.jpg'), class: 'rounded-circle'), :root %>
-            <div class="media-body ml-4 pt-2">
-              <h5 class="mt-0 mb-1">Jan Kus</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            <div class="media-body my-auto ml-4">
+              <h4 class="mt-0 mb-1">Jan Kus</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
             </div>
-          </li>
-        </ul>
+          </div>
       </div>
       <div class="row mt-5 p-0">
         <h3 class="sub-title">Wie ist das Projekt entstanden?</h3>
@@ -56,7 +54,7 @@
           <h5>Wahlbeteiligung</h5>
           bei den Bundestagswahlen 2017
         </div>
-        <div class="col-12 p-0 m-0 my-2 d-flex flex-row justify-content-between">
+        <div class="col-12 my-2 pt-3 d-flex flex-row justify-content-between">
           <div class="turnouts-item">
             <div class="header">69,9<span class="precent">%</span></div>
             <div class="footer">18-20 Jährige</div>
@@ -73,20 +71,28 @@
         <small class="reference pt-2 w-100 text-right">Quelle: Bundeswahlleiter</small>
       </div>
       <div class="app-submission-form row mt-5 py-5 px-3">
-        <h3 class="sub-title">Offen für neue Wahlapps</h3>
-        <a name='submit_app'></a>
-        <p>
-          Du kennst auch ein Webangebot,
-          das für junge Wähler interessant ist und auf unserer Seite noch fehlt?
-          Dann verrate es uns doch einfach.
-        </p>
-        <div class="container">
+        <div class="pl-3">
+          <h3 class="sub-title">Offen für neue Wahlapps</h3>
+          <a name='submit_app'></a>
+          <p>
+            Du kennst auch ein Webangebot,
+            das für junge Wähler interessant ist und auf unserer Seite noch fehlt?
+            Dann verrate es uns doch einfach.
+          </p>
+        </div>
+        <div class="container pl-1">
           <%= render '/shared/notices' %>
           <div class="card-block">
             <%= render 'election_apps/form', election_app: @election_app %>
           </div>
         </div>
+        <div class="text-center col-12 <pt-5></pt-5>">
+          <p class="pt-3">ODER SENDE EINE E-MAIL AN <a href="mailto:tatjana@railslove.com">tatjana@railslove.com</a></p>
+        </div>
+      </div>
+      <div class="support container row mt-5 p-0 text-center">
+        <%= render 'support' %>
       </div>
     </div>
   </div>
-</div>
+</article>
