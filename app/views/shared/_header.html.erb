@@ -5,7 +5,7 @@
       <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
     </div>
   </div>
-  <div class="main-menu no-gutters">
+  <div class="main-menu no-gutters open">
     <div class="d-flex justify-content-between flex-column h-100">
       <div class="top-bar d-flex flex-row p-2">
         <div class="logo-container align-self-start">
@@ -17,20 +17,24 @@
       </div>
       <div class="main-menu-list-container pt-3">
         <div class="main-menu-list col-lg-7 col-md-10 col-sm-12 mx-auto">
-          <ul class="">
-            <li data-menuanchor="why-section">
-              <%= link_to 'WARUM wählen?', root_path(anchor: 'why-section'), class: 'navigation-link' %>
+          <ul>
+            <li>
+              <li><%= link_to 'HOME', root_path %>
+              <ul class="sub-menu">
+                <li data-menuanchor="why-section">
+                  <%= link_to 'WARUM wählen?', root_path(anchor: 'why-section'), class: 'navigation-link' %>
+                </li>
+                <li data-menuanchor="who-section">
+                  <%= link_to 'WEN soll ich wählen?', root_path(anchor: 'who-section'), class: 'navigation-link' %>
+                </li>
+                <li data-menuanchor="how-section">
+                  <%= link_to 'WIE geht wählen?', root_path(anchor: 'how-section'), class: 'navigation-link' %>
+                </li>
+                <li data-menuanchor="what-section">
+                  <%= link_to 'WAS passiert aktuell <br/> in der Politik?'.html_safe, root_path(anchor: 'what-section'), class: 'navigation-link' %>
+                </li>
+              </ul>
             </li>
-            <li data-menuanchor="who-section">
-              <%= link_to 'WEN soll ich wählen?', root_path(anchor: 'who-section'), class: 'navigation-link' %>
-            </li>
-            <li data-menuanchor="how-section">
-              <%= link_to 'WIE geht wählen?', root_path(anchor: 'how-section'), class: 'navigation-link' %>
-            </li>
-            <li data-menuanchor="what-section">
-              <%= link_to 'WAS passiert aktuell <br/> in der Politik?'.html_safe, root_path(anchor: 'what-section'), class: 'navigation-link' %>
-            </li>
-            <li>&nbsp;</li>
             <li><%= link_to 'WAHL-APPS', apps_path %></li>
             <li><%= link_to 'Wörterbuch', glossary_path %></li>
             <li><%= link_to 'WAHL TERMINE', calendar_path %></li>
