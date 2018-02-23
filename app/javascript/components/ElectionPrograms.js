@@ -4,6 +4,7 @@ import TopicButton from './ElectionPrograms/TopicButton'
 import QuestionsList from './ElectionPrograms/QuestionsList'
 import { isDeviceMobile } from '../utils/functions'
 
+import icons from '../images/icons'
 class ElectionPrograms extends React.Component {
   constructor (props) {
     super(props)
@@ -29,6 +30,10 @@ class ElectionPrograms extends React.Component {
     const topicsButtonsContainerClass = isDeviceMobile() ? 'justify-content-center' : 'flex-row'
     return (
       <div className="col-12 p-0 m-0">
+        <div className="call-to-action text-center">
+          <img className="" src={ icons.glossaryCallToAction } />
+          Wähle ein Thema aus
+        </div>
         <div className="topicsButtonsContainer row pb-2">
           <span className={ `topicsButtonsWrapper d-flex ${topicsButtonsContainerClass}` }>
             {topics.map((topic, index) => (
