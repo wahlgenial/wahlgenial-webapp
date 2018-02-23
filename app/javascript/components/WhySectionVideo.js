@@ -18,8 +18,8 @@ const WhySectionVideo = ({children, videoId}) => {
               Wer die Wahl hat, hat die Qual … sagt man. Dabei ist Wählen nicht nur super wichtig, sondern auch gar nicht so kompliziert. <br />
               Du hast deine eigenen Sorgen und Vorstellungen – lass nicht andere entscheiden, ob man sich darum kümmert.
             </p>
-            <PlayButton />
           </div>
+          <PlayButton />
         </div>
 
       </div>

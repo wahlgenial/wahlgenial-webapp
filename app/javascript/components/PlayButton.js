@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({title = 'Button', href = '#', onClick = () => {}, active = false}) => (
   <div
-    className='play-button'
+    className='play-button mx-auto'
     href={ href }
     onClick={ (e) => { onClick(); e.preventDefault() } }>
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 78.8 78.2">

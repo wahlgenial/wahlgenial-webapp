@@ -3,20 +3,20 @@
 	z-index: 103
 	.call-to-action
 		font-family: $font_1
-		font-size: 1.4rem
+		font-size: 1.7rem
 		font-weight: lighter
 		line-height: 1.1rem
 		position: absolute
-		height: 150px
+		height: 120px
 		width: 80px
-		right: -170px
-		top: 20px
-		transform: rotate(-45deg)
+		right: -130px
+		top: -40px
+		transform: rotate(-50deg)
 		img
-			width: 80px
+			width: 160px
 			position: relative
 			left: -80px
-			top: 40px
+			top: 100px
 .topicsButtonsWrapper
 	margin: 0 auto
 	padding: 0
@@ -61,6 +61,8 @@
 	font-weight: lighter
 	cursor: pointer
 	border-bottom: 2px solid $white
+	&.active, &:hover
+		background-color: $orange
 	.question-block
 		max-height: 6rem
 		@include media-breakpoint-up(sm)
