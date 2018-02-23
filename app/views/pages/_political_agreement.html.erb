@@ -17,20 +17,20 @@
       </div>
       <div class="card-footer text-center py-2">
         <div class="row container no-gutters">
-          <div class="col-3 pt-1">
+          <div class="col-3 pt-1 result-counter">
             <%= political_agreement.votes_yes %>
             <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
           </div>
           <div class="col-6">
             <div class="final-result">
               <% if political_agreement.votes_yes > political_agreement.votes_no %>
-                <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
+                <%= image_tag asset_pack_path('images/swoosh.svg') %>
               <% else %>
                 <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
               <% end %>
             </div>
           </div>
-          <div class="col-3 pt-1">
+          <div class="col-3 pt-1 result-counter">
             <%= political_agreement.votes_no %>
             <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
           </div>
