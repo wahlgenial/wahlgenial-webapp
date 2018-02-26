@@ -1,5 +1,16 @@
 .how-description
+  text-align: left
+  @include media-breakpoint-up(md)
+    text-align: center
   h1
-    font-size: 3.7rem
-    line-height: 4rem
+    font-size: 1.9rem
+    letter-spacing: 1px
     font-weight: bold
+    width: 70%
+    @include media-breakpoint-up(md)
+      font-size: 3.6rem
+      letter-spacing: 4px
+      margin: auto
+  p
+    @include media-breakpoint-down(md)
+      width: 85%
