@@ -47,7 +47,7 @@ class OpinionsBoard extends React.Component {
     const {opinions} = this.props
     const {selectedOpinionIndex} = this.state
     return (
-      <div className="opinionsContainer col-12 no-gutters mt-3 py-3">
+      <div className="opinionsContainer col-12 no-gutters mt-3 py-3 px-4">
         <div className="col-md-8 lg-sm-12 mx-auto">
           <p> Das sagen die Parteien </p>
           <div className="d-flex align-content-stretch flex-wrap justify-content-center">
