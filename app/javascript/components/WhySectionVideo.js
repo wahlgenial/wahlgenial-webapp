@@ -9,8 +9,8 @@ const WhySectionVideo = ({children, videoId}) => {
         <div className="logo-container p-2">
           <img src={ require('../images/wahl-daten-helfer-logo.svg') } />
         </div>
-        <div className="why-description text-left my-auto">
-          <div className="description-text">
+        <div className="why-description col-12 text-left m-auto">
+          <div className="description-text pr-5">
             <h1>
               <span>WARUM</span> <br/><span className="color-call-to-action">WÄHLEN?</span>
             </h1>

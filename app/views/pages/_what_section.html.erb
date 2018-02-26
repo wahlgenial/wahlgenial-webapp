@@ -13,7 +13,7 @@
           Sieh dir die letzten Abstimmungen <br />aus dem Bundestag an.
         </p>
       </div>
-      <div class="political-agreements-container row no-gutters col-12">
+      <div class="political-agreements-container row justify-content-center no-gutters col-12">
         <%- @political_agreements.each do |political_agreement| %>
           <%= render 'political_agreement', political_agreement: political_agreement %>
         <% end %>

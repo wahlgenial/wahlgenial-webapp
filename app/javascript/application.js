@@ -30,8 +30,8 @@ const menuIsOpened = () => {
   }
 }
 
-const viewNotMobile = () => {
-  if (window.innerWidth > 570) {
+const viewNotMediumDevice = () => {
+  if (window.innerWidth > 768) {
     return true
   } else {
     return false
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus()
   })
-  if (viewNotMobile()) { mountFullpage() }
+  if (viewNotMediumDevice()) { mountFullpage() }
   mountToolitp()
   menuTogglerEventListener()
   menuLinksNavigator()
