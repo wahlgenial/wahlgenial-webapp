@@ -5,7 +5,7 @@ const howCoverImage = require('../images/how-video-cover.jpg')
 const HowSectionVideo = ({children, videoId, startTime = 0}) => {
   return (
     <VideoPlayer videoId={ videoId } startTime={ startTime } coverImage = { howCoverImage }>
-      <div className="how-description col-lg-6 col-md-8 col-sm-12 m-auto text-center">
+      <div className="how-description col-lg-6 col-md-8 col-sm-12 d-flex text-center">
         <div className="col-lg-6 col-md-8 col-sm-12 m-auto">
           <h1 className="py-5">WIE GEHT <span className="color-call-to-action">WÄHLEN?</span></h1>
         </div>

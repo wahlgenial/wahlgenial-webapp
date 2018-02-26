@@ -66,7 +66,7 @@ class VideoPlayer extends React.Component {
         <ReactCSSTransitionGroup transitionName="video-cover">
           {(!playerStarted && (
             <div
-              className="video-cover control-container d-flex"
+              className="video-cover control-container d-flex p-0 m-0"
               style={ {background: `url(${this.props.coverImage})`, ...videoCoverStyles} }>
             </div>))}
         </ReactCSSTransitionGroup>

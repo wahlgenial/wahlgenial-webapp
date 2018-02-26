@@ -18,11 +18,12 @@ h2
 .color-call-to-action
 	color: $yellow !important
 .logo-container
+	position: absolute
 	height: 20%
-	@include media-breakpoint-down(md)
-		height: 12%
 	img
 		width: 100px
+	@include media-breakpoint-down(md)
+		display: none
 .main-menu-open
     height: auto
     overflow: hidden
@@ -127,6 +128,12 @@ h3.sub-title
 	width: 120px
 	height: 120px
 	opacity: 0.9
+	@include media-breakpoint-down(md)
+		width: 70px
+		height: 70px
+		position: absolute
+		top: 25px
+		right: 15px
 	svg
 		fill: $yellow
 		transition: all 0.3s ease-in
