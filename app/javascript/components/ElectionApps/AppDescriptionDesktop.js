@@ -31,7 +31,7 @@ const AppDescriptionDesktop = ({data, featuredApps, handleAppSelect, history}) =
           </div>
           <div className="container">
             <div id="AppDescription" className="row col-12 no-gutters">
-              <a name="app-description"></a>
+              <a class="anchor-tag" name="app-description"></a>
               <div className="d-flex flex-column col-lg-6 text-left pb-5 px-1 no-gutters">
                 <div className="container">
                   <h2 className="app-title text-center text-lg-left">{name}</h2>

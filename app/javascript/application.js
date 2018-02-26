@@ -66,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus()
   })
-  if (viewNotMediumDevice()) { mountFullpage() }
+  if (viewNotMediumDevice()) {
+    $('.anchor-tag').remove()
+    mountFullpage()
+  }
   mountToolitp()
   menuTogglerEventListener()
   menuLinksNavigator()
