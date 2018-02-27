@@ -1,7 +1,7 @@
 <header class="header w-100">
   <div class="main-menu-toggler-container main-menu-container-open">
     <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
-    <div class="d-lg-none d-md-none mobile-logo-img d-sm-none d-xs-block float-left">
+    <div class="d-lg-none d-md-none mobile-logo-img d-sm-block float-left">
       <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
     </div>
   </div>
@@ -9,7 +9,7 @@
     <div class="d-flex justify-content-between flex-column h-100">
       <div class="top-bar d-flex flex-row p-2">
         <div class="logo-container align-self-start">
-          <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg', class: 'mobile-logo')), :root %>
+          <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
         </div>
         <div class="d-none d-lg-block d-md-block col-1 text-left p-4 mt-1 ml-auto mr-5 ">
           <h6 class="font-weight-bold">MENÜ</h6>
