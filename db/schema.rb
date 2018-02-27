@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221153708) do
+ActiveRecord::Schema.define(version: 20180227101015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20180221153708) do
   create_table "election_programs_topics", force: :cascade do |t|
     t.string "title"
     t.text "details"
+    t.integer "ordering", default: 0
   end
 
   create_table "glossary_terms", force: :cascade do |t|
