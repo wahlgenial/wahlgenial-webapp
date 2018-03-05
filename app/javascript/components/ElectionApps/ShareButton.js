@@ -49,7 +49,7 @@ class ShareButton extends React.Component {
 const SocialButtons = ({url}) => {
   return (
     <div className='d-flex justify-content-between px-3' style={ styles.buttonWrapper }>
-      <FacebookShareButton url={ url } appId='782288638629205' quote={ constants.share.facebookMessage }>
+      <FacebookShareButton url={ url } appId='1796262170386120' quote={ constants.share.facebookMessage }>
         <FacebookIcon size={ 38 } round />
       </FacebookShareButton>
       <WhatsappShareButton url={ url } title={ constants.share.whatsappMessage } separator=":: ">
