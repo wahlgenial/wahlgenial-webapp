@@ -43,6 +43,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Glossary::Term' do
+    base do
+      field :title
+      field :description
+      field :image
+      field :video
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -53,6 +62,5 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-
   end
 end

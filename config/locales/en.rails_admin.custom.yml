@@ -3,3 +3,6 @@ en:
     help:
       "calendar/event":
         datetime: it helps to order records and show latest
+      "glossary/term":
+        description: supports markdown
+        video: youtube video ID

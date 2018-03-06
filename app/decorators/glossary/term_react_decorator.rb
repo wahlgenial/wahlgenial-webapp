@@ -13,10 +13,12 @@ class Glossary::TermReactDecorator < Draper::Decorator
       if letter_records.present?
         letter_records.each do |record|
           term_record = {}
+          term_record[:slug] = record['slug']
           term_record[:title] = record['title']
           term_record[:description] = record['description']
           term_record[:image] = record.image_url
           term_record[:image_thumb] = record.image_url(:thumb)
+          term_record[:video] = record.video
           terms.push(term_record)
         end
       end

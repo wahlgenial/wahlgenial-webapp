@@ -3,3 +3,6 @@ de:
     help:
       "calendar/event":
         datetime: es hilft um Datensätze sortieren und zuletzt anzeigen
+      "glossary/term":
+        description: markdown ist möglich
+        video: youtube video id
