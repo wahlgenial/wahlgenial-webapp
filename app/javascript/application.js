@@ -41,14 +41,16 @@ const mountToolitp = () => {
   $('[data-toggle="tooltip"]').tooltip()
 }
 
-const menuToggleOpen = () => {
+const menuToggleOpen = (e) => {
   $('.main-menu').addClass('open')
   $('body').addClass('main-menu-open')
+  e.preventDefault()
 }
 
-const menuToggleClose = () => {
+const menuToggleClose = (e) => {
   $('.main-menu').removeClass('open')
   $('body').removeClass('main-menu-open')
+  e.preventDefault()
 }
 
 const menuLinksNavigator = () => {
@@ -58,8 +60,8 @@ const menuLinksNavigator = () => {
 }
 
 const menuTogglerEventListener = () => {
-  $('.main-menu-open').click(() => { menuToggleOpen() })
-  $('.main-menu-close').click(() => { menuToggleClose() })
+  $('.main-menu-open').click((e) => { menuToggleOpen(e) })
+  $('.main-menu-close').click((e) => { menuToggleClose(e) })
 }
 
 document.addEventListener('DOMContentLoaded', () => {

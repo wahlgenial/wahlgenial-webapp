@@ -1,12 +1,12 @@
 <header class="header w-100">
   <div class="main-menu-toggler-container main-menu-container-open">
     <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
-    <div class="d-lg-none d-md-none mobile-logo-img d-sm-block float-left">
+    <div class="mobile-logo-img pl-4 float-left d-lg-none d-md-none d-sm-block ">
       <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
     </div>
   </div>
   <div class="main-menu no-gutters">
-    <div class="d-flex justify-content-between flex-column h-100">
+    <div class="main-menu-wrapper h-100 d-flex justify-content-between flex-column">
       <div class="top-bar d-flex flex-row p-2">
         <div class="logo-container align-self-start">
           <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>

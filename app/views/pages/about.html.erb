@@ -2,96 +2,98 @@
   title = t '.title'
   page_title title
 %>
-<article class="about-container">
-  <div class="logo-container p-2 d-none d-lg-block d-md-block">
-    <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
-  </div>
-  <div class="about container-fluid mb-5">
-    <h1 class="main-title text-center"> <%= title %> </h1>
-    <div class="container-fluid col-lg-6 col-md-10 mx-auto">
-      <div class="row mt-5 p-0">
-        <h3 class="sub-title">Unser Ziel</h3>
-        <p>
-          Wir möchten dir die Wahl erleichtern! Die Entscheidung zu fällen, welche Partei man wählen soll, ist gar nicht so leicht! Dabei gibt es jedoch so einige Angebote, die sich eben diesem Problem widmen. Wir möchten dir die Möglichkeit geben, dich über Parteien und ihre Programme zu informieren. Durch Deine Wahl kannst du deine Zukunft mit gestalten!
-        </p>
-        <p>
-          Also schau dich doch einfach bei unseren <a href="/wahl-apps">Wahl-Apps</a> um, und entscheide du, wie duch dich informieren möchtest!
-        </p>
-      </div>
-      <div class="container row mx-0 p-0 mt-5">
-        <h3 class="sub-title">Wer wir sind?</h3>
-          <div class="media mt-3">
-            <%= link_to image_tag(asset_pack_path('images/tatjana-lajendaecker.jpg'), class: 'rounded-circle'), :root %>
-            <div class="media-body my-auto ml-4">
-              <h4 class="mt-0 mb-1">Tatjana Lajendäcker</h4>
-              <p>Tatjana Lajendäcker hat in Köln moderne China Studien und BWL studiert und arbeitet seit 2010 bei <a href="http://railslove.com">Railslove</a> als Projekt- und Backoffice-Managerin. Außerdem ist sie Mitgründerin von <a href="http://coworkingcologne.de">Coworking Cologne</a> und Co-Organisator von <a href="http://railsgirls.com/cologne.html">Railsgirls Cologne&Rheinland</a>.</p>
-            </div>
-          </div>
-          <div class="media mt-3">
-            <%= link_to image_tag(asset_pack_path('images/jan-kus.jpg'), class: 'rounded-circle'), :root %>
-            <div class="media-body my-auto ml-4">
-              <h4 class="mt-0 mb-1">Jan Kus</h4>
-              <p>Jan Kus ist Mitgründer der Unternehmen <a href="http://railslove.com">Railslove</a> und <a href="http://hack.institute/community">hack.institute</a>. Seine Leidenschaft gilt dem Aufbau von Netzwerken und der Vermittlung zwischen den kontrastierenden Welten großer Unternehmen und der Community – um an dieser Schnittstelle perfekte digitale Produkte und Erlebnisse zu formen.</p>
-              <p>Jan entwickelt schon seit 2007 professionell Webapplikationen (vornehmlich mit Ruby on Rails) und ist seit 2010 Open Data Fan. 2012 hat er die <a href="http://koelnapi.de">KölnAPI Usergroup ins Leben gerufen</a> die heute das <a href="http://codefor.de/koeln">OKLab</a> ist. Seit 2013 konzentrieren sich seine Open Data Aktiväten auf dem Thema Wahlen. Neben dem Wahl.Daten.Helfer-Hackathon und der App hat er u.a. den <a href="http://wahllokale.online">Wahllokalfinder</a> auf Basis von Open Data Programmiert.</p>
-              <p>Mit <a href="http://hack.institute">hack.institute</a> organisiert Jan auch viele Events rund um das Thema Open Data, wie z.B.: die Mitorganisation der <a href="https://codefor.de/wahlsalons/">Wahlsalons</a> und den <a href="http://open-data-day-2018.hack.institute">Internationalen Open Data Day in Köln</a>.</p>
-            </div>
-          </div>
-      </div>
-      <div class="row mt-5 p-0">
-        <h3 class="sub-title">Wie ist das Projekt entstanden?</h3>
-        <p>
-          Die ganze Idee begann mit einem Hackathon zur Bundestagswahl 2013, dort haben wir den Wahl-Daten-Helfer ins Leben gerufen. Seit dem hat sich viel getan: Aus dem Event "Wahl.Daten.Helfer" ist eine Plattform geworden, der jungen Menschen ein Informationsangebot rund ums Thema Wahlen und Politik liefern und ihnen die Entscheidung bei den nächsten Wahlen erleichtern soll.
-        </p>
-        <p>Ein paar Einblicke vom Event von 2013 findet ihr hier: </p>
-        <p>
-          <a data-flickr-embed="true"  href="https://www.flickr.com/photos/jbvkoos/albums/72157635795929203" title="Wahl.Daten.Helfer 2013"><img src="https://farm4.staticflickr.com/3810/9894007514_0fc841acf5_k.jpg" width="100%" alt="Wahl.Daten.Helfer 2013"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-        </p>
-      </div>
-      <div class="elections-turnouts row mt-5 p-0 text-center">
-        <%= image_tag(asset_pack_path('images/germany.svg'), class: 'mx-auto mb-2') %>
-        <div class="text-center w-100">
-          <h5>Wahlbeteiligung</h5>
-          bei den Bundestagswahlen 2017
-        </div>
-        <div class="col-12 my-2 pt-3 d-flex flex-row justify-content-between">
-          <div class="turnouts-item">
-            <div class="header">69,9<span class="precent">%</span></div>
-            <div class="footer">18-20 Jährige</div>
-          </div>
-          <div class="turnouts-item">
-            <div class="header">67<span class="precent">%</span></div>
-            <div class="footer">21-24 Jährige</div>
-          </div>
-          <div class="turnouts-item">
-            <div class="header">75,8<span class="precent">%</span></div>
-            <div class="footer">über 25 Jährige</div>
-          </div>
-        </div>
-        <small class="reference pt-2 w-100 text-right">Quelle: Bundeswahlleiter</small>
-      </div>
-      <div class="app-submission-form row mt-5 py-5 px-3">
-        <div class="pl-3">
-          <h3 class="sub-title">Offen für neue Wahlapps</h3>
-          <a name='submit_app'></a>
+<div class="about-container gradient-content">
+  <article class="about-wrapper background-corner">
+    <div class="logo-container p-2 d-none d-lg-block d-md-block">
+      <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+    </div>
+    <div class="about container-fluid mb-5">
+      <h1 class="main-title text-center"> <%= title %> </h1>
+      <div class="container-fluid col-lg-6 col-md-10 mx-auto">
+        <div class="row mt-5 p-0">
+          <h3 class="sub-title">Unser Ziel</h3>
           <p>
-            Du kennst auch ein Webangebot,
-            das für junge Wähler interessant ist und auf unserer Seite noch fehlt?
-            Dann verrate es uns doch einfach.
+            Wir möchten dir die Wahl erleichtern! Die Entscheidung zu fällen, welche Partei man wählen soll, ist gar nicht so leicht! Dabei gibt es jedoch so einige Angebote, die sich eben diesem Problem widmen. Wir möchten dir die Möglichkeit geben, dich über Parteien und ihre Programme zu informieren. Durch Deine Wahl kannst du deine Zukunft mit gestalten!
+          </p>
+          <p>
+            Also schau dich doch einfach bei unseren <a href="/wahl-apps">Wahl-Apps</a> um, und entscheide du, wie duch dich informieren möchtest!
           </p>
         </div>
-        <div class="container pl-1">
-          <%= render '/shared/notices' %>
-          <div class="card-block">
-            <%= render 'election_apps/form', election_app: @election_app %>
+        <div class="container row mx-0 p-0 mt-5">
+          <h3 class="sub-title">Wer wir sind?</h3>
+            <div class="media mt-3">
+              <%= link_to image_tag(asset_pack_path('images/tatjana-lajendaecker.jpg'), class: 'rounded-circle'), :root %>
+              <div class="media-body my-auto ml-4">
+                <h4 class="mt-0 mb-1">Tatjana Lajendäcker</h4>
+                <p>Tatjana Lajendäcker hat in Köln moderne China Studien und BWL studiert und arbeitet seit 2010 bei <a href="http://railslove.com">Railslove</a> als Projekt- und Backoffice-Managerin. Außerdem ist sie Mitgründerin von <a href="http://coworkingcologne.de">Coworking Cologne</a> und Co-Organisator von <a href="http://railsgirls.com/cologne.html">Railsgirls Cologne&Rheinland</a>.</p>
+              </div>
+            </div>
+            <div class="media mt-3">
+              <%= link_to image_tag(asset_pack_path('images/jan-kus.jpg'), class: 'rounded-circle'), :root %>
+              <div class="media-body my-auto ml-4">
+                <h4 class="mt-0 mb-1">Jan Kus</h4>
+                <p>Jan Kus ist Mitgründer der Unternehmen <a href="http://railslove.com">Railslove</a> und <a href="http://hack.institute/community">hack.institute</a>. Seine Leidenschaft gilt dem Aufbau von Netzwerken und der Vermittlung zwischen den kontrastierenden Welten großer Unternehmen und der Community – um an dieser Schnittstelle perfekte digitale Produkte und Erlebnisse zu formen.</p>
+                <p>Jan entwickelt schon seit 2007 professionell Webapplikationen (vornehmlich mit Ruby on Rails) und ist seit 2010 Open Data Fan. 2012 hat er die <a href="http://koelnapi.de">KölnAPI Usergroup ins Leben gerufen</a> die heute das <a href="http://codefor.de/koeln">OKLab</a> ist. Seit 2013 konzentrieren sich seine Open Data Aktiväten auf dem Thema Wahlen. Neben dem Wahl.Daten.Helfer-Hackathon und der App hat er u.a. den <a href="http://wahllokale.online">Wahllokalfinder</a> auf Basis von Open Data Programmiert.</p>
+                <p>Mit <a href="http://hack.institute">hack.institute</a> organisiert Jan auch viele Events rund um das Thema Open Data, wie z.B.: die Mitorganisation der <a href="https://codefor.de/wahlsalons/">Wahlsalons</a> und den <a href="http://open-data-day-2018.hack.institute">Internationalen Open Data Day in Köln</a>.</p>
+              </div>
+            </div>
+        </div>
+        <div class="row mt-5 p-0">
+          <h3 class="sub-title">Wie ist das Projekt entstanden?</h3>
+          <p>
+            Die ganze Idee begann mit einem Hackathon zur Bundestagswahl 2013, dort haben wir den Wahl-Daten-Helfer ins Leben gerufen. Seit dem hat sich viel getan: Aus dem Event "Wahl.Daten.Helfer" ist eine Plattform geworden, der jungen Menschen ein Informationsangebot rund ums Thema Wahlen und Politik liefern und ihnen die Entscheidung bei den nächsten Wahlen erleichtern soll.
+          </p>
+          <p>Ein paar Einblicke vom Event von 2013 findet ihr hier: </p>
+          <p>
+            <a data-flickr-embed="true"  href="https://www.flickr.com/photos/jbvkoos/albums/72157635795929203" title="Wahl.Daten.Helfer 2013"><img src="https://farm4.staticflickr.com/3810/9894007514_0fc841acf5_k.jpg" width="100%" alt="Wahl.Daten.Helfer 2013"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+          </p>
+        </div>
+        <div class="elections-turnouts row mt-5 p-0 text-center">
+          <%= image_tag(asset_pack_path('images/germany.svg'), class: 'mx-auto mb-2') %>
+          <div class="text-center w-100">
+            <h5>Wahlbeteiligung</h5>
+            bei den Bundestagswahlen 2017
+          </div>
+          <div class="col-12 my-2 pt-3 d-flex flex-row justify-content-between">
+            <div class="turnouts-item">
+              <div class="header">69,9<span class="precent">%</span></div>
+              <div class="footer">18-20 Jährige</div>
+            </div>
+            <div class="turnouts-item">
+              <div class="header">67<span class="precent">%</span></div>
+              <div class="footer">21-24 Jährige</div>
+            </div>
+            <div class="turnouts-item">
+              <div class="header">75,8<span class="precent">%</span></div>
+              <div class="footer">über 25 Jährige</div>
+            </div>
+          </div>
+          <small class="reference pt-2 w-100 text-right">Quelle: Bundeswahlleiter</small>
+        </div>
+        <div class="app-submission-form row mt-5 py-5 px-3">
+          <div class="pl-3">
+            <h3 class="sub-title">Offen für neue Wahlapps</h3>
+            <a name='submit_app'></a>
+            <p>
+              Du kennst auch ein Webangebot,
+              das für junge Wähler interessant ist und auf unserer Seite noch fehlt?
+              Dann verrate es uns doch einfach.
+            </p>
+          </div>
+          <div class="container pl-1">
+            <%= render '/shared/notices' %>
+            <div class="card-block">
+              <%= render 'election_apps/form', election_app: @election_app %>
+            </div>
+          </div>
+          <div class="text-center col-12 <pt-5></pt-5>">
+            <p class="pt-3">ODER SENDE EINE E-MAIL AN <a href="mailto:tatjana@railslove.com">tatjana@railslove.com</a></p>
           </div>
         </div>
-        <div class="text-center col-12 <pt-5></pt-5>">
-          <p class="pt-3">ODER SENDE EINE E-MAIL AN <a href="mailto:tatjana@railslove.com">tatjana@railslove.com</a></p>
+        <div class="support container row mt-5 p-0 text-center">
+          <%= render 'support' %>
         </div>
       </div>
-      <div class="support container row mt-5 p-0 text-center">
-        <%= render 'support' %>
-      </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>

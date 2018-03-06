@@ -1,17 +1,19 @@
 <%- page_title('GLOSSAR') %>
-<div class="glossary-container gradient-content h-100 clearfix pb-5">
-  <div class="logo-container p-2 d-none d-lg-block d-md-block">
-    <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
-  </div>
-  <div class="text-center">
-    <h1 class="main-title">
-      WÖRTERBUCH
-    </h1>
-    <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light">Was steckt eigentlich hinter den ganzen politischen Wörtern? Schau selbst nach!</p>
-  </div>
-  <div class="glossary-wrapper container-fluid m-0 p-0">
-    <%= react_component(
-      'Glossary',
-      lettersCollection: @terms.to_h) %>
+<div class="glossary-container gradient-content">
+  <div class="glossary-wrapper background-corner">
+    <div class="logo-container p-2 d-none d-lg-block d-md-block">
+      <%= link_to image_tag(asset_pack_path('images/wahl-daten-helfer-logo.svg')), :root %>
+    </div>
+    <div class="text-center">
+      <h1 class="main-title">
+        WÖRTERBUCH
+      </h1>
+      <p class="col-lg-3 mx-auto text-center p-0 pb-3 mb-5 fonr-weight-light">Was steckt eigentlich hinter den ganzen politischen Wörtern? Schau selbst nach!</p>
+    </div>
+    <div class="container-fluid m-0 p-0">
+      <%= react_component(
+        'Glossary',
+        lettersCollection: @terms.to_h) %>
+    </div>
   </div>
 </div>
