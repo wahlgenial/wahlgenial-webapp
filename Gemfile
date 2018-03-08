@@ -27,6 +27,7 @@ end
 
 group :production do
   gem 'fog'
+  gem "sentry-raven"
 end
 
 group :development do
