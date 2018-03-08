@@ -42,7 +42,6 @@ class GlossaryRoot extends React.Component {
     if (!letter && !termSlug) { return false }
     return {termSlug, letter}
   }
-
   preselectTerm () {
     const termDetails = this.uriReturnedData()
     if (!termDetails) return

@@ -5,10 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 const Glossary = (props) => {
   return (
     <BrowserRouter>
-      <Route
-        render={
-          (qprops) => (<GlossaryRoot { ...props } { ...qprops } />) }
-      />
+      <Route render={ (qprops) => (<GlossaryRoot { ...props } { ...qprops } />) } />
     </BrowserRouter>
 
   )
