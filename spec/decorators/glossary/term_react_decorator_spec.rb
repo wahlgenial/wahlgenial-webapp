@@ -12,7 +12,7 @@ RSpec.describe Glossary::TermReactDecorator do
         { "letter" => "E", "count" => 1, "terms" => [
           { slug: "ein-term-mit-ae-und-oe",
             title: "ein Term mit ä und Ö",
-            description: "aTerm Description",
+            description: "<p>aTerm Description</p>\n",
             image: nil,
             image_thumb: nil,
             video: nil } ]
@@ -26,7 +26,7 @@ RSpec.describe Glossary::TermReactDecorator do
         { "letter" => "L", "count" => 1, "terms" => [
           { slug: "l-term",
             title: "L Term",
-            :description => "lTerm Description",
+            :description => "<p>lTerm Description</p>\n",
             image: nil,
             image_thumb: nil,
             video: nil } ]
@@ -47,14 +47,14 @@ RSpec.describe Glossary::TermReactDecorator do
         { "letter" => "Z", "count" => 2, "terms" => [
           { slug: "z-term",
             title: "Z Term",
-            description: "ZTerm Description",
+            description: "<p>ZTerm Description</p>\n",
             image: nil,
             image_thumb: nil,
             video: nil
           },
           { slug: "zz-ae-term",
             title: "zz ä Term",
-            description: "zzTerm Description",
+            description: "<p>zzTerm Description</p>\n",
             image: nil,
             image_thumb: nil,
             video: nil

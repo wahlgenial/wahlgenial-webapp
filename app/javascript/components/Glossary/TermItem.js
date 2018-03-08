@@ -1,6 +1,5 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-import Markdown from 'react-markdown'
 const TermItem = ({title, description, image, imageThumb, videoID, onClick, selected}) => {
   const playerParameters = _ => {
     return ({
@@ -36,7 +35,7 @@ const TermItem = ({title, description, image, imageThumb, videoID, onClick, sele
           )}
           <div className="card-block pt-3 pb-4">
             <p className="card-title font-weight-bold unselectable px-4 pt-3">{title}</p>
-            <Markdown className="card-text px-4" source={ description } />
+            <div className="card-text px-4" dangerouslySetInnerHTML={ { __html: description } } />
           </div>
         </div>)}
     </div>
