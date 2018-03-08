@@ -1,7 +1,9 @@
 .about-container
   h4
-    font-size: 14px
+    font-size: 15px
     font-weight: bold
+    @include media-breakpoint-down(md)
+      padding-top: 1rem
   p
     font-size: 14px
   a
@@ -13,9 +15,16 @@
       width: 150px
       height: 150px
       border: 2px solid $white
+    @include media-breakpoint-down(md)
+      display: block
+      text-align: center
   .media-body
     font-size: 0.9rem
     line-height: 1.3rem
+    @include media-breakpoint-up(md)
+      padding-left: 1rem
+    p
+      text-align: left
   .elections-turnouts
     text-align: center
     img
