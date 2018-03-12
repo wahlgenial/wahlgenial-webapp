@@ -1,5 +1,7 @@
 # WAHLDATENHELFER :ballot_box_with_check:
 [![Build Status](https://www.travis-ci.com/railslove/wahldatenhelfer.svg?token=rLsyzRs4bH4dqZXw5Aq9&branch=master)](https://www.travis-ci.com/railslove/wahldatenhelfer)
+The oroginal name was Wahldatenhelfer, later has been changed to Wahlgenial.  
+You may find in codebase `wahldatenhelfer`, `Wahlgenial` is for public.
 ## Getting Started
 
 ### Requirements:
@@ -35,7 +37,7 @@ That :point_up: leads to configure the following :point_down: env variables:
   - `ENV['AWS_ACCESS_KEY_ID'],`
   - `ENV['AWS_SSECRET_ACCESS_KEY'],`
   - `ENV['AWS_BUCKET_NAME']`
-  
+
 ## Development
 
 ### Dummy content

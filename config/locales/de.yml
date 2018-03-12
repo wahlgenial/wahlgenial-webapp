@@ -1,7 +1,7 @@
 de:
   mailers:
     new_app_registered:
-      from: 'notifications@wahldatenhelfer.de'
+      from: 'notifications@wahlgenial.de'
       to: 'tatjana@railslove.com'
       subject: "`%{app_name}` has been added to `%{category_title}`"
   common:

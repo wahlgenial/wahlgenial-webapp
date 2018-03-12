@@ -10,7 +10,7 @@ class ElectionAppsMailer < ApplicationMailer
       to: I18n.t('mailers.new_app_registered.to'),
       subject: I18n.t('mailers.new_app_registered.subject',
         app_name: app.name,
-        category_title: (app.category ? app.category.title : 'wahldatenhelfer')
+        category_title: (app.category ? app.category.title : 'Wahlgenial')
       )
     )
   end
