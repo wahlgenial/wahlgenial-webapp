@@ -1,40 +1,32 @@
 // fullpage.js overrides:
-
 .fp-section.fp-table
 	display: flex
-
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span
   background: $white
-
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span
 	background-color: $yellow
-
 #fp-nav ul li a span,
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span
 	height: 10px
 	width: 10px
 	margin: -5px 0 0 -5px
-
 #fp-nav ul li,
 .fp-slidesNav ul li
 	width: 24px
 	height: 24px
 
 // bootstrap overrides
-
 .btn
 	border-radius: 1.5rem
-
 .btn-primary
   color: $white
   background-color: $pompadour
   border-color: transparent
-
 .btn-yellow
   background-color: $yellow
 .btn-yellow.active,
@@ -44,12 +36,9 @@
 	transition: all 0.15s ease-in
 	background-color: $yellow_light
 	color: $white
-
-
 .btn-default
   color: $white
   border-color: $white
-
 .btn-default.active,
 .btn-default:hover,
 .btn-default:not([disabled]):not(.disabled):active,
@@ -76,3 +65,18 @@
 	transition: all 0.15s ease-in
 	background-color: $white
 	color: $pompadour
+.modal-body
+	font-size: 0.93rem
+	color: $dark_gray
+	h6
+		font-size: 0.93rem
+		font-weight: bold
+	a
+		color: $dark_gray
+		text-decoration: underline
+.modal-header
+	border-bottom: 0
+	padding: 0
+	.close
+		padding: 12px 22px
+		margin: 0px 0 -9px auto

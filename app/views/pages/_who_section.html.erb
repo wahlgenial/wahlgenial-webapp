@@ -7,10 +7,13 @@
       </div>
       <div class="d-none d-md-block d-lg-block pt-5 ml-5">
         <h3 class="mr-5">Wen soll ich wählen?</h2>
-        <p class="text-left">Wähle ein Thema aus, um herauszufinden, wie die einzelnen Parteien Fragen zu dem Thema gegenüber stehen.</p>
-        <p>
-          <%= image_tag(asset_pack_path('images/icon-info.svg')) %>
+        <p class="text-left">
+          Wähle ein Thema aus, um herauszufinden, wie die einzelnen Parteien Fragen zu dem Thema gegenüber stehen.
+          <div class="info-point-icon" data-toggle="modal" data-target="#elections-programs-info-modal">
+            <%= image_tag(asset_pack_path('images/icon-info.svg'))%>
+          </div>
         </p>
+
       </div>
     </div>
   </div>

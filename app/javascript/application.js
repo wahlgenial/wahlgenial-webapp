@@ -14,7 +14,7 @@ const mountFullpage = () => {
     lockAnchors: false,
     anchors: ['why-section', 'who-section', 'how-section', 'what-section'],
     // navigationTooltips: ['WARUM', 'WEN', 'WIE', 'WAS'],
-    normalScrollElements: '.main-menu',
+    normalScrollElements: '.main-menu, #elections-programs-info-modal, #political-agreements-info-modal',
     showActiveTooltip: true,
     navigation: true,
     navigationPosition: 'right',
@@ -65,13 +65,11 @@ const menuTogglerEventListener = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').focus()
-  })
   if (viewNotMediumDevice()) {
     $('.anchor-tag').remove()
     mountFullpage()
   }
+
   mountToolitp()
   menuTogglerEventListener()
   menuLinksNavigator()
