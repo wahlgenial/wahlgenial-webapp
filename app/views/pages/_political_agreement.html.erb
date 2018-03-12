@@ -19,20 +19,22 @@
         <div class="row container no-gutters">
           <div class="col-3 pt-1 result-counter">
             <%= political_agreement.votes_yes %>
-            <%= image_tag asset_pack_path('images/icon-thumb-up.svg') %>
+            <%= image_tag asset_pack_path('images/icon-with.svg') %>
+            <div class="description text-left">dafür</div>
           </div>
           <div class="col-6">
-            <div class="final-result">
+            <div class="final-result d-flex mx-auto">
               <% if political_agreement.votes_yes > political_agreement.votes_no %>
-                <%= image_tag asset_pack_path('images/swoosh.svg') %>
+                <%= image_tag asset_pack_path('images/icon-with.svg'), class: 'm-auto' %>
               <% else %>
-                <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
+                <%= image_tag asset_pack_path('images/icon-against.svg'), class: 'm-auto' %>
               <% end %>
             </div>
           </div>
           <div class="col-3 pt-1 result-counter">
             <%= political_agreement.votes_no %>
-            <%= image_tag asset_pack_path('images/icon-thumb-down.svg') %>
+            <%= image_tag asset_pack_path('images/icon-against.svg'), class: 'against-icon' %>
+            <div class="description">dagegen</div>
           </div>
         </div>
       </div>

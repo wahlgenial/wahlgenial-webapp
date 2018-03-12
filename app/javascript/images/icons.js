@@ -23,6 +23,9 @@ export default {
   opinionpositive: require('./icon-smile-positive.svg'),
   opinionneutral: require('./icon-smile-neutral.svg'),
 
+  with: require('./icon-with.svg'),
+  against: require('./icon-against.svg'),
+
   question: require('./icon-question.svg'),
   glossaryCallToAction: require('./glossary-call-to-action.svg'),
   arc: require('./arc.png')

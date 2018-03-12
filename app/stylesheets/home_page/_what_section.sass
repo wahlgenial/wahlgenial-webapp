@@ -5,15 +5,13 @@
       font-weight: bold
   a
     color: $white
-    transition: all 0.2s ease-out
+    transition: all 0.3s ease-out
     &:hover
-      text-decoration: none
-      .card-title
-        background-color: $lighter-pink
-        transition: all 0.2s ease-out
-      .card-footer
-        // background-color: $pompadour-light
-        transition: all 0.2s ease-out
+      .card-image
+        img
+          width: 104%
+          margin: -1%
+          transition: all 0.3s ease-out
   .political-agreements-container
     margin: 0 0 auto 0
     height: 75%
@@ -27,7 +25,9 @@
     .card-image
       overflow: hidden
       img
+        margin: 0
         width: 100%
+        transition: all 0.2s ease-out
     .card-title
       transition: all 0.2s ease-out
       background-color: $light-pink
@@ -37,7 +37,6 @@
       height: 90px
       padding: 5px 20px
       margin: 0 0 auto 0
-
       overflow: hidden
     .card-body
       height: 100%
@@ -50,26 +49,27 @@
       position: absolute
       bottom: 0
       width: 100%
-      height: 46px
+      height: 60px
       border: 0
       padding: 0
       font-size: 0.9rem
       .result-counter
         img
-          width: 14px
+          width: 16px
           margin-left: 5px
+          &.against-icon
+            width: 12px
+        .description
+          opacity: 0.9
+          font-size: 13px
+          overflow: visible
     .final-result
       width: 80px
       height: 80px
       margin: 0
       position: relative
       bottom: 50px
-      margin: auto
       border: 8px solid $white
       border-radius: 60px
       background-color: $light-mauve
-      .final-result
-        img
-          width: 50px
-          margin-left: 0
-          margin-top: 7px
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
