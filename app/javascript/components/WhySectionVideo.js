@@ -7,7 +7,7 @@ const WhySectionVideo = ({children, videoId}) => {
     <VideoPlayer videoId={ videoId } coverImage = { whyCoverImage }>
       <div className='col-lg-12 d-flex'>
         <div className="logo-container p-2">
-          <img src={ require('../images/wahl-daten-helfer-logo.svg') } />
+          <img src={ require('../images/wahlgenial-logo.svg') } />
         </div>
         <div className="why-description col-12 text-left m-auto">
           <div className="description-text pr-5">
