@@ -1,5 +1,5 @@
 import React from 'react'
-import {Positive, Negative, Neutral} from './SmileIcons'
+import {Positive, Negative, Neutral} from './AssentIcons'
 
 const OpinionButton = ({opinion, onPress, active, opinionIndex, topicsCount, onClick}) => {
   const partyOpinionIcon = () => {
