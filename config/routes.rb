@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home', as: 'home'
   get 'impressum', to: 'pages#imprint', as: 'imprint'
   get 'ueber-uns', to: 'pages#about', as: 'about'
+  get 'datenschutzerklaerung', to: 'pages#data_protection', as: 'data_protection'
 
   root 'pages#home'
 end

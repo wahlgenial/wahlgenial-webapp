@@ -13,6 +13,9 @@ class PagesController < ApplicationController
     @election_app = ElectionApps::App.new()
   end
 
+  def data_protection
+  end
+
   def create_app
 
     @election_app = ElectionApps::App.new(election_app_params)
