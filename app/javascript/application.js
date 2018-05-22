@@ -6,6 +6,7 @@ import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
 import WhySectionVideo from './components/WhySectionVideo'
 import HowSectionVideo from './components/HowSectionVideo'
+import CookiesEuBanner from 'cookies-eu-banner'
 
 require('./_dependencies')
 const mountFullpage = () => {
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (viewNotMediumDevice()) {
     $('.anchor-tag').remove()
     mountFullpage()
+    CookiesEuBanner(() => {}) // should be
   }
 
   mountToolitp()

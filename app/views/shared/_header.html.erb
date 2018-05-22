@@ -1,3 +1,10 @@
+<div id="cookies-eu-banner" class="w-100 bg-usccess" style="display: none;">
+  <div class="container text-center py-2">
+    Wir nutzen Cookies, um den Service unserer Webseite optimal zu gestalten. Durch Benutzung unserer Website akzeptierst du die Verwendung von Cookies.
+    <%= link_to 'Weitere Infos', data_protection_path, class: 'btn btn-yellow', id: 'cookies-eu-more' %>
+    <button id="cookies-eu-accept" class="btn btn-yellow">Akzeptieren</button>
+  </div>
+</div>
 <header class="header w-100">
   <div class="main-menu-toggler-container main-menu-container-open">
     <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
