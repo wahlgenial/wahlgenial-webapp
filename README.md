@@ -76,3 +76,4 @@ In `Sass` files, relative paths should be used to point to image assets Ex. `bac
 
  since both `storybook` and `webpacker gem` using same entry point `application.sass`, using absolute path Ex. `images/arc.png` is only possible for `webpacker`, it wasn't successful to setup `~/wahldatenhelfer/app/javaScript` as resolve path for storybook `webpack.config` which
  tells webpack what directories should be searched when resolving modules. [webpack#resolve-modules](https://webpack.js.org/configuration/resolve/#resolve-modules)
+=======
