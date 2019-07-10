@@ -9,10 +9,13 @@ You may find in codebase `wahldatenhelfer`, `Wahlgenial` is for public.
 - PostgreSQL 9.6 or later.
 
 ### Installation:
-- copy `config/database.yml.example` into `config/database.yml`
+- copy `config/database.yml.example` into `config/database.yml` like this `cp config/database.yml.example config/database.yml`
 - `$ bundle install`
 - `$ rails db:setup`
 - `$ yarn`
+
+### Start App:
+- `$ rails s` and then go to `http://localhost:3000`
 
 ## Deploy
 WAHLDATENHELFER uses many services:
