@@ -47,4 +47,7 @@ class PagesController < ApplicationController
       :logo,
       :link )
   end
+
+  def election_teacher_apps_params
+  end
 end

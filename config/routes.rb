@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # matchnig `controller/a/b/c/d....`
   get 'wahl-apps/(*params_string)', to: 'election_apps#index', as: 'apps'
+  get 'lehrer-wahl-apps/(*params_string)', to: 'election_apps#teacher', as: 'teacher_apps'
   get 'woerterbuch/(*params_string)', to: 'glossary#index', as: 'glossary'
   get 'wahl-termine', to: 'calendar#index', as: 'calendar'
 
