@@ -15,7 +15,9 @@ You may find in codebase `wahldatenhelfer`, `Wahlgenial` is for public.
 - `$ yarn`
 
 ### Start App:
-- `$ rails s` and then go to `http://localhost:3000`
+- `$ ./bin/webpack-dev-server`
+- in different terminal `$ rails s` 
+- and then go to `http://localhost:3000`
 
 ## Deploy
 WAHLDATENHELFER uses many services:
