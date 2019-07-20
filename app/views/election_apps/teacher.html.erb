@@ -1,8 +1,8 @@
-<%- page_title('LEHRER WAHL-APPS') %>
-<div class="gradient-content background-teacher-election-apps">
+<%- page_title('WAHL-APPS') %>
+<div class="gradient-content background-teacher-election-apps election-apps-desktop">
   <div class="background-corner">
-  <%= react_component(
-    'ElectionApps',
-    appsCategories: @apps_categories.to_h) %>
+    <%= react_component(
+      'TeacherApps',
+      apps: @apps) %>
   </div>
 </div>
