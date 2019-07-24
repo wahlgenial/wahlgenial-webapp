@@ -1,11 +1,17 @@
-<%- page_title('LEHRER WAHL-APPS') %>
-<div class="gradient-content background-teacher-election-apps">
+<%- page_title('WAHL-APPS') %>
+<div class="gradient-content background-teacher-election-apps election-apps-desktop">
   <div class="background-corner">
+<<<<<<< HEAD
     <div class="logo-container p-2 d-none d-lg-block d-md-block">
       <%= link_to image_tag(asset_pack_path('images/wahlgenial-logo.svg')), :root %>
     </div>
   <%= react_component(
     'ElectionApps',
     appsCategories: @apps_categories.to_h) %>
+=======
+    <%= react_component(
+      'TeacherApps',
+      apps: @apps) %>
+>>>>>>> 2935a51578df09a02d24852ebed51f0de51bc771
   </div>
 </div>
