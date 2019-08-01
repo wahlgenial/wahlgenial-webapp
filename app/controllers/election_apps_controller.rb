@@ -4,7 +4,7 @@ class ElectionAppsController < ApplicationController
   end
 
   def teacher
-    @apps = TeacherApp.all
+    @apps = TeacherApp.where(published:true)
   end
 
   private
