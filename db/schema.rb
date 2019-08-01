@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190730153237) do
+ActiveRecord::Schema.define(version: 20190801114220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -120,11 +120,13 @@ ActiveRecord::Schema.define(version: 20190730153237) do
     t.string "title"
     t.text "description"
     t.integer "schoolclass"
-    t.integer "teacher_apps_id"
     t.string "tool"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "published", default: false, null: false
+    t.string "picture"
+    t.text "teaser_text"
+    t.string "external_link"
   end
 
   create_table "teacher_apps_tags", force: :cascade do |t|
