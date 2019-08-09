@@ -9,6 +9,7 @@ function TeacherApps({ apps }) {
     }
 
     return (
+      
         <div>
             <HeaderLogo />
             <div className="apps-container d-flex flex-wrap justify-content-center">
