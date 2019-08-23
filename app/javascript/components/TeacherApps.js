@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderLogo from './HeaderLogo'
-import AppItemDesktop from './ElectionApps/AppItemDesktop'
+import TeacherAppItemDesktop from './ElectionApps/TeacherAppItemDesktop'
 
 
 function TeacherApps({ apps }) {
@@ -9,12 +9,12 @@ function TeacherApps({ apps }) {
     }
 
     return (
-      
+
         <div>
             <HeaderLogo />
             <div className="apps-container d-flex flex-wrap justify-content-center">
                 {apps.map(app => {
-                    return <AppItemDesktop name={app.title} description={app.description} link={app.link} onClick={handleClick(app)} />
+                    return <TeacherAppItemDesktop name={app.title} description={app.description} link={app.link} onClick={handleClick(app)} />
                 })}
             </div>
         </div>

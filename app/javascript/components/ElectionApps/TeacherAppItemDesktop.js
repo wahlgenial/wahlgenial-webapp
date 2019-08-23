@@ -13,7 +13,7 @@ const TeacherAppItem = ({name, description, link, onClick}) => {
             </div>
             <p className="card-text">{descriptionTurncate()}</p>
             <h5 className="more-text">
-              mehr
+              mehr LEhrerapp
             </h5>
           </div>
         </div>
