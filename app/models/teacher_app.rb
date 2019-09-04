@@ -10,6 +10,15 @@ class TeacherApp < ApplicationRecord
     Tag.select('teacher_app_tags.*, count(teacher_app_taggings.tag_id) as count').joins(:teacher_app_taggings).group('teacher_app_taggings.tag_id')
   end
 
+  #es fehlt noch und where(published:true)
+  def self.search(search)
+    if search
+      where(["title LIKE ?", "%#{search}%"]).or(where(["description LIKE ?", "%#{search}%"]))
+   else
+      all 
+   end  
+  end
+
   def tag_list
     teacher_app_tags.map(&:name).join(', ')
   end
@@ -19,4 +28,5 @@ class TeacherApp < ApplicationRecord
       Tag.where(name: n.strip).first_or_create!
     end
   end
+
 end

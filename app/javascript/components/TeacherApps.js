@@ -16,6 +16,7 @@ function TeacherApps({ apps }) {
                 {apps.map(app => {
                     return <TeacherAppItemDesktop name={app.title} description={app.description} link={app.link} onClick={handleClick(app)} />
                 })}
+                {apps.length === 0 && <h1>Kein Treffer</h1>}
             </div>
         </div>
     )
