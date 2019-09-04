@@ -1,5 +1,5 @@
 import React from 'react'
-const TeacherAppItem = ({name, description, link, onClick}) => {
+const TeacherAppItem = ({name, description, link, tool, tags, onClick}) => {
   const descriptionTurncate = () => {
     return description.substring(0, 98) + '...'
   }
@@ -12,9 +12,13 @@ const TeacherAppItem = ({name, description, link, onClick}) => {
               <h4 className="card-title">{name}</h4>
             </div>
             <p className="card-text">{descriptionTurncate()}</p>
+            <p className="card-tools">Tools: {tool}</p>
             <h5 className="more-text">
-              mehr LEhrerapp
+              mehr
             </h5>
+            <div className="card-tag-text">
+              Tags: {tags}
+            </div>
           </div>
         </div>
         <div className="footer-link">

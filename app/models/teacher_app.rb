@@ -20,7 +20,7 @@ class TeacherApp < ApplicationRecord
   end
 
   def tag_list
-    teacher_app_tags.map(&:name).join(', ')
+    self.teacher_app_tags.map(&:name).join(', ')
   end
 
   def tag_list=(names)
