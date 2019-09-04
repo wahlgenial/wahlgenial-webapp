@@ -1,0 +1,36 @@
+
+.category-appear
+  transform: translateX(30px)
+  opacity: 0
+.category-appear.category-appear-active
+  opacity: 1
+  transform: translateX(0)
+  transition: all 0.6s linear
+.category-enter
+  opacity: 0
+  transform: translateX(30px)
+.category-enter.category-enter-active
+  opacity: 1
+  transform: translateX(0)
+  transition: all 0.2s linear 0.4s
+
+.electionsapps-appear
+  opacity: 0.01
+.electionsapps-appear.electionsapps-appear-active
+  opacity: 1
+  transition: opacity .6s ease-in
+
+.app-description-appear
+  transform: translateY(20px)
+  opacity: 0
+.app-description-appear.app-description-appear-active
+  opacity: 1
+  transform: translateY(0)
+  transition: all 0.6s linear
+.app-description-enter
+  opacity: 0
+  transform: translateY(20px)
+.app-description-enter.app-description-enter-active
+  opacity: 1
+  transform: translateY(0)
+  transition: all 0.2s linear 0.4s

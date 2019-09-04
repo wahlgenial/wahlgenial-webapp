@@ -1,0 +1,42 @@
+@import "./teacher_apps/transitions"
+@import "./teacher_apps/desktop"
+@import "./teacher_apps/mobile"
+
+.election-apps
+  background: url('../javascript/images/europe.svg')
+  background-size:  270px 277.65px
+  background-repeat: no-repeat
+  background-position-y: -46px
+  background-position-x: 97%
+
+.share-button-container
+  cursor: pointer
+  transition: all 0.2s ease-out
+  .SocialMediaShareButton
+    transition: all 0.2s ease-out
+    &:hover, &:active
+      opacity: 0.85
+.btn-container
+  padding: 1rem 0
+  .btn-cta
+    background-color: $white
+    border-color: $pompadour
+    color: $pompadour
+    padding: 1rem 2rem
+    margin-bottom: 120px
+    &:hover,
+    &:active
+      background-color: $pompadour_lighter
+  .btn
+    border-width: 2px
+    display: inline-block
+    width: 100%
+    padding: 0.4rem 0.8rem
+    margin: 0.3rem auto
+    img
+      width: 34px
+      top: 2px
+    .text
+      margin: auto
+    .icon
+      position: absolute
