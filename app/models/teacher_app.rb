@@ -19,4 +19,11 @@ class TeacherApp < ApplicationRecord
       Tag.where(name: n.strip).first_or_create!
     end
   end
+
+  def as_json(options = {})
+    super(options).merge({
+      'teacher_app_tags' => teacher_app_tags.as_json
+    })
+  end
+
 end

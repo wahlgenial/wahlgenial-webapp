@@ -1,7 +1,7 @@
 import React from 'react'
-const TeacherAppItem = ({name, description, link, tool, tags, onClick}) => {
-  const descriptionTurncate = () => {
-    return description.substring(0, 98) + '...'
+const TeacherAppItem = ({name, teaserText, link, tool, tags, onClick}) => {
+  const teaserTextTurncate = () => {
+    return teaserText.substring(0, 98) + '...'
   }
   return (
     <div className="app-item mx-1 mb-2">
@@ -11,7 +11,7 @@ const TeacherAppItem = ({name, description, link, tool, tags, onClick}) => {
             <div className="card-title-wrapper">
               <h4 className="card-title">{name}</h4>
             </div>
-            <p className="card-text">{descriptionTurncate()}</p>
+            <p className="card-text">{teaserTextTurncate()}</p>
             <p className="card-tools">Tools: {tool}</p>
             <h5 className="more-text">
               mehr
