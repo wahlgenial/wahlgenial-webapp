@@ -30,9 +30,9 @@ function TeacherApps({ apps }) {
                   link={app.link}
                   tool={app.tool}
                   tags={tagHandler(app)}
-                  onClick={handleClick(app)}
-                  />
+                  onClick={handleClick(app)}/>
               })}
+              {apps.length === 0 && <h1>Kein Treffer</h1>}
           </div>
         </div>
     )

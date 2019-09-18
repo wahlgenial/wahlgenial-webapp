@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   get 'wahl-termine', to: 'calendar#index', as: 'calendar'
 
   post 'about', to: 'pages#create_app', as: 'new_app'
+  post 'lehrer-wahl-apps/(*params_string)', to: 'election_apps#teacher'
 
   get 'home', to: 'pages#home', as: 'home'
   get 'impressum', to: 'pages#imprint', as: 'imprint'
   get 'ueber-uns', to: 'pages#about', as: 'about'
   get 'datenschutzerklaerung', to: 'pages#data_protection', as: 'data_protection'
+
+
 
   root 'pages#home'
 end

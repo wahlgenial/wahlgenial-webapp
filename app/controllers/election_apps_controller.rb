@@ -4,7 +4,13 @@ class ElectionAppsController < ApplicationController
   end
 
   def teacher
-    @apps = TeacherApp.where(published:true)
+    #@apps = TeacherApp.where(published:true)
+    @apps = TeacherApp.search(params[:search])
+    #@apps = TeacherApp.where(["name LIKE ?","%#{params[:search]}%"])
+  end
+
+  def new
+    @app = TeacherApp.new
   end
 
   private
