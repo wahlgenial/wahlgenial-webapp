@@ -3,11 +3,6 @@
 <div class="gradient-content background-teacher-apps teacher-apps-desktop">
   <div class="background-corner"> 
 
-
-  <div class="logo-container p-2 d-none d-lg-block d-md-block">
-    <%= link_to image_tag(asset_pack_path('images/wahlgenial-logo.svg')), :root %>
-  </div>
-
  <%= react_component(
       'TeacherApps',
       apps: @apps) %>
