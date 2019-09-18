@@ -1,19 +1,13 @@
 <%- page_title('WAHL-APPS') %>
 
 <div class="gradient-content background-teacher-apps teacher-apps-desktop">
-  <div class="background-corner">
+  <div class="background-corner"> 
 
 
-   <h1>Webseiten und Apps</h1> 
-   <h1>für deinen Politik-Unterricht</h1>
+  <div class="logo-container p-2 d-none d-lg-block d-md-block">
+    <%= link_to image_tag(asset_pack_path('images/wahlgenial-logo.svg')), :root %>
+  </div>
 
-  <%= form_tag teacher_apps_path, :methode => 'get' do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search" %>
-  <% end %>
-
-<div class="gradient-content background-teacher-election-apps election-apps-desktop">
-  <div class="background-corner">
  <%= react_component(
       'TeacherApps',
       apps: @apps) %>
