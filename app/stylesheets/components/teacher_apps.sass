@@ -2,12 +2,20 @@
 @import "./teacher_apps/desktop"
 @import "./teacher_apps/mobile"
 
-.election-apps
-  background: url('../javascript/images/europe.svg')
-  background-size:  270px 277.65px
+.teacher-apps
+  background: url('../javascript/images/class.png')
   background-repeat: no-repeat
-  background-position-y: -46px
-  background-position-x: 97%
+  height: 180px//40%
+  width: 180px//40%
+  background-size: contain
+  position: absolute
+  top: 70px//15%
+  right: 80px//-20%
+
+.teacher-content
+  width: 660px
+  margin: 0 auto
+  padding-top: 90px
 
 .share-button-container
   cursor: pointer
@@ -19,10 +27,33 @@
 
 .search-form
   background-color: transparent
-  color: #FFF
+  border-color: #ffffff
+  border-style: solid
+  color: #ffffff
+  width: 100%
+  margin-top: 2.0rem
+  margin-bottom: 0.5rem
+  margin-y: 1.5rem
+  padding-left: 0.5rem
+  padding-top: 0.2rem
+  padding-bottom: 0.2rem 
+  .placeholder 
+    color: red
+  
+.grade
+  width: 100%
+
+.grade-one
+  margin-y: 0.3rem
+  margin-left: 0.6rem
+  margin-right: 0.2rem
+
+.teacher-heading
+  text-align: center
+  width: 100%
 
   &::placeholder 
-    color: #FFF
+    color: #d4bbbb11
 
 .btn-container
   padding: 1rem 0
