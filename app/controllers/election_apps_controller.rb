@@ -9,6 +9,10 @@ class ElectionAppsController < ApplicationController
     #@apps = TeacherApp.where(["name LIKE ?","%#{params[:search]}%"])
   end
 
+  def teacher_apps_view
+    @apps =  TeacherApp.where(slug: params[:slug])
+  end
+
   def new
     @app = TeacherApp.new
   end

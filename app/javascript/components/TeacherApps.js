@@ -6,12 +6,21 @@ import TeacherAppItemDesktop from './ElectionApps/TeacherAppItemDesktop'
 class TeacherApps extends Component {
 
     tagHandler = app => {
-    console.log(app.teacher_app_tags)
       var teacherAppsTags = app.teacher_app_tags;
       var tagNameString = teacherAppsTags.map(function(val){
         return "#" + val.name
       }).join(", ")
       return tagNameString;
+    }
+
+    teacherHandleAppSelect = (categorySlug, appSlug, historyHandler) => {
+      this.setState({
+        selectedCategorySlug: categorySlug,
+        selectedAppSlug: appSlug
+      })
+      if (historyHandler) {
+        historyHandler.push(`${constants.electionsAppsPath}/${categorySlug}/${appSlug}`)
+      }
     }
 
     state = { searchQuery: "" }
@@ -20,33 +29,31 @@ class TeacherApps extends Component {
         apps: PropTypes.array.isRequired
     }
 
-    changeSearchString = event => 
-        this.setState({ searchQuery: event.target.value})        
+    changeSearchString = event =>
+        this.setState({ searchQuery: event.target.value})
 
-    handleClick = app => () => console.log(app)
+    handleClick = slug => () => {
+      console.log(slug)
+    }
 
-    // function handleClick (app) {
-    //     return ()
-    // }
-    
     filterApps = e => {
         e.preventDefault()
-        
+
         console.log(this.state.searchQuery)
     }
 
     filteredApps = () => {
         const { apps } = this.props
         console.log({apps}, this.state.searchQuery);
-        
+
         if (this.state.searchQuery === "") {
             return apps
         }
 
         return apps.filter(app => {
-            
 
-            return app.title.toLowerCase().includes(this.state.searchQuery.toLowerCase()) 
+
+            return app.title.toLowerCase().includes(this.state.searchQuery.toLowerCase())
             || app.description.toLowerCase().includes(this.state.searchQuery.toLowerCase())
             || app.teaser_text.toLowerCase().includes(this.state.searchQuery.toLowerCase())
         })
@@ -74,11 +81,13 @@ class TeacherApps extends Component {
                     {apps.map(app => {
                         return <TeacherAppItemDesktop
                         name={app.title}
-                        description={app.description} link={app.link}
-                        teaserText={app.teaser_text} link={app.link}
+                        description={app.description}
+                        link={app.link}
+                        teaserText={app.teaser_text}
                         tool={app.tool}
                         tags={this.tagHandler(app)}
-                        onClick={this.handleClick(app)}/>
+                        slug={app.slug}
+                        />
                     })}
                     {apps.length === 0 && <h3>Keine Treffer</h3>}
                 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190808105343) do
+ActiveRecord::Schema.define(version: 20190918124122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20190808105343) do
     t.text "teaser_text"
     t.string "external_link"
     t.integer "school_grade", default: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], array: true
+    t.string "slug"
   end
 
   add_foreign_key "teacher_app_taggings", "teacher_app_tags"
