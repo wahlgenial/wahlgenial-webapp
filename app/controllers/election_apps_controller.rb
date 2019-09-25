@@ -10,7 +10,7 @@ class ElectionAppsController < ApplicationController
   end
 
   def teacher_apps_view
-    @apps =  TeacherApp.where(slug: params[:slug])
+    @apps = TeacherApp.where(slug: params[:slug])
   end
 
   def new
