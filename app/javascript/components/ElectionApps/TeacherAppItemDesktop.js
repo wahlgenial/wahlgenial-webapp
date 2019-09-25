@@ -7,21 +7,20 @@ const TeacherAppItem = ({name, teaserText, link, tool, tags, onClick, slug}) => 
     <div className="app-item mx-1 mb-2">
       <div className="app-block card">
         <div className="app-description">
-          <a href={'/lehrer-wahl-apps/' + slug} classname="boxhead">
             <div className="card-body text-left clearfix">
               <div className="card-title-wrapper">
                 <h4 className="card-title">{name}</h4>
               </div>
-              <p className="card-text">{teaserTextTurncate()}</p>
-              <p className="card-tools">Tools: {tool}</p>
-              <h5 className="more-text">
-                mehr
-              </h5>
+                  <p className="card-text">{teaserTextTurncate()}</p>
+                  <p className="card-tools">Tools: {tool}</p>
+                  <h5 className="more-text">
+                    mehr
+                  </h5>
+                  <a href={'/lehrer-wahl-apps/' + slug} className="card-href"></a>
               <div className="card-tag-text">
-                Tags: {tags}{slug}
+                Tags: {tags}
               </div>
             </div>
-          </a>
         </div>
         <div className="footer-link">
           <a href={ !link ? '#' : link }>
