@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190918124122) do
+ActiveRecord::Schema.define(version: 20191217123142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,7 +119,6 @@ ActiveRecord::Schema.define(version: 20190918124122) do
   create_table "teacher_apps", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "tool"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "published", default: false, null: false
@@ -128,6 +127,10 @@ ActiveRecord::Schema.define(version: 20190918124122) do
     t.string "external_link"
     t.integer "school_grade", default: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], array: true
     t.string "slug"
+    t.boolean "for_Desktop"
+    t.boolean "for_Tablet"
+    t.boolean "for_Smartphone"
+    t.boolean "for_Whiteboard"
   end
 
   add_foreign_key "teacher_app_taggings", "teacher_app_tags"
