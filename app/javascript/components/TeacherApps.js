@@ -53,7 +53,6 @@ class TeacherApps extends Component {
             return app.title.toLowerCase().includes(this.state.searchQuery.toLowerCase())
             || app.description.toLowerCase().includes(this.state.searchQuery.toLowerCase())
             || app.teaser_text.toLowerCase().includes(this.state.searchQuery.toLowerCase())
-            || app.tool.toLowerCase().includes(this.state.searchQuery.toLowerCase())
         })
     }
 
@@ -118,7 +117,10 @@ class TeacherApps extends Component {
                             name={app.title}
                             description={app.description} link={app.link}
                             teaserText={app.teaser_text} link={app.link}
-                            tool={app.tool}
+                            forDesktop={app.for_Desktop}
+                            forTablet={app.for_Tablet}
+                            forSmartphone={app.for_Smartphone}
+                            forWhiteboard={app.for_Whiteboard}
                             tags={this.tagHandler(app)}
                             slug={app.slug}/>
                         })}
