@@ -1,5 +1,5 @@
 import React from 'react'
-const TeacherAppItem = ({name, teaserText, link, tool, tags, onClick, slug}) => {
+const TeacherAppItem = ({name, teaserText, link, tool, tags, slug}) => {
   const teaserTextTurncate = () => {
      return teaserText.substring(0, 98) + '...'
   }
