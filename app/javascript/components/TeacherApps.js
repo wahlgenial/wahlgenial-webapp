@@ -70,7 +70,6 @@ class TeacherApps extends Component {
 
     render () {
         const apps = this.filteredApps()
-        console.log(this.state.selectedGrades);
         return (
 
             <div>
