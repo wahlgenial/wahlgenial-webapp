@@ -1,5 +1,5 @@
 <div>
-  <href>Zurück zur Übersicht</href>
+  <%= link_to "Zur Übersicht" , teacher_apps_path %>
   </div>
 
 <h1><%= @apps.title %></h1>
@@ -15,6 +15,9 @@
   Über die APP
   <%= @apps.description %>
 </div>
+
+<%= image_tag "{@apps.picture}", class: "img-responsive" %>
+
 <div>
-<href>Zum Angebot</href>
+<%= link_to "Zum Angebot" , @apps.external_link %>
 </div>
