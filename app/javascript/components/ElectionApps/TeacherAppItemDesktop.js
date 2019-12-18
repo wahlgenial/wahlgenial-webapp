@@ -1,5 +1,6 @@
 import React from 'react'
-const TeacherAppItem = ({name, teaserText, link, forDesktop, forTablet, forSmartphone, forWhiteboard, tags, slug}) => {
+
+const TeacherAppItem = ({name, teaserText, link, forDesktop, forTablet, forSmartphone, forWhiteboard, tags, slug, picture}) => {
   const teaserTextTurncate = () => {
      return teaserText.substring(0, 98) + '...'
   }
@@ -27,6 +28,7 @@ const TeacherAppItem = ({name, teaserText, link, forDesktop, forTablet, forSmart
       <div className="app-block card">
         <div className="app-description">
             <div className="card-body text-left clearfix">
+            <img src={require('../../images/' + picture)} />
               <div className="card-title-wrapper">
                 <h4 className="card-title">{name}</h4>
               </div>
