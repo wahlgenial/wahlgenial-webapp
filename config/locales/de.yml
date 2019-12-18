@@ -13,6 +13,15 @@ de:
       title: Neue App einreichen
     create:
       success: Election App is created successfully
+  teacher_apps:
+    for_oberstufe: Oberstufe
+    for_unterstufe: Unterstufe
+    for_mittelstufe: Mittelstufe
+    for_grundschule: Grundschule
+    for_desktop: Desktop
+    for_tablet: Tablet
+    for_smartphone: Smartphone
+    for_whiteboard: Whiteboard
   calendar:
     link_text: Die Wahltermine
     index:

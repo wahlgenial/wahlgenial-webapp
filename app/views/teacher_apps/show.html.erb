@@ -6,9 +6,9 @@
 <h4><%= @apps.teaser_text %></h4>
 
 <div>
-  <li>Stufe: <%= @apps.school_grade %></li>
-  <li>Kategorie: </li>
-  <li>Geräte: </li>
+  <li>Stufe: <%= @apps.grade_list.compact.join(', ')%></li>
+  <li>Kategorie: <%= @apps.tag_list %></li>
+  <li>Geräte: <%= @apps.tool_list.compact.join(', ')%></li>
 </div
 
 <div>

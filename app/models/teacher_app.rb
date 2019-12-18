@@ -23,9 +23,15 @@ class TeacherApp < ApplicationRecord
     self.teacher_app_tags.map(&:name).join(', ')
   end
 
-  def tag_list=(names)
-    self.teacher_app_tags = names.split(',').map do |n|
-      Tag.where(name: n.strip).first_or_create!
+  def grade_list
+    [:for_oberstufe, :for_mittelstufe, :for_unterstufe, :for_grundschule].map do |grade|
+      I18n.t("teacher_apps.#{ grade.to_s }") if self[grade]
+    end
+  end
+
+  def tool_list
+    [:for_desktop, :for_smartphone, :for_tablet, :for_whiteboard].map do |tool|
+      I18n.t("teacher_apps.#{ tool.to_s }") if self[tool]
     end
   end
 

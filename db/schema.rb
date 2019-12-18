@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191218094547) do
+ActiveRecord::Schema.define(version: 20191218104715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -126,11 +126,11 @@ ActiveRecord::Schema.define(version: 20191218094547) do
     t.text "teaser_text"
     t.string "external_link"
     t.string "slug"
-    t.boolean "for_Desktop"
-    t.boolean "for_Tablet"
-    t.boolean "for_Smartphone"
-    t.boolean "for_Whiteboard"
-    t.boolean "for_Oberstufe"
+    t.boolean "for_desktop"
+    t.boolean "for_tablet"
+    t.boolean "for_smartphone"
+    t.boolean "for_whiteboard"
+    t.boolean "for_oberstufe"
     t.boolean "for_mittelstufe"
     t.boolean "for_unterstufe"
     t.boolean "for_grundschule"
