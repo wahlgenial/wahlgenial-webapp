@@ -174,12 +174,13 @@ handelDeviceChange = (e) => {
                             name={app.title}
                             description={app.description} link={app.link}
                             teaserText={app.teaser_text} link={app.link}
-                            forDesktop={app.for_Desktop}
-                            forTablet={app.for_Tablet}
-                            forSmartphone={app.for_Smartphone}
-                            forWhiteboard={app.for_Whiteboard}
+                            forDesktop={app.for_desktop}
+                            forTablet={app.for_tablet}
+                            forSmartphone={app.for_smartphone}
+                            forWhiteboard={app.for_whiteboard}
                             tags={this.tagHandler(app)}
-                            slug={app.slug}/>
+                            slug={app.slug}
+                            picture={app.picture}/>
                         })}
                         {apps.length === 0 && <h8>Keine Treffer</h8>}
                     </div>

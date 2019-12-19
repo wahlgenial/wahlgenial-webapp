@@ -16,7 +16,7 @@
   <%= @apps.description %>
 </div>
 
-<%= image_tag "{@apps.picture}", class: "img-responsive" %>
+<%= image_tag(asset_pack_path("images/#{@apps.picture}"), class: "img-responsive") %>
 
 <div>
 <%= link_to "Zum Angebot" , @apps.external_link %>
