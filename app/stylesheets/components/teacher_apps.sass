@@ -2,20 +2,16 @@
 @import "./teacher_apps/desktop"
 @import "./teacher_apps/mobile"
 
-.teacher-apps
-  background: url('../javascript/images/class.png')
-  background-repeat: no-repeat
-  height: 180px//40%
-  width: 180px//40%
-  background-size: contain
-  position: absolute
-  top: 70px//15%
-  right: 80px//-20%
+
+.sucheundapps
+  display: flex
+  flex-direction: row-reverse
+  justify-content: center
+  flex-wrap: wrap
 
 .teacher-content
-  width: 660px
-  margin: 0 auto
-  padding-top: 90px
+  width: 720px
+  padding-top: 90px 
 
 .share-button-container
   cursor: pointer
@@ -25,35 +21,62 @@
     &:hover, &:active
       opacity: 0.85
 
-.search-form
+.teacher-filter-bar
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  flex-wrap: wrap
   background-color: transparent
-  border-color: #ffffff
-  border-style: solid
-  color: #ffffff
-  width: 100%
-  margin-top: 2.0rem
-  margin-bottom: 0.5rem
-  margin-y: 1.5rem
-  padding-left: 0.5rem
-  padding-top: 0.2rem
-  padding-bottom: 0.2rem
-  .placeholder
-    color: red
+  width: 230px
+  color: #676767
+  margin-top: 90px 
+  margin-left: 20px
+  margin-right: 20px
+
+  .teacher-filter-options
+    background-color: #ffffff
+    border-color: transparent
+    border-style: solid
+    border-radius: 15px
+    padding: 20px 20px 0px 20px
+
+  .search-form
+    background-color: #ffffff
+    border-color: transparent
+    border-style: solid
+    border-radius: 15px
+    color: #676767
+    width: 100%
+    margin-top: 2.0rem
+    margin-bottom: 0.5rem
+    margin-y: 1.5rem
+    padding-left: 0.5rem
+    padding-top: 0.2rem
+    padding-bottom: 0.2rem
+    .placeholder
+      color: red
 
 .grade-container
   width: 100%
+  margin-bottom: 20px 
 
 .grades
-  display: inline-block
+  display: block
 
 .grade-one
-  margin-y: 0.3rem
   margin-left: 0.6rem
-  margin-right: 0.2rem
+  margin-right: 0.6rem
 
 .teacher-heading
-  text-align: center
+  text-align: left
+  color: black
   width: 100%
+  margin-left: 10px
+  margin-right: 5px
+  
+  .teacher-subtitle
+    color: #979797
+    padding-top: 10px
 
   &::placeholder
     color: #d4bbbb11
@@ -61,14 +84,14 @@
 .btn-container
   padding: 1rem 0
   .btn-cta
-    background-color: $white
-    border-color: $pompadour
-    color: $pompadour
+    background-color: black
+    border-color: black
+    color: black
     padding: 1rem 2rem
     margin-bottom: 120px
     &:hover,
     &:active
-      background-color: $pompadour_lighter
+      background-color: lighten(#ffffff, 50%)
   .btn
     border-width: 2px
     display: inline-block
@@ -82,3 +105,98 @@
       margin: auto
     .icon
       position: absolute
+
+
+//Teacher-Detail-Seiten Style
+.teacher-detail
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  width: auto//930px
+  padding-top: 90px 
+  margin-left: 90px 
+  margin-right: 90px
+  color: black
+  justify-content: center //wieso geht das nicht? 
+
+  .teacher-backlink
+    text-align: left
+    margin-bottom: 43px
+    a
+      color: #4a4a4a
+      font-weight: normal
+      font-size: 0.9rem
+      transition: all 0.3s ease-out
+      &:hover
+        transition: all 0.3s ease-out
+
+  .teacher-detail-content-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap-reverse
+
+
+    .teacher-detail-content
+      width: 470px
+      margin-right: 40px 
+
+      .detail-title
+        text-align: left
+        font-size: 2.2rem
+        font-weight: bold
+        color: black
+        margin-bottom: 8px
+      
+      .detail-subtitle
+        text-align: left
+        font-size: 0.9rem
+        font-weight: normal
+        color: #979797
+        margin-bottom: 30px
+
+      .teacher-detail-list
+        text-align: left
+        font-size: 0.9rem
+        font-weight: normal
+        color: black
+
+    
+      .detail-description-wrapper
+
+        .detail-description-title
+          margin-top: 30px
+          text-align: left
+          font-size: 0.9rem
+          font-weight: bold
+          color: black
+          margin-bottom: 11px 
+
+        .detail-description
+          text-align: left
+          font-size: 0.9rem
+          font-weight: normal
+          color: #4a4a4a
+          margin-bottom: 30px 
+      
+      .teacher-link
+        background-color: #f5a623
+        border-radius: 15px
+        width: 180px
+        height: 40px
+        text-align: center
+        padding: 10px
+        a
+          color: $white
+          font-weight: normal
+          font-size: 0.9rem
+          transition: all 0.3s ease-out
+          &:hover
+            transition: all 0.3s ease-out
+
+    .teacher-detail-image
+      width: 370px
+      height: 195px
+      border-radius: 15px
+

@@ -5,6 +5,7 @@ import CalendarFooter from './components/CalendarFooter'
 import Glossary from './components/Glossary'
 import ElectionApps from './components/ElectionApps'
 import TeacherApps from './components/TeacherApps'
+import HeaderLogo from './components/HeaderLogo'
 import WhySectionVideo from './components/WhySectionVideo'
 import HowSectionVideo from './components/HowSectionVideo'
 import CookiesEuBanner from 'cookies-eu-banner'
@@ -84,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ElectionApps,
     WhySectionVideo,
     HowSectionVideo,
-    TeacherApps
+    TeacherApps,
+    HeaderLogo
   })
   // mountComponents is needed since there is an issue with jquery3 onReady method
   // https://github.com/reactjs/react-rails/issues/742

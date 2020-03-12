@@ -109,65 +109,81 @@ handelDeviceChange = (e) => {
         return (
 
             <div>
-                <HeaderLogo />
+                <HeaderLogo isOrange />
+
+            <div className="sucheundapps" >
+                 <div className="teacher-filter-bar">
+                    {/* Hier wird das Suchfeld erstellt */}
+                    <div>
+                        <form>
+                                <input className="search-form" name="search" placeholder="Suchwort eingeben..." onChange={this.changeSearchString}/>
+                        </form>
+                    </div>
+
+                
+
+                    <div className="teacher-filter-options">
+                        {/* Hier werden die controlled Componentes/Forms React (checkboxen) erstellt fuer die Klassenstufen */}
+                        <div className="grade-container">
+                            <form id = "klassen">
+                            <div className="grade-container">
+                                <h8>STUFE </h8>
+                                {filterGrades.map(grade =>{
+                                    return <div key={grade.name} className="grades">
+                                    <input
+                                    className="grade-one"
+                                    type="checkbox"
+                                    name={grade.name}
+                                    onChange={this.handelGradeChange}
+                                    checked={this.state.selectedGrades.includes(grade.name)}
+                                    id={grade.name}/>
+                                    <label htmlFor={grade.label}>{grade.label}</label>
+                                    </div>
+                                })}
+                                </div>
+                            </form>
+                            </div>
+
+                            {/* Hier werden die controlled Componentes/Forms React (checkboxen) erstellt fuer die Geraete */}
+                        <div className="grade-container">
+                            <form id = "klassen">
+                            <div className="grade-container">
+                                <h8>GERÄTE </h8>
+                                {filterDevices.map(tool =>{
+                                    return <div key={tool.name} className="tools">
+                                    <input
+                                    className="grade-one"
+                                    type="checkbox"
+                                    name={tool.name}
+                                    onChange={this.handelDeviceChange}
+                                    checked={this.state.selectedDevices.includes(tool.name)}
+                                    id={tool.name}/>
+                                    <label htmlFor={tool.label}>{tool.label}</label>
+                                    </div>
+                                })}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+
+
 
                 <div className="teacher-content">
                     <div className="teacher-heading">
                         <h1>Politik Apps &amp; Tools</h1>
-                        <h4>Diese Apps und Angebote helfen Lehrern ihre Schüler rund um das Thema Wahlen in ihrem Politik-Unterricht zu informieren.  </h4>
+                        <h6 class="teacher-subtitle">Diese Apps und Angebote helfen Lehrern ihre Schüler rund um das Thema 
+                            Wahlen in ihrem Politik-Unterricht zu informieren.  
+                        </h6>
                     </div>
-
-                    {/* Hier wird das Suchfeld erstellt */}
-                    <div>
-                        <form>
-                                <input className="search-form" name="search" placeholder="Suchbegriff eingeben" onChange={this.changeSearchString}/>
-                        </form>
-                    </div>
-
-                  {/* Hier werden die controlled Componentes/Forms React (checkboxen) erstellt fuer die Klassenstufen */}
-                  <div className="grade-container">
-                    <form id = "klassen">
-                      <div className="grade-container">
-                        <h8>STUFE </h8>
-                          {filterGrades.map(grade =>{
-                            return <div key={grade.name} className="grades">
-                              <input
-                               className="grade-one"
-                               type="checkbox"
-                               name={grade.name}
-                               onChange={this.handelGradeChange}
-                               checked={this.state.selectedGrades.includes(grade.name)}
-                               id={grade.name}/>
-                              <label htmlFor={grade.label}>{grade.label}</label>
-                            </div>
-                          })}
-                        </div>
-                      </form>
-                    </div>
-
-                {/* Hier werden die controlled Componentes/Forms React (checkboxen) erstellt fuer die Geraete */}
-                  <div className="grade-container">
-                    <form id = "klassen">
-                      <div className="grade-container">
-                        <h8>GERÄTE </h8>
-                          {filterDevices.map(tool =>{
-                            return <div key={tool.name} className="tools">
-                              <input
-                               className="grade-one"
-                               type="checkbox"
-                               name={tool.name}
-                               onChange={this.handelDeviceChange}
-                               checked={this.state.selectedDevices.includes(tool.name)}
-                               id={tool.name}/>
-                              <label htmlFor={tool.label}>{tool.label}</label>
-                            </div>
-                          })}
-                        </div>
-                      </form>
-                    </div>
+                    
 
                     {/*  Hier wird die Appanzeige zusammengebaut */}
-                    <div className="apps-container ">
+                    <div className="teacher-apps-container">
                         {apps.map(app => {
                             return <TeacherAppItemDesktop
                             key ={app.id}
@@ -185,7 +201,12 @@ handelDeviceChange = (e) => {
                         {apps.length === 0 && <h8>Keine Treffer</h8>}
                     </div>
                 </div>
+
             </div>
+            
+
+
+         </div>
         )
     }
 }

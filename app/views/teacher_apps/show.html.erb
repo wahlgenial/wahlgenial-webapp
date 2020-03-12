@@ -1,23 +1,43 @@
-<div>
-  <%= link_to "Zur Übersicht" , teacher_apps_path %>
-  </div>
+<div class="background-teacher-apps">
 
-<h1><%= @apps.title %></h1>
-<h4><%= @apps.teaser_text %></h4>
-
-<div>
-  <li>Stufe: <%= @apps.grade_list.compact.join(', ')%></li>
-  <li>Kategorie: <%= @apps.tag_list %></li>
-  <li>Geräte: <%= @apps.tool_list.compact.join(', ')%></li>
-</div
-
-<div>
-  Über die APP
-  <%= @apps.description %>
+ <%= react_component(
+      'HeaderLogo',
+      isOrange: true) %>
+      
 </div>
+  <div class="teacher-detail"> 
+    <div class="teacher-backlink">
+      <%= link_to "zurück zur Übersicht" , teacher_apps_path %>
+    </div>
 
-<%= image_tag(asset_pack_path("images/#{@apps.picture}"), class: "img-responsive") %>
+    <div class="teacher-detail-content-wrapper">
+      <div class="teacher-detail-content">
+        <div class="detail-title"><%= @apps.title %></div>
+        <div class="detail-subtitle"><%= @apps.teaser_text %></div>
 
-<div>
-<%= link_to "Zum Angebot" , @apps.external_link %>
+        <hr>
+
+        <div class="teacher-detail-list">
+          <div>STUFE:    <%= @apps.grade_list.compact.join(', ')%></div>
+          <div>KATEGORIE: <%= @apps.tag_list %></div>
+          <div>GERÄTE:    <%= @apps.tool_list.compact.join(', ')%></div>
+        </div>
+
+        <hr>
+        
+        <div class="detail-description-wrapper">
+          <div class="detail-description-title"> ÜBER DIE APP </div>
+          <div class="detail-description"><%= @apps.description %> </div>
+        </div>
+
+        <div class="teacher-link">
+          <%= link_to "Zum Angebot" , @apps.external_link %>
+        </div>
+      </div>
+
+      <div class="teacher-detail-image"> 
+        <%= image_tag(asset_pack_path("images/#{@apps.picture}"), class: "teacher-detail-image") %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -20,20 +20,31 @@
       font-size: 1.2rem
       line-height: 1rem
       margin: 0 60px
-  .apps-container
+  .teacher-apps-container
+    display: flex
+    flex-direction: flex-start
+    flex-wrap: wrap
+    padding-top: 25px
+
   .app-block
-    width: 100%
-    height: 20rem
-    border: 0.2rem solid $white
-    background-color: $white_transparent
+    width: 350px
+    height: 370px
+    background-color: $white
     transition: all 0.3s ease-out
     border-radius: 0.6rem
     overflow: hidden
     clear: none
 
+    .teacherapp-image 
+      width: 100%
+      height: 147px
+
     &:hover
       cursor: pointer
       background-color: $pompadour
+    .teacher-card-content-wrapper
+      margin: 20px
+      padding-top: 10px 
     .card-title-wrapper
       height: 55px
       display: flex
@@ -41,26 +52,29 @@
       font-size: 1.2rem
       font-weight: 600
       margin-top: auto
-    .card-body
-      padding: 15px 10px 0 20px
-      height: 100%
+      color: black
       .more-text
         position: absolute
         bottom: 75px
-        color: $white
+        color: black
         font-weight: bold
         font-size: 1rem
       .more-icon
         display: none
     .card-text
       line-height: 1.2rem
+      color: #9b9b9b
+      font-size: 1rem
+      margin-bottom: 5px
     .card-tools
+      color: #676767
+      font-size: 1rem
     .card-tag
     .card-tag-text
       text-align: center
       position: absolute
       bottom: 50px
-      color: $white
+      color: #676767
       font-weight: bold
       font-size: 1rem
     .card-href

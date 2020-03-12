@@ -27,20 +27,18 @@ const TeacherAppItem = ({name, teaserText, link, forDesktop, forTablet, forSmart
     <div className="app-item mx-1 mb-2">
       <div className="app-block card">
         <div className="app-description">
-            <div className="card-body text-left clearfix">
-            <img src={require('../../images/' + picture)} />
+            <img className="teacherapp-image" src={require('../../images/' + picture)} />
+            <div className="teacher-card-content-wrapper">
               <div className="card-title-wrapper">
+                {/* whenClicked is a property not an event, per se. <div className="card-tag-text">
+                  {tags}
+                </div>*/}
                 <h4 className="card-title">{name}</h4>
               </div>
                   <p className="card-text">{teaserTextTurncate()}</p>
                   <p className="card-tools">Tools: {showTools()}</p>
-                  <h5 className="more-text">
-                    mehr
-                  </h5>
                   <a href={'/lehrer-wahl-apps/' + slug} className="card-href"></a>
-              <div className="card-tag-text">
-                Tags: {tags}
-              </div>
+
             </div>
         </div>
         <div className="footer-link">
