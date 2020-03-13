@@ -120,14 +120,18 @@ handelDeviceChange = (e) => {
                         </form>
                     </div>
 
-                
+                    <div class="btn-container">
+                        <div class="btn-filter">
+                            <img src="/javascript/images/filter-icon.svg" alt="FILTER"></img> 
+                        </div>
+                    </div>
 
                     <div className="teacher-filter-options">
                         {/* Hier werden die controlled Componentes/Forms React (checkboxen) erstellt fuer die Klassenstufen */}
                         <div className="grade-container">
                             <form id = "klassen">
                             <div className="grade-container">
-                                <h8>STUFE </h8>
+                                <h8 className="headline-filter">STUFE </h8>
                                 {filterGrades.map(grade =>{
                                     return <div key={grade.name} className="grades">
                                     <input
@@ -148,7 +152,7 @@ handelDeviceChange = (e) => {
                         <div className="grade-container">
                             <form id = "klassen">
                             <div className="grade-container">
-                                <h8>GERÄTE </h8>
+                                <h8 className="headline-filter">GERÄTE </h8>
                                 {filterDevices.map(tool =>{
                                     return <div key={tool.name} className="tools">
                                     <input
@@ -183,7 +187,7 @@ handelDeviceChange = (e) => {
                     
 
                     {/*  Hier wird die Appanzeige zusammengebaut */}
-                    <div className="teacher-apps-container">
+                    <div className="teacher-apps-container ">
                         {apps.map(app => {
                             return <TeacherAppItemDesktop
                             key ={app.id}
