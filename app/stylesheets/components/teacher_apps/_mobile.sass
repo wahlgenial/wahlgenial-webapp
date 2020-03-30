@@ -1,0 +1,141 @@
+.teacher-apps-mobile
+  .h1
+    padding-bottom: 100px
+    text-decoration: underline
+    display: block
+    .category-container
+    width: fit-content
+    width: -moz-fit-content
+    padding-bottom: 3rem
+  .category-title
+    position: relative
+    left: -60px
+    padding-bottom: 1rem
+    overflow: visible
+    .category-title-icon
+      width: 55px
+      position: absolute
+      top: -20px
+    .category-title-text
+      font-size: 1.2rem
+      line-height: 1rem
+      margin: 0 60px
+  .teacher-apps-container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 25px
+
+  .app-block
+    width: 50px
+    height: 70px
+    margin-bottom: 20px
+    background-color: $white
+    transition: all 0.3s ease-out
+    border-radius: 0.6rem
+    overflow: hidden
+    clear: none
+
+    .teacherapp-image 
+      width: 100%
+      height: 147px
+
+    &:hover
+      cursor: pointer
+      background-color: $pompadour
+    .teacher-card-content-wrapper
+      margin: 20px
+      padding-top: 10px 
+    .card-title-wrapper
+      height: 55px
+      display: flex
+    .card-title
+      font-size: 1.2rem
+      font-weight: 600
+      margin-top: auto
+      color: black
+      .more-text
+        position: absolute
+        bottom: 75px
+        color: black
+        font-weight: bold
+        font-size: 1rem
+      .more-icon
+        display: none
+    .card-text
+      line-height: 1.2rem
+      color: #9b9b9b
+      font-size: 1rem
+      margin-bottom: 5px
+    .card-tools
+      color: #676767
+      font-size: 1rem
+    .card-tag
+    .card-tag-text
+      text-align: center
+      position: absolute
+      bottom: 50px
+      color: #676767
+      font-weight: bold
+      font-size: 1rem
+    .card-href
+      position: absolute
+      display: block
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      text-indent: -9999px
+    .card-footer
+      text-align: center
+      background-color: $white
+      position: absolute
+      bottom: 0
+      width: 100%
+      border: 0
+    .footer-link
+      text-align: center
+      a
+        color: $pompadour
+        font-weight: bold
+        font-size: 1rem
+        transition: all 0.3s ease-out
+        &:hover
+          transition: all 0.3s ease-out
+          .card-footer
+            &:before
+              position: absolute
+              right: 12px
+              content: '\01F680'
+
+.app-description
+  min-height: 100%
+  .call-to-action-ghost
+    width: auto
+    float: none
+  .back-icon
+    img
+      width: 16px
+      margin-right: 0.5rem
+      transform: rotate(180deg)
+    a
+      font-weight: 400
+      text-decoration: none
+      color: $white
+  .description-img
+    img
+      height: 300px
+  .btn-container
+    padding: 1rem 0
+    .btn-cta
+      background-color: $white
+      border-color: $pompadour
+      color: $pompadour
+      &:hover,
+      &:active
+        background-color: $pompadour_lighter
+  .app-title
+    @include media-breakpoint-down(sm)
+      border-bottom: 1px solid $white
+      padding: 1.5rem

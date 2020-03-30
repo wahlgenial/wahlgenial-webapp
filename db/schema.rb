@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305161901) do
+ActiveRecord::Schema.define(version: 20191218104715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,4 +101,41 @@ ActiveRecord::Schema.define(version: 20180305161901) do
     t.index ["slug"], name: "index_glossary_terms_on_slug", unique: true
   end
 
+  create_table "teacher_app_taggings", force: :cascade do |t|
+    t.bigint "teacher_app_tag_id"
+    t.bigint "teacher_app_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_app_id"], name: "index_teacher_app_taggings_on_teacher_app_id"
+    t.index ["teacher_app_tag_id"], name: "index_teacher_app_taggings_on_teacher_app_tag_id"
+  end
+
+  create_table "teacher_app_tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teacher_apps", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "published", default: false, null: false
+    t.string "picture"
+    t.text "teaser_text"
+    t.string "external_link"
+    t.string "slug"
+    t.boolean "for_desktop"
+    t.boolean "for_tablet"
+    t.boolean "for_smartphone"
+    t.boolean "for_whiteboard"
+    t.boolean "for_oberstufe"
+    t.boolean "for_mittelstufe"
+    t.boolean "for_unterstufe"
+    t.boolean "for_grundschule"
+  end
+
+  add_foreign_key "teacher_app_taggings", "teacher_app_tags"
+  add_foreign_key "teacher_app_taggings", "teacher_apps"
 end

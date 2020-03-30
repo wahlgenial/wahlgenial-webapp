@@ -7,7 +7,7 @@
 </div>
 <header class="header w-100">
   <div class="main-menu-toggler-container main-menu-container-open">
-    <%= link_to image_tag(asset_pack_path('images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
+    <%= link_to image_tag(asset_pack_path(controller_name=="teacher_apps" ? 'images/icon-menu-open-dark.svg' : 'images/icon-menu-open.svg')), '#', class: 'main-menu-toggler main-menu-open' %>
     <div class="mobile-logo-img pl-4 float-left d-lg-none d-md-none d-sm-block ">
       <%= link_to image_tag(asset_pack_path('images/wahlgenial-logo.svg')), :root %>
     </div>
