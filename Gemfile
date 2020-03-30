@@ -29,7 +29,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'fog-aws'
+  gem 'fog'
   gem "sentry-raven"
 end
 
