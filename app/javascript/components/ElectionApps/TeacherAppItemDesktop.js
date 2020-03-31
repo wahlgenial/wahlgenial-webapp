@@ -42,7 +42,7 @@ const TeacherAppItem = ({name, teaserText, link, forDesktop, forTablet, forSmart
             </div>
         </div>
         <div className="footer-link">
-          <a href={ !link ? '#' : link }>
+          <a href={ !link ? '/lehrer-wahl-apps/' + slug : link }>
             <div className="card-footer py-2"> Los geht's </div>
           </a>
         </div>
