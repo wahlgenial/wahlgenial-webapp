@@ -179,7 +179,7 @@ handelDeviceChange = (e) => {
 
                 <div className="teacher-content">
                     <div className="teacher-heading">
-                        <h1>Politik Apps &amp; Tools</h1>
+                        <h1>Apps und Tools für den Unterricht</h1>
                         <h6 class="teacher-subtitle">Diese Apps und Angebote helfen Lehrern ihre Schüler rund um das Thema 
                             Wahlen in ihrem Politik-Unterricht zu informieren.  
                         </h6>
