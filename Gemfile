@@ -20,12 +20,13 @@ gem 'rack-tracker'
 gem 'redcarpet'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.6'
+  gem 'bundler-audit'
+  gem 'byebug'
   gem 'factory_bot_rails'
   gem 'guard-rails', require: false
   gem "guard-rspec"
   gem "guard"
-  gem 'byebug'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :production do
