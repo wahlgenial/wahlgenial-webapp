@@ -2,10 +2,12 @@ source 'https://rubygems.org'
 
 ruby '2.7.5'
 
-gem 'rails', '~> 5.1.4'
-gem 'pg'
-gem 'rails_admin', '~> 1.2'
+gem 'rails', '~> 5.2.7'
+
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'pg', '~> 0.21'
 gem 'rails-i18n', '~> 5.1'
+gem 'rails_admin', '~> 1.4.3'
 
 gem 'webpacker'
 gem 'react-rails'
