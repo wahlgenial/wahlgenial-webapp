@@ -6,13 +6,13 @@ gem 'rails', '~> 5.2.7'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg', '~> 0.21'
+gem 'puma', '~> 5.6'
 gem 'rails-i18n', '~> 5.1'
 gem 'rails_admin', '~> 1.4.3'
 
 gem 'webpacker'
 gem 'react-rails'
 gem 'draper'
-gem 'puma'
 
 gem 'carrierwave'
 gem 'mini_magick'
