@@ -7,4 +7,4 @@ before_script:
   - ./bin/webpack
 script:
   - bundle exec rails db:setup RAILS_ENV=test
-  - bundle exec rspec
+  - bundle exec rake ci
