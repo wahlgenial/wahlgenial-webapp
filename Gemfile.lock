@@ -541,32 +541,32 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bundler-audit
-  byebug
-  carrierwave
-  draper
-  factory_bot_rails
-  fog
-  guard
-  guard-rails
-  guard-rspec
-  letter_opener
+  bundler-audit (~> 0.7)
+  byebug (~> 9.1)
+  carrierwave (~> 1.2)
+  draper (~> 3.0)
+  factory_bot_rails (~> 4.8)
+  fog (~> 2.2)
+  guard (~> 2.14)
+  guard-rails (~> 0.8)
+  guard-rspec (~> 4.7)
+  letter_opener (~> 1.6)
   listen (>= 3.0.5, < 3.2)
-  mini_magick
+  mini_magick (~> 4.8)
   pg (~> 0.21)
   puma (~> 5.6)
-  rack-tracker
+  rack-tracker (~> 1.5)
   rails (~> 5.2.7)
   rails-i18n (~> 5.1)
-  rails_admin (~> 1.4.3)
-  react-rails
-  redcarpet
+  rails_admin (~> 1.4)
+  react-rails (~> 2.4)
+  redcarpet (~> 3.4)
   rspec-rails (~> 3.6)
-  sentry-raven
-  spring
+  sentry-raven (~> 2.7)
+  spring (~> 2.0)
   spring-watcher-listen (~> 2.0.0)
   web-console (>= 3.3.0)
-  webpacker
+  webpacker (~> 3.0)
 
 RUBY VERSION
    ruby 2.7.5p203
