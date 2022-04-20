@@ -1,5 +1,4 @@
 # WAHLDATENHELFER :ballot_box_with_check:
-[![Build Status](https://www.travis-ci.com/railslove/wahldatenhelfer.svg?token=rLsyzRs4bH4dqZXw5Aq9&branch=master)](https://www.travis-ci.com/railslove/wahldatenhelfer)
 The original name was Wahldatenhelfer, which has been changed to Wahlgenial.  
 In the codebase `wahldatenhelfer` might still be found, but use `Wahlgenial` for public facing strings.
 
@@ -14,6 +13,11 @@ In the codebase `wahldatenhelfer` might still be found, but use `Wahlgenial` for
 - `$ bundle install`
 - `$ rails db:setup`
 - `$ yarn`
+
+### Tests
+
+- run `rake ci` locally to execute the specs, linters and audit dependencies for vulnerabilities
+- when creating a PR or pushing to master a GitHub Actions workflow will run the same checks
 
 ### Start App:
 - `$ ./bin/webpack-dev-server`
