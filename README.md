@@ -45,6 +45,9 @@ That :point_up: leads to configure the following :point_down: env variables:
 
 ## Development
 
+## Deployment
+Master branch is pushed automatically
+
 ### Dummy content
 Through installation, after running `$ rails db:setup`, the records should be created on development environment automatically, otherwise you can run `$ rails db:seed` to add pre-created content (which is only for development).
 
