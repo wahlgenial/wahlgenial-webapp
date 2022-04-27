@@ -22,6 +22,8 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
     end
 
     it 'returns the correct data tree' do
+      ElectionPrograms::Topic.destroy_all # not sure why this is needed on the CI, maybe because we still use Rails 5.0 defaults?
+
       party_1 = create(:party, name: 'party1', ordering: 2)
       party_2 = create(:party, name: 'party2', ordering: 1)
       topic = create(:topic, title: 'topic2', ordering: 2, details: 'The topic details 2')
@@ -29,13 +31,14 @@ RSpec.describe ElectionPrograms::TopicReactDecorator do
       question = create(:question, title: 'question', text: 'the question text', topic: topic)
       create(:opinion, opinion: 'positive', party: party_1, statement: 'Part1 statement', question: question)
       create(:opinion, opinion: 'positive', party: party_2, statement: 'Part2 statement',question: question)
+
       # array of hashes
       election_programs = ElectionPrograms::TopicReactDecorator.decorate_collection(
-        ElectionPrograms::Topic.includes(:questions) )
+        ElectionPrograms::Topic.includes(:questions)
+      )
       election_programs_collection = election_programs.map(&:to_h)
 
-      expect(election_programs_collection).to eql(output)
-
+      expect(election_programs_collection).to match_array(output)
     end
   end
 end

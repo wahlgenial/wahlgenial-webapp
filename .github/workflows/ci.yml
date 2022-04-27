@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  audit-specs-linter:
+    name: Run audit, specs and linter
+    runs-on: ubuntu-18.04
+
+    env:
+      OSTYPE: linux
+      RAILS_ENV: test
+      RAILS_MAX_THREADS: 5
+      WAHLGENIE_DB_HOST: localhost
+      WAHLGENIE_DB_NAME: wahlgenie_ci
+      WAHLGENIE_DB_PASSWORD: ci_db_user_password
+      WAHLGENIE_DB_PORT: 5432
+      WAHLGENIE_DB_USERNAME: wahlgenie_ci
+
+    services:
+      postgres:
+        image: postgres # Docker Hub image
+        env:
+          POSTGRES_DB: wahlgenie_ci
+          POSTGRES_HOST: localhost # use 'postgres' when running the app in Docker
+          POSTGRES_PASSWORD: ci_db_user_password
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: wahlgenie_ci
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 8
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Copy Secrets (comment in when needed)
+        run: |
+          # cp config/secrets.yml config/secrets.yml
+
+      - name: Install native dependencies for fog gem (comment in when needed)
+        run: |
+          # sudo apt-get install libcurl4-openssl-dev
+
+      - name: Setup Ruby and install gems (writes to cache)
+        uses: ruby/setup-ruby@v1
+        env:
+          # BUNDLE_GITHUB__COM: x-access-token:${{ secrets.REPO_SCOPED_TOKEN }}
+          BUNDLE_WITH: development:test
+          BUNDLE_WITHOUT: staging:production
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 1 # increment this number when you have to empty the cache manually
+
+      - name: Setup Node and install packages (writes to cache)
+        uses: actions/setup-node@v3
+        with:
+           node-version-file: '.node-version'
+           cache: 'yarn'
+      - run: |
+          yarn install
+
+      - name: Setup DB (uses 'service postgres' as configured in 'database.yml')
+        run: |
+          cp config/database-ci.yml config/database.yml
+          bundle exec rake db:drop db:create
+          bundle exec rake db:migrate
+
+      - name: Run factory_bot:lint
+        run: |
+          bundle exec rake factory_bot:lint
+
+      - name: Run specs
+        run: |
+          bundle exec rspec
+
+      - name: Run bundle:audit [allowed to fail]
+        continue-on-error: true
+        run: |
+          bundle exec rake bundle:audit
+
+      - name: Run rubocop (comment in after adding rubocop to the project) [allowed to fail]
+        continue-on-error: true
+        run: |
+          # bundle exec rake rubocop
+
+      - name: Run yarn:audit [allowed to fail]
+        continue-on-error: true
+        run: |
+          bundle exec rake yarn:audit
+
+      - name: Run yarn lint [allowed to fail]
+        continue-on-error: true
+        run: |
+          yarn lint --no-fix
