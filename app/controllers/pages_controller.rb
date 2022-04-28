@@ -17,15 +17,14 @@ class PagesController < ApplicationController
   end
 
   def create_app
-    @election_app = ElectionApps::App.new(election_app_params)
 
-    if @election_app.save
+    @election_app = ElectionApps::App.new(election_app_params)
+    if (@election_app.save)
       ElectionAppsMailer.new_app_registered(
         @election_app,
         rails_admin.show_url(model_name: 'election_apps~app', id: @election_app.id),
         user_details
       ).deliver
-
       redirect_to about_path, notice: t('.success')
     else
       render :about
