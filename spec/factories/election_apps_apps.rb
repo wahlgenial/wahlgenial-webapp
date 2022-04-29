@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :election_apps_app, class: 'ElectionApps::App' do
-    name "MyString"
+    title "MyString"
     description "MyText"
+    image 1
   end
 end

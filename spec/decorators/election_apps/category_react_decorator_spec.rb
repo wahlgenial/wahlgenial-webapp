@@ -57,8 +57,6 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
     end
 
     it 'returns the correct data tree' do
-      ElectionApps::Category.destroy_all # not sure why this is needed on the CI, maybe because we still use Rails 5.0 defaults?
-
       category_1 = create(:category, title: 'First Category')
       category_2 = create(:category, title: 'Second Category')
       create(:app, name: 'App Name 1', category: category_1, link: 'http://link.app/', featured: true)
@@ -67,8 +65,7 @@ RSpec.describe ElectionApps::CategoryReactDecorator do
       create(:app, name: 'App Name 4', category: category_2, link: 'http://link.app/', featured: true)
 
       election_apps_categories = ElectionApps::CategoryReactDecorator.decorate(ElectionApps::Category.includes(:apps))
-
-      expect(election_apps_categories.to_h).to match_array(output)
+      expect(election_apps_categories.to_h).to eql(output)
     end
   end
 end

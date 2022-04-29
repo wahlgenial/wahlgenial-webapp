@@ -1,11 +1,11 @@
 # WAHLDATENHELFER :ballot_box_with_check:
-The original name was Wahldatenhelfer, which has been changed to Wahlgenial.  
-In the codebase `wahldatenhelfer` might still be found, but use `Wahlgenial` for public facing strings.
-
+[![Build Status](https://www.travis-ci.com/railslove/wahldatenhelfer.svg?token=rLsyzRs4bH4dqZXw5Aq9&branch=master)](https://www.travis-ci.com/railslove/wahldatenhelfer)
+The oroginal name was Wahldatenhelfer, later has been changed to Wahlgenial.  
+You may find in codebase `wahldatenhelfer`, `Wahlgenial` is for public.
 ## Getting Started
 
 ### Requirements:
-- Ruby 2.7.5
+- Ruby 2.4.2
 - PostgreSQL 9.6 or later.
 
 ### Installation:
@@ -13,11 +13,6 @@ In the codebase `wahldatenhelfer` might still be found, but use `Wahlgenial` for
 - `$ bundle install`
 - `$ rails db:setup`
 - `$ yarn`
-
-### Tests
-
-- run `rake ci` locally to execute the specs, linters and audit dependencies for vulnerabilities
-- when creating a PR or pushing to master a GitHub Actions workflow will run the same checks
 
 ### Start App:
 - `$ ./bin/webpack-dev-server`
@@ -66,10 +61,11 @@ Run `$ rspec` for running tests. To work in file-change-watch mode, run `$ guard
 
 ### React
 #### Storybook
-Run `$ yarn storybook` for storybook. Stories are located in `/app/javascript/stories/`
+Run `$ yarn stroybook` for storybook. Stories are located in `/app/javascript/stories/`
 
 ### Webpacker
 Webpacker is used as a pipeline for JavaScript, to run the development server, run `$ webpack-dev-server`
+
 
 ## Available Assets
 ### ElectionApps Category Icons
@@ -82,6 +78,10 @@ Currently the only icons available for `icon_name` field are:
 ## Hacks
 
 ### Sass for WEBPACKER & STORYBOOK
-In `Sass` files, relative paths should be used to point to image assets Ex. `background: url('../javascript/images/arc.png')` instead of `background: url('images/arc.png')` (path is relative to application.sass).  
-Since both `storybook` and `webpacker gem` using same entry point `application.sass`, using absolute path e.g. `images/arc.png` is only possible for `webpacker`, it wasn't successful to setup `~/wahldatenhelfer/app/javaScript` as resolve path for storybook `webpack.config` which
+In `Sass` files, relative paths should be used to point to image assets Ex. `background: url('../javascript/images/arc.png')` instead of `background: url('images/arc.png')`  
+(path is relative to application.sass)
+
+
+ since both `storybook` and `webpacker gem` using same entry point `application.sass`, using absolute path Ex. `images/arc.png` is only possible for `webpacker`, it wasn't successful to setup `~/wahldatenhelfer/app/javaScript` as resolve path for storybook `webpack.config` which
  tells webpack what directories should be searched when resolving modules. [webpack#resolve-modules](https://webpack.js.org/configuration/resolve/#resolve-modules)
+=======
