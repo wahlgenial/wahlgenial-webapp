@@ -9,13 +9,14 @@ import HeaderLogo from './components/HeaderLogo'
 import WhySectionVideo from './components/WhySectionVideo'
 import HowSectionVideo from './components/HowSectionVideo'
 import CookiesEuBanner from 'cookies-eu-banner'
+import EkoSectionVideo from './components/EkoSectionVideo'
 
 require('./_dependencies')
 const mountFullpage = () => {
   $('#fullpage').fullpage({
     menu: '#menu',
     lockAnchors: false,
-    anchors: ['who-section', 'why-section', 'what-section', 'how-section'],
+    anchors: ['eko-section', 'who-section', 'why-section', 'what-section', 'how-section'],
     // navigationTooltips: ['WARUM', 'WEN', 'WIE', 'WAS'],
     normalScrollElements: '.main-menu, #elections-programs-info-modal, #political-agreements-info-modal',
     showActiveTooltip: true,
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Glossary,
     ElectionApps,
     WhySectionVideo,
+    EkoSectionVideo,
     HowSectionVideo,
     TeacherApps,
     HeaderLogo
