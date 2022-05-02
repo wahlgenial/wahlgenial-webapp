@@ -15,7 +15,7 @@ const mountFullpage = () => {
   $('#fullpage').fullpage({
     menu: '#menu',
     lockAnchors: false,
-    anchors: ['why-section', 'who-section', 'what-section', 'how-section'],
+    anchors: ['who-section', 'why-section', 'what-section', 'how-section'],
     // navigationTooltips: ['WARUM', 'WEN', 'WIE', 'WAS'],
     normalScrollElements: '.main-menu, #elections-programs-info-modal, #political-agreements-info-modal',
     showActiveTooltip: true,
